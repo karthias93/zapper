@@ -15,10 +15,10 @@ const HistoryComp = () => {
     }, [dispatch, id]);
     return (
         <Fragment>
-            <div className="card-wrapper px-8 py-6 bg-white mb-10">
-                {transactionState.map(trans=>{
-                    return (
-                        <div className="flex justify-around" key={trans.blockNumber}>
+            {transactionState.map(trans=>{
+                return (
+                    <div className="card-wrapper px-8 py-6 bg-white mb-10" key={trans.blockNumber}>
+                        <div className="flex justify-around">
                             <div className="flex-1">
                                 <div className="flex items-center">
                                     <Image src={`/images/coin-1.svg`} alt="" width={27} height={27} />
@@ -48,12 +48,13 @@ const HistoryComp = () => {
                                 <div className="font-small">{trans.gas} ETH</div>
                             </div>
                         </div>
-                    )
-                })}
-                {/*<div>
-                    <button type='button'>Load More</button>
-    </div>*/}
-            </div>
+                            
+                        {/*<div>
+                            <button type='button'>Load More</button>
+            </div>*/}
+                    </div>
+                )
+            })}
         </Fragment>
     )
 }
