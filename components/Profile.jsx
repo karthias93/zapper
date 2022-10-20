@@ -10,7 +10,7 @@ import Github from "../public/images/github.svg";
 import Router, { useRouter } from "next/router";
 import Portfolio from "./Portfolio";
 import NftComp from "./NftComp";
-import HistoryComp from "./historyComp";
+import HistoryComp from "./HistoryComp";
 import Link from "next/link";
 import { useQuery } from "@apollo/client";
 import { UserAvatar, UserSocialStats, NftNetWorth } from "../graphql/query";
