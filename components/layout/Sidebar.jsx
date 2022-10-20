@@ -32,8 +32,8 @@ const Sidebar = () => {
                 <div className="sidebar-body table">
                     <div className="menu-border table-cell"></div>
                     <ul className="menus mb-8 table-cell">
-                        <Link href={address ? `/profile/${address}` : ``}>
-                            <li>
+                        <Link href={address ? `/profile/${address}` : `/`}>
+                            <li className="cursor-pointer">
                                 <Dashboard className="sidebar-icons" width="20px" height="20px" />
                                 <span className="menutext">Dashboard</span>
                             </li>
@@ -63,10 +63,12 @@ const Sidebar = () => {
                         <Support className="sidebar-icons" width="20px" height="20px" />
                         <span className="menutext">Support</span>
                     </li>
-                    <li>
-                        <Settings className="sidebar-icons" width="20px" height="20px" />
-                        <span className="menutext">Settings</span>
-                    </li>
+                    <Link href={address ? `/settings` : `/`}>
+                        <li className="cursor-pointer">
+                            <Settings className="sidebar-icons" width="20px" height="20px" />
+                            <span className="menutext">Settings</span>
+                        </li>
+                    </Link>
                     <li className="mt-2 dark-btn">
                         <button className="flex" onClick={updateTheme}>
                             <Dark className="sidebar-btn-icons" />

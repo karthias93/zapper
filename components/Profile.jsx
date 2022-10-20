@@ -16,6 +16,10 @@ import { useQuery } from "@apollo/client";
 import { UserAvatar, UserSocialStats, NftNetWorth } from "../graphql/query";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import toast, { Toaster } from 'react-hot-toast';
+import TwitterBlack from "../public/images/twitter-black.svg";
+import Email from "../public/images/email.svg";
+import Copy from "../public/images/copy.svg";
+import Scan from "../public/images/scan.svg";
 
 const Profile = ({ page = 'portfolio' }) => {
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
@@ -37,10 +41,10 @@ const Profile = ({ page = 'portfolio' }) => {
                         <div className="account-name font-medium text-4xl mb-5 flex-1">Binance 8</div>
                         <div className="contact-options flex flex-1 justify-center items-center mb-5 gap-4">
                             <div className="twitter-icon border p-2 flex border-[#434343] rounded-full	">
-                                <Image src={`/images/twitter-black.svg`} alt="" width={20} height={17}/>
+                                <TwitterBlack width={20} height={17} className="icons"/>
                             </div>
                             <div className="mail-icon border p-2 flex border-[#434343] rounded-full	">
-                                <Image src={`/images/email.svg`} alt="" width={20} height={16}/>
+                                <Email width={20} height={16} className="icons"/>
                             </div>
                         </div>
                     </div>
@@ -49,17 +53,17 @@ const Profile = ({ page = 'portfolio' }) => {
                         <div className="action flex gap-4 justify-center">
                             <div className="copy-icon cursor-pointer">
                                 <CopyToClipboard text={id} onCopy={() => toast('Copied')}>
-                                    <Image src={`/images/copy.svg`} alt="" width={19} height={22}/>
+                                    <Copy width={19} height={22} className="icons"/>
                                 </CopyToClipboard>
                             </div>
                             <div className="scan-icon">
-                            <Image src={`/images/scan.svg`} alt="" width={18} height={18}/>
+                            <Scan width={18} height={18} className="icons"/>
                             </div>
                         </div>
                     </div>
                     <div className="activity-info flex font-normal text-sm items-center">
-                        <div className="followers flex-1">Followers<span className="text-black font-semibold ml-3">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</span></div>
-                        <div className="following flex-1">Following<span className="text-black font-semibold ml-3">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</span></div>
+                        <div className="followers flex-1">Followers<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</span></div>
+                        <div className="following flex-1">Following<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</span></div>
                         <div className="achivements text-white flex p-3 justify-around gap-6">
                             <Image src={`/images/award.svg`} alt='' width={18} height={18} className="flex-1"/>
                             <div>8659</div>
@@ -99,7 +103,7 @@ const Profile = ({ page = 'portfolio' }) => {
                     </select>
                 </div>
             </div>
-            <div className="px-10 py-9 bg-[#D3D3D3]">
+            <div className="px-10 py-9 bg-[#D3D3D3] dark:bg-[#999]">
                 {page === 'portfolio' && <Portfolio />}
                 {page === 'nft' && <NftComp />}
                 {page === 'history' && <HistoryComp />}

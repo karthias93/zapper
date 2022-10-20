@@ -55,15 +55,15 @@ const Header = ({page = 'Welcome'}) => {
     return (
         <div className="page-header mt-5 mb-4 flex justify-between">
             <div>
-                <h1 className="text-4xl font-medium text-black">{page} 👋</h1>
+                <h1 className="text-4xl font-medium text-black dark:text-white">{page} 👋</h1>
             </div>
             <div className="flex">
                 <div ref={dropdownRef}>
-                    <input onFocus={handleFocus} onBlur={handleBlur} type="text" className="search-input font-normal" placeholder="Search address / Web3 ID / ENS / Protocol" onChange={debouncedResults}/>
+                    <input onFocus={handleFocus} onBlur={handleBlur} type="text" className="search-input font-normal dark:bg-black" placeholder="Search address / Web3 ID / ENS / Protocol" onChange={debouncedResults}/>
                     <span className="search-icon">
                         <Image src={`/images/search.svg`} alt="" width="100%" height="100%"/>
                     </span>
-                    {showDropdown && <div className="absolute z-10 mt-2 min-w-[300px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    {showDropdown && <div className="absolute z-10 mt-2 min-w-[300px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black">
                         {data?.search?.results?.length ?
                             (
                             <Fragment>
@@ -71,7 +71,7 @@ const Header = ({page = 'Welcome'}) => {
                                     {data.search.results.map((res)=>{
                                         return (
                                             <Link href={{pathname: `/profile/${res.id}`}} key={res.id}>
-                                                <a className="text-gray-700 block px-4 py-2 text-sm">{res.id}</a>
+                                                <a className="text-gray-700 block px-4 py-2 text-sm dark:text-[#D1D1D1] hover:bg-[#2b303f]">{res.id}</a>
                                             </Link>
                                         )
                                     })}

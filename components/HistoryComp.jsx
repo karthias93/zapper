@@ -25,7 +25,7 @@ const HistoryComp = () => {
                                     <div className="text-xs font-small ml-2">{timeDifference(Date.now(), trans.timeStamp)}</div>
                                 </div>
                                 <div className="flex">
-                                    <div className="mr-3 text-lg font-small">{trans.from}</div>
+                                    <div className="mr-3 text-lg font-small">{trans?.from.substr(0,5)}...${(trans?.from.substr(-10))}</div>
                                     <Image src={`/images/copy.svg`} alt="" width={15} height={17} />
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ const HistoryComp = () => {
                                 </div>
                                 <div className="flex">
                                     <Image src={`/images/solidity.svg`} alt="" width={8} height={13} />
-                                    <div className="ml-3 font-small text-xs text-[##00B01C]">+{trans.amount} ETH</div>
+                                    <div className="ml-3 font-small text-xs text-[#00B01C]">+{trans.amount} ETH</div>
                                 </div>
                             </div>
                             <div className="flex-1">

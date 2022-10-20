@@ -93,22 +93,22 @@ const Portfolio = () => {
                     })}
                 </div>
                 <div className="w-2/6 bg-white card-wrapper h-fit flex justify-around gap-8 p-8">
-                    <div className="flex-1 bg-[#D3D3D3] rounded flex justify-center items-center">
+                    <div className="flex-1 bg-[#D3D3D3] rounded flex justify-center items-center dark:bg-black">
                         <div className="mr-2">
                             <Image height={15} width={14} src={`/images/wallet.svg`} alt=""/>
                         </div>
                         <div className="font-semibold">
                             <div className="text-[10px]">Wallet</div>
-                            <div className="text-black text-xs">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tokens.total?.toFixed())}</div>
+                            <div className="text-black text-xs dark:text-white">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tokens.total?.toFixed())}</div>
                         </div>
                     </div>
-                    <div className="flex-1 bg-[#D3D3D3] rounded flex justify-center items-center">
+                    <div className="flex-1 bg-[#D3D3D3] rounded flex justify-center items-center dark:bg-black">
                         <div className="mr-2">
                             <Image height={18} width={18} src={`/images/looksrare.png`} alt=""/>
                         </div>
                         <div className="p-3 font-semibold">
                             <div className="text-[10px] ">LooksRare</div>
-                            <div className="text-black text-xs">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(looksRare.total?.toFixed())}</div>
+                            <div className="text-black text-xs dark:text-white">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(looksRare.total?.toFixed())}</div>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@ const Portfolio = () => {
             </div>
             <div className="card-wrapper px-8 py-6 bg-white mb-10">
                 <div className="table w-full">
-                    <div className="table-header-group bg-[#D3D3D3]">
+                    <div className="table-header-group bg-[#D3D3D3] dark:bg-black">
                         <div className="table-row text-xs font-medium">
                             <div className="table-cell text-center py-2"></div>
                             <div className="table-cell text-left py-2">Assets</div>
@@ -157,7 +157,7 @@ const Portfolio = () => {
             </div>
             <div className="card-wrapper px-8 py-6 bg-white mb-10">
                 <div className="table w-full">
-                    <div className="table-header-group bg-[#D3D3D3]">
+                    <div className="table-header-group bg-[#D3D3D3] dark:bg-black">
                         <div className="table-row text-xs font-medium">
                             <div className="table-cell text-center py-2"></div>
                             <div className="table-cell text-left py-2">Assets</div>
