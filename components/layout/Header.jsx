@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo, Fragment } from "react";
+import React, { useEffect, useState, useMemo, Fragment, useRef } from "react";
 import Image from 'next/image';
 import {
     useAccount,
@@ -8,85 +8,26 @@ import {
     useEnsName,
     useBalance
 } from 'wagmi';
-import { useLazyQuery, gql } from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 import debounce from "lodash.debounce";
 import Link from "next/link";
 import WalletModal from "../WalletModal";
-
-const QUERY = gql`
-    query GlobalSearch($searchInput: SearchInput!) {
-        search(input: $searchInput) {
-            results {
-                __typename
-                ... on BaseTokenResult {
-                    category
-                    title
-                    imageUrl
-                    perNetworkInfo {
-                        network
-                        address
-                        marketCap
-                        imageUrl
-                    }
-                    symbol
-                    name
-                    marketCap
-                    id
-                    score
-                }
-                ... on AppResult {
-                    category
-                    title     
-                    imageUrl 
-                    networks    
-                    appId      
-                    name          
-                    id      
-                    score         
-                }
-                ... on NftCollectionResult {
-                    category
-                    title
-                    imageUrl
-                    network
-                    address  
-                    name  
-                    monthlyVolume  
-                    id         
-                    score    
-                }  
-                ... on UserResult {    
-                    category           
-                    title     
-                    imageUrl    
-                    address      
-                    ens   
-                    id     
-                    score   
-                }   
-                ... on DAOResult {   
-                    id             
-                    category     
-                    title      
-                    imageUrl 
-                    score    
-                }  
-            } 
-        }        
-    }
-`;
+import useOutsideAlerter from "../../utility/useOusideAlerter";
+import { GlobalSearch } from "../../graphql/query";
 
 const Header = ({page = 'Welcome'}) => {
+    const dropdownRef = useRef(null);
     const { address, connector, isConnected } = useAccount();
     const [ balance, setBalance ] = useState(0);
     const [showDropdown, setShowDropdown] = useState(false);
+    useOutsideAlerter(dropdownRef, setShowDropdown);
     const { data: balanceObj } = useBalance({
         addressOrName: address,
     });
     useEffect(()=>{
         setBalance(balanceObj?.formatted)
     },[balanceObj?.formatted])
-    const [searchQuery, { data, loading }] = useLazyQuery(QUERY);
+    const [searchQuery, { data, loading }] = useLazyQuery(GlobalSearch);
 
     const handleChange = (e) => {
         searchQuery({
@@ -103,7 +44,7 @@ const Header = ({page = 'Welcome'}) => {
     }
 
     const handleBlur = () => {
-        setShowDropdown(false);
+        //setShowDropdown(false);
     }
 
     const debouncedResults = useMemo(() => {
@@ -117,7 +58,7 @@ const Header = ({page = 'Welcome'}) => {
                 <h1 className="text-4xl font-medium text-black">{page} 👋</h1>
             </div>
             <div className="flex">
-                <div>
+                <div ref={dropdownRef}>
                     <input onFocus={handleFocus} onBlur={handleBlur} type="text" className="search-input font-normal" placeholder="Search address / Web3 ID / ENS / Protocol" onChange={debouncedResults}/>
                     <span className="search-icon">
                         <Image src={`/images/search.svg`} alt="" width="100%" height="100%"/>
@@ -129,7 +70,7 @@ const Header = ({page = 'Welcome'}) => {
                                 <div className="py-1" role="none">
                                     {data.search.results.map((res)=>{
                                         return (
-                                            <Link href={`/profile/${res.id}`} key={res.id}>
+                                            <Link href={{pathname: `/profile/${res.id}`}} key={res.id}>
                                                 <a className="text-gray-700 block px-4 py-2 text-sm">{res.id}</a>
                                             </Link>
                                         )
@@ -148,7 +89,7 @@ const Header = ({page = 'Welcome'}) => {
                 {page !== 'Welcome' ? 
                     (<div>
                         <button className="text-regal-white login-btn font-medium">
-                            {balance ? `${address?.substr(0,5)}...${(address?.substr(-10))}($${parseFloat(balanceObj?.formatted).toFixed(2)})` : ''}
+                            {balance ? `${address?.substr(0,5)}...${(address?.substr(-10))}($${parseFloat(balanceObj?.formatted).toFixed(2)})` : 'Log in via web3 wallet.'}
                         </button>
                     </div>) :
                     (

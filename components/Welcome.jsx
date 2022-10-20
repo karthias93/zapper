@@ -18,7 +18,7 @@ const Welcome = () => {
                 <div>
                     <button className="text-regal-white login-btn flex" onClick={() => setShowPopup(true)}>
                         <span className="mr-3 font-medium">Log in via web3 wallet. </span>
-                        <Image height={20} width={20} src={`/images/wallet.svg`} alt=""/>
+                        <Image height={20} width={20} src={`/images/wallet-white.svg`} alt=""/>
                     </button>
                 </div>
                 </div>

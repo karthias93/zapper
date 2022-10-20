@@ -18,19 +18,11 @@ import BgRound2 from '../public/images/bg-round2.svg';
 import BgRound3 from '../public/images/bg-round3.svg';
 
 export default function Home() {
-  const themeState = useSelector(selectThemeState);
-  const dispatch = useDispatch();
   const { address, connector, isConnected } = useAccount();
 
   useEffect(()=>{
     if (isConnected) Router.push(`/profile/${address}`);
   }, [isConnected, address])
-
-  const updateTheme = () => {
-    const mode = themeState === 'dark' ? 'light' : 'dark';
-    localStorage.theme = mode;
-    dispatch(setThemeState(mode))
-  }
   return (
     <div className="layout">
       <Sidebar />
