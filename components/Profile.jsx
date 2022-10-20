@@ -20,6 +20,9 @@ import TwitterBlack from "../public/images/twitter-black.svg";
 import Email from "../public/images/email.svg";
 import Copy from "../public/images/copy.svg";
 import Scan from "../public/images/scan.svg";
+import UploadAvatar from "./UploadAvatar";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCoins, selectCoinState } from "../store/coinSlice";
 
 const Profile = ({ page = 'portfolio' }) => {
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
@@ -30,15 +33,83 @@ const Profile = ({ page = 'portfolio' }) => {
     const { data, loading } = useQuery(UserAvatar, { variables: { userInput: { address: id } } });
     const { data: socialStats} = useQuery(UserSocialStats, {variables: { address: id }});
     const { data: nftNet } = useQuery(NftNetWorth, {variables: { addresses:[id] }});
+    const handleClick = () => {
+        if (address) setShowPopup(true);
+    }
+    const dispatch = useDispatch();
+    const coinState = useSelector(selectCoinState);
+    const [tokens, setTokens] = useState({});
+    const [looksRare, setLooksRare] = useState([]);
+    const [coinBalance, setCoinBalance] = useState({});
+    useEffect(()=> {
+        dispatch(fetchCoins(id));
+    }, [dispatch, id])
+    useEffect(()=>{
+        const token = {
+            total: 0,
+            wallet: []
+        };
+        const looks = {
+            total: 0,
+            appName: '',
+            wallet: []
+        };
+        const coins = {};
+        coinState.forEach(wallet=>{
+            if (wallet.appId === 'looks-rare') {
+                looks.total = wallet.app.meta.total;
+                looks.appName = wallet.app.displayProps.appName;
+                looks.logo = wallet.app.displayProps.images[0];
+                wallet.app.data.forEach((app)=>{
+                    app.breakdown.forEach((d)=>{
+                        looks.wallet.push({
+                            value: app.balanceUSD,
+                            label: d.context.symbol,
+                            logo: d.displayProps.images[0],
+                            balance: d.context.balance,
+                            price: d.context.price
+                        });
+                    });
+                });
+            } else if (wallet.appId === 'tokens') {
+                wallet.totals.forEach((trans)=>{
+                    if (coins[wallet.network]) {
+                        coins[wallet.network] += trans.balanceUSD;
+                    } else {
+                        coins[wallet.network] = trans.balanceUSD;
+                    }
+                    token.total += trans.balanceUSD;
+                    const c = wallet.balance.wallet[trans.key];
+                    token.wallet.push({
+                        value: c.context.price,
+                        label: c.context.symbol,
+                        logo: c.displayProps.images[0],
+                        balance: c.context.balance,
+                        price: c.context.price
+                    })
+                });
+            }
+        });
+        setLooksRare(looks);
+        setTokens(token);
+        const coinChain = {};
+        Object.entries(coins).forEach(([key, val])=>{
+            coinChain[key] = {
+                balance: val,
+                percentage: (val/(tokens.total+looks.total))*100
+            }
+        });
+        setCoinBalance(coinChain);
+    }, [coinState])
     return (
         <div className="profile-container">
             <div className="profile-header flex items-center">
-                <div className="hexagon">
+                <div className="hexagon" onClick={handleClick}>
                     <Image src={data?.user?.avatarURI ? data.user.avatarURI : '/images/default-avatar.jpeg'} className="flex-1" width={185} height={209} alt=''/>
                 </div>
                 <div className="profile-info flex-1">
                     <div className="account-info flex">
-                        <div className="account-name font-medium text-4xl mb-5 flex-1">Binance 8</div>
+                        <div className="account-name font-medium text-4xl mb-5 flex-1">No ID</div>
                         <div className="contact-options flex flex-1 justify-center items-center mb-5 gap-4">
                             <div className="twitter-icon border p-2 flex border-[#434343] rounded-full	">
                                 <TwitterBlack width={20} height={17} className="icons"/>
@@ -71,7 +142,7 @@ const Profile = ({ page = 'portfolio' }) => {
                     </div>
                 </div>
                 <div className="balance-info flex-1 font-semibold text-5xl text-right">
-                    ${nftNet?.nftNetWorth ? parseFloat(nftNet.nftNetWorth).toFixed(2) : 0}
+                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tokens.total?.toFixed()+looksRare.total?.toFixed())}
                 </div>
             </div>
             <div className="tab-container flex">
@@ -104,7 +175,7 @@ const Profile = ({ page = 'portfolio' }) => {
                 </div>
             </div>
             <div className="px-10 py-9 bg-[#D3D3D3] dark:bg-[#999]">
-                {page === 'portfolio' && <Portfolio />}
+                {page === 'portfolio' && <Portfolio looksRare={looksRare} coinBalance={coinBalance} tokens={tokens}/>}
                 {page === 'nft' && <NftComp />}
                 {page === 'history' && <HistoryComp />}
             </div>
@@ -116,6 +187,7 @@ const Profile = ({ page = 'portfolio' }) => {
                 <Github />
             </div>
             <Toaster />
+            {showPopup && <UploadAvatar setShowPopup={setShowPopup} />}
         </div>
     )
 }

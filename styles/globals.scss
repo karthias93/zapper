@@ -231,6 +231,14 @@ html.dark {
     height: 209px;
     background: linear-gradient(180deg, #FEAA02 0%, #E25410 100%);
   }
+  .hexagon-settings {
+    width: 143px;
+    height: 161px;
+  }
+  .preview-profile {
+    width: 79px;
+    height: 89px;
+  }
   .hexagon:before {
     position: absolute;
     content: '';
@@ -246,7 +254,19 @@ html.dark {
     -webkit-clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
   }
-  
+  .upload-icon {
+    background: #000;
+    span {
+        top: 50px;
+    }
+  }
+  .upload-icon:before {
+    top: 3px;  /* border width */
+    left: 3px; 
+    height: calc(100% - 6px);  /* 100% - (2 * border width) */
+    width: calc(100% - 6px); 
+    background-color: #D9D9D9;
+  }
   /* Just for demo */
   
   .hexagon {
@@ -314,7 +334,28 @@ html.dark {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.settings-card {
+    background: #F7F7F7;
+    border-radius: 30px;
+    padding: 2rem 4rem;
+}
+.upload-avatar {
+    .cancel-btn {
+        border: 2px solid #4B4B4B;
+        border-radius: 15px;
+        padding: .2rem 1rem;
+        min-width: 100px;
+    }
+    .save-btn {
+        background: linear-gradient(180deg, #FEAA02 0%, #E25410 100%);
+        border-radius: 15px;
+        padding: .2rem 1rem;
+        color: #FFFFFF;
+        min-width: 100px;
+    }
+}
 
+/* Dark styles */
 .dark {
     .layout {
         .sidebar {

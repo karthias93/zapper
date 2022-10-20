@@ -12,7 +12,7 @@ import { useLazyQuery } from "@apollo/client";
 import debounce from "lodash.debounce";
 import Link from "next/link";
 import WalletModal from "../WalletModal";
-import useOutsideAlerter from "../../utility/useOusideAlerter";
+import useOutsideAlerter from "../../utils/useOusideAlerter";
 import { GlobalSearch } from "../../graphql/query";
 
 const Header = ({page = 'Welcome'}) => {
@@ -55,7 +55,7 @@ const Header = ({page = 'Welcome'}) => {
     return (
         <div className="page-header mt-5 mb-4 flex justify-between">
             <div>
-                <h1 className="text-4xl font-medium text-black dark:text-white">{page} 👋</h1>
+                <h1 className="text-4xl font-medium text-black dark:text-white">{page} {page==='Welcome' ? '👋' : ''}</h1>
             </div>
             <div className="flex">
                 <div ref={dropdownRef}>

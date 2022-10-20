@@ -1,78 +1,8 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCoins, selectCoinState } from "../store/coinSlice";
 import { chains } from "../constants";
-import { useRouter } from "next/router";
 
-const Portfolio = () => {
-    const dispatch = useDispatch();
-    const coinState = useSelector(selectCoinState);
-    const [tokens, setTokens] = useState({});
-    const [looksRare, setLooksRare] = useState([]);
-    const [coinBalance, setCoinBalance] = useState({});
-    const router = useRouter();
-    const {id} = router.query;
-    useEffect(()=> {
-        dispatch(fetchCoins(id));
-    }, [dispatch, id])
-    useEffect(()=>{
-        const token = {
-            total: 0,
-            wallet: []
-        };
-        const looks = {
-            total: 0,
-            appName: '',
-            wallet: []
-        };
-        const coins = {};
-        coinState.forEach(wallet=>{
-            if (wallet.appId === 'looks-rare') {
-                looks.total = wallet.app.meta.total;
-                looks.appName = wallet.app.displayProps.appName;
-                looks.logo = wallet.app.displayProps.images[0];
-                wallet.app.data.forEach((app)=>{
-                    app.breakdown.forEach((d)=>{
-                        looks.wallet.push({
-                            value: app.balanceUSD,
-                            label: d.context.symbol,
-                            logo: d.displayProps.images[0],
-                            balance: d.context.balance,
-                            price: d.context.price
-                        });
-                    });
-                });
-            } else if (wallet.appId === 'tokens') {
-                wallet.totals.forEach((trans)=>{
-                    if (coins[wallet.network]) {
-                        coins[wallet.network] += trans.balanceUSD;
-                    } else {
-                        coins[wallet.network] = trans.balanceUSD;
-                    }
-                    token.total += trans.balanceUSD;
-                    const c = wallet.balance.wallet[trans.key];
-                    token.wallet.push({
-                        value: c.context.price,
-                        label: c.context.symbol,
-                        logo: c.displayProps.images[0],
-                        balance: c.context.balance,
-                        price: c.context.price
-                    })
-                });
-            }
-        });
-        setLooksRare(looks);
-        setTokens(token);
-        const coinChain = {};
-        Object.entries(coins).forEach(([key, val])=>{
-            coinChain[key] = {
-                balance: val,
-                percentage: (val/(tokens.total+looks.total))*100
-            }
-        });
-        setCoinBalance(coinChain);
-    }, [coinState])
+const Portfolio = ({looksRare, coinBalance, tokens}) => {
     return (
         <Fragment>
             <div className="flex mb-10">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTransactions, selectTransactionState } from "../store/transactionSlice";
 import { useRouter } from "next/router";
-import { timeDifference } from "../utility/common";
+import { timeDifference } from "../utils/common";
 
 const HistoryComp = () => {
     const dispatch = useDispatch();
