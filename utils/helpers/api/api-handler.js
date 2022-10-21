@@ -1,4 +1,4 @@
-import { errorHandler, jwtMiddleware, corsMiddleware } from ".";
+import { errorHandler, corsMiddleware } from ".";
 import Cors from "cors";
 
 // Initializing the cors middleware
@@ -18,7 +18,7 @@ function apiHandler(handler) {
         try {
             // global middleware
             await corsMiddleware(req, res, cors);
-            await jwtMiddleware(req, res);
+            // await jwtMiddleware(req, res);
             // loggerMiddleware();
 
             // route handler

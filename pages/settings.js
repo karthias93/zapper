@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Sidebar from "../components/layout/Sidebar";
 import Header from "../components/layout/Header";
 import Welcome from "../components/Welcome";
-import { useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   useAccount,
   useConnect,
@@ -14,13 +14,50 @@ import {
 } from 'wagmi';
 import Router from 'next/router';
 import Background from "../components/Background";
+import UploadAvatar from "../components/UploadAvatar";
+import { FaCheck, FaTimes } from 'react-icons/fa';
+import axios from "axios";
+import toast from "react-hot-toast";
+import InputField from "../components/InputField";
+import { selectUserState } from "../store/userSlice";
+import { IKImage } from "imagekitio-react";
 
-export default function Home() {
+export default function Settings() {
   const { address, connector, isConnected } = useAccount();
+  const [ showPopup, setShowPopup ] = useState(false);
+  const [ usernameEdit, setUsernameEdit ] = useState(false);
+  const [ firstnameEdit, setFirstnameEdit ] = useState(false);
+  const [ phoneEdit, setPhoneEdit ] = useState(false);
+  const [ emailEdit, setEmailEdit ] = useState(false);
+  const [ secondnameEdit, setSecondnameEdit ] = useState(false);
+  const userState = useSelector(selectUserState);
+  const [inputs, setInputs] = useState({});
 
   useEffect(()=>{
     if (!isConnected) Router.push(`/`);
-  }, [isConnected, address])
+  }, [isConnected, address]);
+  useEffect(()=>{
+    setInputs({
+        username: userState.username,
+        firstname: userState.firstname,
+        phone: userState.phone,
+        email: userState.email,
+        secondname: userState.secondname,
+    })
+  }, [userState])
+
+  const updateDetails = () => {
+    axios.patch(`/api/users/${address}`, {...inputs})
+        .then(res=>{
+            toast('Updated Successfully')
+        })
+  }
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
   return (
     <div className="layout">
       <Sidebar />
@@ -34,59 +71,59 @@ export default function Home() {
                     <div className="font-semibold text-2xl mb-5">Account Details</div>
                     <div className="flex justify-between mb-5">
                         <div>
-                            <div className="mb-5">
-                                <div className="text-sm font-normal">
-                                    Username:
-                                </div>
-                                <div className="flex items-baseline">
-                                    <div className="font-semibold text-2xl mr-2">Binance 8</div>
-                                    <div className="font-semibold text-xs">(Edit)</div>
-                                </div>
-                            </div>
-                            <div className="mb-5">
-                                <div className="text-sm font-normal">
-                                    First Name:
-                                </div>
-                                <div className="flex items-baseline">
-                                    <div className="font-semibold text-2xl mr-2">Jamie</div>
-                                    <div className="font-semibold text-xs">(Edit)</div>
-                                </div>
-                            </div>
-                            <div className="mb-5">
-                                <div className="text-sm font-normal">
-                                    Phone Number:
-                                </div>
-                                <div className="flex items-baseline">
-                                    <div className="font-semibold text-2xl mr-2">+971 52 340 4989</div>
-                                    <div className="font-semibold text-xs">(Edit)</div>
-                                </div>
-                            </div>
+                            <InputField 
+                                label="Username:"
+                                isEdit={usernameEdit}
+                                handleChange={handleChange}
+                                inputs={inputs}
+                                updateDetails={updateDetails}
+                                setIsEdit={setUsernameEdit}
+                                name="username"
+                            />
+                            <InputField 
+                                label="First Name:"
+                                isEdit={firstnameEdit}
+                                handleChange={handleChange}
+                                inputs={inputs}
+                                updateDetails={updateDetails}
+                                setIsEdit={setFirstnameEdit}
+                                name="firstname"
+                            />
+                            <InputField 
+                                label="Phone Number:"
+                                isEdit={phoneEdit}
+                                handleChange={handleChange}
+                                inputs={inputs}
+                                updateDetails={updateDetails}
+                                setIsEdit={setPhoneEdit}
+                                name="phone"
+                            />
                         </div>
                         <div>
-                            <div className="mb-5">
-                                <div className="text-sm font-normal">
-                                    Email : 
-                                </div>
-                                <div className="flex items-baseline">
-                                    <div className="font-semibold text-2xl mr-2">binance0808@gmail.com</div>
-                                    <div className="font-semibold text-xs">(Edit)</div>
-                                </div>
-                            </div>
-                            <div className="mb-5">
-                                <div className="text-sm font-normal">
-                                    Second Name :
-                                </div>
-                                <div className="flex items-baseline">
-                                    <div className="font-semibold text-2xl mr-2">Taylor</div>
-                                    <div className="font-semibold text-xs">(Edit)</div>
-                                </div>
-                            </div>
+                            <InputField 
+                                label="Email :"
+                                isEdit={emailEdit}
+                                handleChange={handleChange}
+                                inputs={inputs}
+                                updateDetails={updateDetails}
+                                setIsEdit={setEmailEdit}
+                                name="email"
+                            />
+                            <InputField 
+                                label="Second Name :"
+                                isEdit={secondnameEdit}
+                                handleChange={handleChange}
+                                inputs={inputs}
+                                updateDetails={updateDetails}
+                                setIsEdit={setSecondnameEdit}
+                                name="secondname"
+                            />
                         </div>
                         <div>
                             <div className="hexagon hexagon-settings">
-                                <Image src={`/images/default-avatar.jpeg`} alt='' width={143} height={161}/>
+                                <IKImage path={userState?.profilePic?.filePath ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3"/>
                             </div>
-                            <div className="text-center">(Edit)</div>
+                            <div className="text-center cursor-pointer" onClick={()=>setShowPopup(true)}>(Edit)</div>
                         </div>
                     </div>
                     <div>
@@ -107,6 +144,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {showPopup && <UploadAvatar setShowPopup={setShowPopup} />}
     </div>
   )
 }

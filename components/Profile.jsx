@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useQuery } from "@apollo/client";
 import { UserAvatar, UserSocialStats, NftNetWorth } from "../graphql/query";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import TwitterBlack from "../public/images/twitter-black.svg";
 import Email from "../public/images/email.svg";
 import Copy from "../public/images/copy.svg";
@@ -23,6 +23,8 @@ import Scan from "../public/images/scan.svg";
 import UploadAvatar from "./UploadAvatar";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCoins, selectCoinState } from "../store/coinSlice";
+import { selectUserState } from "../store/userSlice";
+import { IKImage } from "imagekitio-react";
 
 const Profile = ({ page = 'portfolio' }) => {
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
@@ -34,13 +36,16 @@ const Profile = ({ page = 'portfolio' }) => {
     const { data: socialStats} = useQuery(UserSocialStats, {variables: { address: id }});
     const { data: nftNet } = useQuery(NftNetWorth, {variables: { addresses:[id] }});
     const handleClick = () => {
-        if (address) setShowPopup(true);
+        if (address && address === id) setShowPopup(true);
     }
     const dispatch = useDispatch();
     const coinState = useSelector(selectCoinState);
+    const userState = useSelector(selectUserState);
     const [tokens, setTokens] = useState({});
     const [looksRare, setLooksRare] = useState([]);
     const [coinBalance, setCoinBalance] = useState({});
+    const [balance, setBalance] = useState(0);
+
     useEffect(()=> {
         dispatch(fetchCoins(id));
     }, [dispatch, id])
@@ -96,20 +101,21 @@ const Profile = ({ page = 'portfolio' }) => {
         Object.entries(coins).forEach(([key, val])=>{
             coinChain[key] = {
                 balance: val,
-                percentage: (val/(tokens.total+looks.total))*100
+                percentage: (val/(token.total+looks.total))*100
             }
         });
+        setBalance(parseFloat(token.total+looks.total)?.toFixed())
         setCoinBalance(coinChain);
     }, [coinState])
     return (
         <div className="profile-container">
             <div className="profile-header flex items-center">
                 <div className="hexagon" onClick={handleClick}>
-                    <Image src={data?.user?.avatarURI ? data.user.avatarURI : '/images/default-avatar.jpeg'} className="flex-1" width={185} height={209} alt=''/>
+                    <IKImage path={userState?.profilePic?.filePath && userState.wallet === id ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
                 </div>
                 <div className="profile-info flex-1">
                     <div className="account-info flex">
-                        <div className="account-name font-medium text-4xl mb-5 flex-1">No ID</div>
+                        <div className="account-name font-medium text-4xl mb-5 flex-1">{userState?.username && userState.wallet === id ? userState.username : 'No ID' }</div>
                         <div className="contact-options flex flex-1 justify-center items-center mb-5 gap-4">
                             <div className="twitter-icon border p-2 flex border-[#434343] rounded-full	">
                                 <TwitterBlack width={20} height={17} className="icons"/>
@@ -133,8 +139,8 @@ const Profile = ({ page = 'portfolio' }) => {
                         </div>
                     </div>
                     <div className="activity-info flex font-normal text-sm items-center">
-                        <div className="followers flex-1">Followers<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</span></div>
-                        <div className="following flex-1">Following<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</span></div>
+                        <div className="followers flex-1">Followers<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</span></div>
+                        <div className="following flex-1">Following<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</span></div>
                         <div className="achivements text-white flex p-3 justify-around gap-6">
                             <Image src={`/images/award.svg`} alt='' width={18} height={18} className="flex-1"/>
                             <div>8659</div>
@@ -142,7 +148,7 @@ const Profile = ({ page = 'portfolio' }) => {
                     </div>
                 </div>
                 <div className="balance-info flex-1 font-semibold text-5xl text-right">
-                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tokens.total?.toFixed()+looksRare.total?.toFixed())}
+                    {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(balance)}
                 </div>
             </div>
             <div className="tab-container flex">
@@ -186,7 +192,6 @@ const Profile = ({ page = 'portfolio' }) => {
                 <Telegram />
                 <Github />
             </div>
-            <Toaster />
             {showPopup && <UploadAvatar setShowPopup={setShowPopup} />}
         </div>
     )

@@ -70,7 +70,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                                     </div>
                                     <div className="table-cell py-2">{w.label}</div>
                                     <div className="table-cell py-2">{w.price.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.balance?.toFixed(2))}</div>
+                                    <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
                                     <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
                                 </div>
                             )
@@ -105,7 +105,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                                     </div>
                                     <div className="table-cell py-2">{w.label}</div>
                                     <div className="table-cell py-2">{w.price.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.balance?.toFixed(2))}</div>
+                                    <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
                                     <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
                                 </div>
                             )

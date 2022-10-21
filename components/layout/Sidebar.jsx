@@ -46,10 +46,12 @@ const Sidebar = () => {
                             <Profile className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">Social Rankings</span>
                         </li>
-                        <li>
-                            <Defi className="sidebar-icons" width="20px" height="20px" />
-                            <span className="menutext">Defi List</span>
-                        </li>
+                        <Link href={`/projects`}>
+                            <li className="cursor-pointer">
+                                <Defi className="sidebar-icons" width="20px" height="20px" />
+                                <span className="menutext">Defi List</span>
+                            </li>
+                        </Link>
                         <li>
                             <More className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">More</span>

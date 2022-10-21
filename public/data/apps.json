@@ -1,0 +1,3205 @@
+{
+  "pageProps": {
+    "tableData": [
+      {
+        "id": "1",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "ethereum",
+        "tvl": 6784320024.959563
+      },
+      {
+        "id": "2",
+        "appId": "lido",
+        "appName": "Lido",
+        "network": "ethereum",
+        "tvl": 5810488057.7251835
+      },
+      {
+        "id": "3",
+        "appId": "convex",
+        "appName": "Convex",
+        "network": "ethereum",
+        "tvl": 3983388163.3782973
+      },
+      {
+        "id": "4",
+        "appId": "aave-v2",
+        "appName": "Aave V2",
+        "network": "ethereum",
+        "tvl": 3939296417.3622203
+      },
+      {
+        "id": "5",
+        "appId": "uniswap-v3",
+        "appName": "Uniswap V3",
+        "network": "ethereum",
+        "tvl": 2666942992.192362
+      },
+      {
+        "id": "6",
+        "appId": "pancakeswap",
+        "appName": "PancakeSwap",
+        "network": "binance-smart-chain",
+        "tvl": 2444513931.3869543
+      },
+      {
+        "id": "7",
+        "appId": "compound",
+        "appName": "Compound",
+        "network": "ethereum",
+        "tvl": 2234761653.829885
+      },
+      {
+        "id": "8",
+        "appId": "uniswap-v2",
+        "appName": "Uniswap V2",
+        "network": "ethereum",
+        "tvl": 978486053.916248
+      },
+      {
+        "id": "9",
+        "appId": "sushiswap-bentobox",
+        "appName": "SushiSwap BentoBox",
+        "network": "ethereum",
+        "tvl": 754063053.7130697
+      },
+      {
+        "id": "10",
+        "appId": "venus",
+        "appName": "Venus",
+        "network": "binance-smart-chain",
+        "tvl": 735540739.6068202
+      },
+      {
+        "id": "11",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "ethereum",
+        "tvl": 666639473.6448419
+      },
+      {
+        "id": "12",
+        "appId": "gmx",
+        "appName": "GMX",
+        "network": "arbitrum",
+        "tvl": 659034356.424359
+      },
+      {
+        "id": "13",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "avalanche",
+        "tvl": 615273302.0759776
+      },
+      {
+        "id": "14",
+        "appId": "wonderland",
+        "appName": "Wonderland",
+        "network": "avalanche",
+        "tvl": 593925086.455429
+      },
+      {
+        "id": "15",
+        "appId": "vvs-finance",
+        "appName": "VVS Finance",
+        "network": "cronos",
+        "tvl": 558492050.0693231
+      },
+      {
+        "id": "16",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "optimism",
+        "tvl": 454743283.36741465
+      },
+      {
+        "id": "17",
+        "appId": "yearn",
+        "appName": "Yearn",
+        "network": "ethereum",
+        "tvl": 426679608.7664317
+      },
+      {
+        "id": "18",
+        "appId": "aave-safety-module",
+        "appName": "Aave Safety Module",
+        "network": "ethereum",
+        "tvl": 415567487.98884225
+      },
+      {
+        "id": "19",
+        "appId": "frax",
+        "appName": "Frax",
+        "network": "ethereum",
+        "tvl": 372427120.44546527
+      },
+      {
+        "id": "20",
+        "appId": "maple",
+        "appName": "Maple",
+        "network": "ethereum",
+        "tvl": 349421456.59548247
+      },
+      {
+        "id": "21",
+        "appId": "biswap",
+        "appName": "Biswap",
+        "network": "binance-smart-chain",
+        "tvl": 337817260.7399396
+      },
+      {
+        "id": "22",
+        "appId": "the-graph",
+        "appName": "The Graph",
+        "network": "ethereum",
+        "tvl": 325659863.4040932
+      },
+      {
+        "id": "23",
+        "appId": "euler",
+        "appName": "Euler",
+        "network": "ethereum",
+        "tvl": 278477975.5083613
+      },
+      {
+        "id": "24",
+        "appId": "benqi",
+        "appName": "Benqi",
+        "network": "avalanche",
+        "tvl": 267388860.89039055
+      },
+      {
+        "id": "25",
+        "appId": "quickswap",
+        "appName": "Quickswap",
+        "network": "polygon",
+        "tvl": 237798987.8930265
+      },
+      {
+        "id": "26",
+        "appId": "aave-v2",
+        "appName": "Aave V2",
+        "network": "polygon",
+        "tvl": 236923323.3648276
+      },
+      {
+        "id": "27",
+        "appId": "fixed-forex",
+        "appName": "Fixed Forex",
+        "network": "ethereum",
+        "tvl": 202882861.07000002
+      },
+      {
+        "id": "28",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "ethereum",
+        "tvl": 193460638.24905387
+      },
+      {
+        "id": "29",
+        "appId": "iron-bank",
+        "appName": "Iron Bank",
+        "network": "ethereum",
+        "tvl": 186089303.15184087
+      },
+      {
+        "id": "30",
+        "appId": "morpho",
+        "appName": "Morpho",
+        "network": "ethereum",
+        "tvl": 159790408.90762594
+      },
+      {
+        "id": "31",
+        "appId": "tokemak",
+        "appName": "Tokemak",
+        "network": "ethereum",
+        "tvl": 140642227.84326082
+      },
+      {
+        "id": "32",
+        "appId": "spookyswap",
+        "appName": "SpookySwap",
+        "network": "fantom",
+        "tvl": 140085845.7391599
+      },
+      {
+        "id": "33",
+        "appId": "sushiswap-bentobox",
+        "appName": "SushiSwap BentoBox",
+        "network": "arbitrum",
+        "tvl": 118400858.67704928
+      },
+      {
+        "id": "34",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "polygon",
+        "tvl": 118180156.63385358
+      },
+      {
+        "id": "35",
+        "appId": "amp",
+        "appName": "Amp",
+        "network": "ethereum",
+        "tvl": 108631299.2190167
+      },
+      {
+        "id": "36",
+        "appId": "platypus-finance",
+        "appName": "Platypus Finance",
+        "network": "avalanche",
+        "tvl": 108622621.12166974
+      },
+      {
+        "id": "37",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "avalanche",
+        "tvl": 107284520.62939845
+      },
+      {
+        "id": "38",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "avalanche",
+        "tvl": 106285098.81776668
+      },
+      {
+        "id": "39",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "fantom",
+        "tvl": 102596037.763495
+      },
+      {
+        "id": "40",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "arbitrum",
+        "tvl": 93631209.75711776
+      },
+      {
+        "id": "41",
+        "appId": "bancor-v3",
+        "appName": "Bancor V3",
+        "network": "ethereum",
+        "tvl": 88627046.83090954
+      },
+      {
+        "id": "42",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "gnosis",
+        "tvl": 86336675.69392459
+      },
+      {
+        "id": "43",
+        "appId": "aave-v2",
+        "appName": "Aave V2",
+        "network": "avalanche",
+        "tvl": 85830254.59544852
+      },
+      {
+        "id": "44",
+        "appId": "vector-finance",
+        "appName": "Vector Finance",
+        "network": "avalanche",
+        "tvl": 85700342.1064463
+      },
+      {
+        "id": "45",
+        "appId": "badger",
+        "appName": "Badger",
+        "network": "ethereum",
+        "tvl": 82530338.07004558
+      },
+      {
+        "id": "46",
+        "appId": "gmx",
+        "appName": "GMX",
+        "network": "avalanche",
+        "tvl": 81038183.26092383
+      },
+      {
+        "id": "47",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "arbitrum",
+        "tvl": 74089429.63342959
+      },
+      {
+        "id": "48",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "binance-smart-chain",
+        "tvl": 72441499.50070572
+      },
+      {
+        "id": "49",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "polygon",
+        "tvl": 67901396.86508365
+      },
+      {
+        "id": "50",
+        "appId": "index-coop",
+        "appName": "Index Coop",
+        "network": "ethereum",
+        "tvl": 66072545.129498795
+      },
+      {
+        "id": "51",
+        "appId": "compound-v3",
+        "appName": "Compound III",
+        "network": "ethereum",
+        "tvl": 64517205.736340344
+      },
+      {
+        "id": "52",
+        "appId": "realt",
+        "appName": "RealT",
+        "network": "ethereum",
+        "tvl": 61580490.419999994
+      },
+      {
+        "id": "53",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "polygon",
+        "tvl": 60842776.19450196
+      },
+      {
+        "id": "54",
+        "appId": "aave-v1",
+        "appName": "Aave V1",
+        "network": "ethereum",
+        "tvl": 60612470.99817074
+      },
+      {
+        "id": "55",
+        "appId": "uniswap-v3",
+        "appName": "Uniswap V3",
+        "network": "polygon",
+        "tvl": 59730476.767514825
+      },
+      {
+        "id": "56",
+        "appId": "uniswap-v3",
+        "appName": "Uniswap V3",
+        "network": "arbitrum",
+        "tvl": 58867399.44002038
+      },
+      {
+        "id": "57",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "polygon",
+        "tvl": 56881965.54576954
+      },
+      {
+        "id": "58",
+        "appId": "realt",
+        "appName": "RealT",
+        "network": "gnosis",
+        "tvl": 56797458.1
+      },
+      {
+        "id": "59",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "arbitrum",
+        "tvl": 55875432.46408478
+      },
+      {
+        "id": "60",
+        "appId": "bancor",
+        "appName": "Bancor",
+        "network": "ethereum",
+        "tvl": 53480550.53287543
+      },
+      {
+        "id": "61",
+        "appId": "clearpool",
+        "appName": "Clearpool",
+        "network": "polygon",
+        "tvl": 53246147.12970953
+      },
+      {
+        "id": "62",
+        "appId": "geist",
+        "appName": "Geist",
+        "network": "fantom",
+        "tvl": 53141313.88012994
+      },
+      {
+        "id": "63",
+        "appId": "curve",
+        "appName": "Curve",
+        "network": "optimism",
+        "tvl": 52942369.12498152
+      },
+      {
+        "id": "64",
+        "appId": "clearpool",
+        "appName": "Clearpool",
+        "network": "ethereum",
+        "tvl": 52654331.581713855
+      },
+      {
+        "id": "65",
+        "appId": "frax-swap",
+        "appName": "Frax Swap",
+        "network": "ethereum",
+        "tvl": 52208076.89911131
+      },
+      {
+        "id": "66",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "binance-smart-chain",
+        "tvl": 48578102.65934476
+      },
+      {
+        "id": "67",
+        "appId": "origin-dollar",
+        "appName": "Origin Dollar",
+        "network": "ethereum",
+        "tvl": 47811774.69087027
+      },
+      {
+        "id": "68",
+        "appId": "x2y2",
+        "appName": "X2Y2",
+        "network": "ethereum",
+        "tvl": 45393434.54796794
+      },
+      {
+        "id": "69",
+        "appId": "uniswap-v3",
+        "appName": "Uniswap V3",
+        "network": "optimism",
+        "tvl": 45176551.01434805
+      },
+      {
+        "id": "70",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "fantom",
+        "tvl": 42252061.443831034
+      },
+      {
+        "id": "71",
+        "appId": "bend-dao",
+        "appName": "BendDAO",
+        "network": "ethereum",
+        "tvl": 41824705.71334936
+      },
+      {
+        "id": "72",
+        "appId": "belt",
+        "appName": "Belt",
+        "network": "binance-smart-chain",
+        "tvl": 41234089.872168146
+      },
+      {
+        "id": "73",
+        "appId": "manifold-finance",
+        "appName": "Manifold Finance",
+        "network": "ethereum",
+        "tvl": 40867066.13820633
+      },
+      {
+        "id": "74",
+        "appId": "beethoven-x",
+        "appName": "Beethoven-X",
+        "network": "fantom",
+        "tvl": 40725464.17953828
+      },
+      {
+        "id": "75",
+        "appId": "liquity",
+        "appName": "Liquity",
+        "network": "ethereum",
+        "tvl": 39491893.86363072
+      },
+      {
+        "id": "76",
+        "appId": "lyra-avalon",
+        "appName": "Lyra Avalon",
+        "network": "optimism",
+        "tvl": 38886682.75520799
+      },
+      {
+        "id": "77",
+        "appId": "qi-dao",
+        "appName": "Qi Dao",
+        "network": "polygon",
+        "tvl": 38665054.60657288
+      },
+      {
+        "id": "78",
+        "appId": "convex-frax",
+        "appName": "Convex Frax",
+        "network": "ethereum",
+        "tvl": 36983068.098191515
+      },
+      {
+        "id": "79",
+        "appId": "pool-together-v4",
+        "appName": "PoolTogetherV4",
+        "network": "optimism",
+        "tvl": 36684721.7178452
+      },
+      {
+        "id": "80",
+        "appId": "pangolin",
+        "appName": "Pangolin",
+        "network": "avalanche",
+        "tvl": 35496087.75271041
+      },
+      {
+        "id": "81",
+        "appId": "looks-rare",
+        "appName": "LooksRare",
+        "network": "ethereum",
+        "tvl": 35212821.66724532
+      },
+      {
+        "id": "82",
+        "appId": "origin-story",
+        "appName": "Origin Story",
+        "network": "ethereum",
+        "tvl": 34819602.272512406
+      },
+      {
+        "id": "83",
+        "appId": "loopring",
+        "appName": "Loopring",
+        "network": "ethereum",
+        "tvl": 33808253.944645636
+      },
+      {
+        "id": "84",
+        "appId": "tokenlon",
+        "appName": "Tokenlon",
+        "network": "ethereum",
+        "tvl": 33752659.81933307
+      },
+      {
+        "id": "85",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "polygon",
+        "tvl": 33485758.4755698
+      },
+      {
+        "id": "86",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "ethereum",
+        "tvl": 33414439.596306544
+      },
+      {
+        "id": "87",
+        "appId": "idle",
+        "appName": "Idle",
+        "network": "ethereum",
+        "tvl": 33358587.046835605
+      },
+      {
+        "id": "88",
+        "appId": "cream",
+        "appName": "Cream",
+        "network": "ethereum",
+        "tvl": 33335004.80877417
+      },
+      {
+        "id": "89",
+        "appId": "instadapp",
+        "appName": "Instadapp",
+        "network": "ethereum",
+        "tvl": 32219651.84000035
+      },
+      {
+        "id": "90",
+        "appId": "enzyme-finance",
+        "appName": "Enzyme Finance",
+        "network": "ethereum",
+        "tvl": 32035637.886274252
+      },
+      {
+        "id": "91",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "arbitrum",
+        "tvl": 30615264.052502852
+      },
+      {
+        "id": "92",
+        "appId": "tomb",
+        "appName": "Tomb Finance",
+        "network": "fantom",
+        "tvl": 28378554.7993389
+      },
+      {
+        "id": "93",
+        "appId": "rari-fuse",
+        "appName": "Rari Fuse",
+        "network": "ethereum",
+        "tvl": 28340041.84704055
+      },
+      {
+        "id": "94",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "arbitrum",
+        "tvl": 28031691.70910487
+      },
+      {
+        "id": "95",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "arbitrum",
+        "tvl": 27695022.777747277
+      },
+      {
+        "id": "96",
+        "appId": "mm-finance",
+        "appName": "MMFinance",
+        "network": "cronos",
+        "tvl": 26875486.43577953
+      },
+      {
+        "id": "97",
+        "appId": "meshswap",
+        "appName": "Meshswap",
+        "network": "polygon",
+        "tvl": 26436213.52104949
+      },
+      {
+        "id": "98",
+        "appId": "stake-dao",
+        "appName": "StakeDAO",
+        "network": "ethereum",
+        "tvl": 23749882.796441607
+      },
+      {
+        "id": "99",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "optimism",
+        "tvl": 23245649.136048026
+      },
+      {
+        "id": "100",
+        "appId": "plutus",
+        "appName": "PlutusDAO",
+        "network": "arbitrum",
+        "tvl": 22253563.524876453
+      },
+      {
+        "id": "101",
+        "appId": "kyber-dmm",
+        "appName": "Kyber DMM",
+        "network": "ethereum",
+        "tvl": 20859636.592296693
+      },
+      {
+        "id": "102",
+        "appId": "yearn",
+        "appName": "Yearn",
+        "network": "fantom",
+        "tvl": 20373927.648694523
+      },
+      {
+        "id": "103",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "fantom",
+        "tvl": 20320054.857296854
+      },
+      {
+        "id": "104",
+        "appId": "harvest",
+        "appName": "Harvest",
+        "network": "ethereum",
+        "tvl": 20258930.573827762
+      },
+      {
+        "id": "105",
+        "appId": "llama-airforce",
+        "appName": "Llama Airforce",
+        "network": "ethereum",
+        "tvl": 20095424.17719113
+      },
+      {
+        "id": "106",
+        "appId": "defi-swap",
+        "appName": "DeFi Swap",
+        "network": "ethereum",
+        "tvl": 19717984.017425623
+      },
+      {
+        "id": "107",
+        "appId": "umami-finance",
+        "appName": "Umami Finance",
+        "network": "arbitrum",
+        "tvl": 18687775.547905214
+      },
+      {
+        "id": "108",
+        "appId": "beefy",
+        "appName": "Beefy Finance",
+        "network": "avalanche",
+        "tvl": 18589471.541312505
+      },
+      {
+        "id": "109",
+        "appId": "alpha-tokenomics",
+        "appName": "Alpha Tokenomics",
+        "network": "ethereum",
+        "tvl": 18488888.34930044
+      },
+      {
+        "id": "110",
+        "appId": "stargate",
+        "appName": "Stargate",
+        "network": "optimism",
+        "tvl": 18084300.790474176
+      },
+      {
+        "id": "111",
+        "appId": "dfyn",
+        "appName": "Dfyn",
+        "network": "polygon",
+        "tvl": 17502428.572275445
+      },
+      {
+        "id": "112",
+        "appId": "liquiddriver",
+        "appName": "LiquidDriver",
+        "network": "fantom",
+        "tvl": 17295298.68606527
+      },
+      {
+        "id": "113",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "binance-smart-chain",
+        "tvl": 16617181.57848168
+      },
+      {
+        "id": "114",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "gnosis",
+        "tvl": 16532672.083862763
+      },
+      {
+        "id": "115",
+        "appId": "trader-joe-banker",
+        "appName": "Banker Joe",
+        "network": "avalanche",
+        "tvl": 16249570.023251139
+      },
+      {
+        "id": "116",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "avalanche",
+        "tvl": 16045052.688623734
+      },
+      {
+        "id": "117",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "polygon",
+        "tvl": 14719570.96693906
+      },
+      {
+        "id": "118",
+        "appId": "aura",
+        "appName": "Aura Finance",
+        "network": "ethereum",
+        "tvl": 14712653.648431174
+      },
+      {
+        "id": "119",
+        "appId": "alchemix-v2",
+        "appName": "Alchemix V2",
+        "network": "ethereum",
+        "tvl": 14685455.419712331
+      },
+      {
+        "id": "120",
+        "appId": "scream-v2",
+        "appName": "Scream V2",
+        "network": "fantom",
+        "tvl": 14341143.203592485
+      },
+      {
+        "id": "121",
+        "appId": "mstable",
+        "appName": "mStable",
+        "network": "ethereum",
+        "tvl": 14317619.54338269
+      },
+      {
+        "id": "122",
+        "appId": "spiritswap",
+        "appName": "SpiritSwap",
+        "network": "fantom",
+        "tvl": 14107475.363981096
+      },
+      {
+        "id": "123",
+        "appId": "dodo",
+        "appName": "Dodo",
+        "network": "binance-smart-chain",
+        "tvl": 14045409.895126829
+      },
+      {
+        "id": "124",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "fantom",
+        "tvl": 12889304.024909459
+      },
+      {
+        "id": "125",
+        "appId": "aurigami",
+        "appName": "Aurigami",
+        "network": "aurora",
+        "tvl": 12686884.256052712
+      },
+      {
+        "id": "126",
+        "appId": "zero-x",
+        "appName": "0x",
+        "network": "ethereum",
+        "tvl": 12658418.026298018
+      },
+      {
+        "id": "127",
+        "appId": "iron-bank",
+        "appName": "Iron Bank",
+        "network": "optimism",
+        "tvl": 12501426.599438917
+      },
+      {
+        "id": "128",
+        "appId": "dfx",
+        "appName": "DFX",
+        "network": "ethereum",
+        "tvl": 12450236.935325526
+      },
+      {
+        "id": "129",
+        "appId": "scream",
+        "appName": "Scream",
+        "network": "fantom",
+        "tvl": 11694491.810488697
+      },
+      {
+        "id": "130",
+        "appId": "nereus-finance",
+        "appName": "Nereus Finance",
+        "network": "avalanche",
+        "tvl": 11400943.961243993
+      },
+      {
+        "id": "131",
+        "appId": "hop",
+        "appName": "Hop",
+        "network": "arbitrum",
+        "tvl": 10678829.960915782
+      },
+      {
+        "id": "132",
+        "appId": "solidex",
+        "appName": "Solidex",
+        "network": "fantom",
+        "tvl": 10606591.63959431
+      },
+      {
+        "id": "133",
+        "appId": "trisolaris",
+        "appName": "Trisolaris",
+        "network": "aurora",
+        "tvl": 10529633.800006213
+      },
+      {
+        "id": "134",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "ethereum",
+        "tvl": 10480606.957249256
+      },
+      {
+        "id": "135",
+        "appId": "pika-protocol-v3",
+        "appName": "Pika Protocol V3",
+        "network": "optimism",
+        "tvl": 10095573.378643
+      },
+      {
+        "id": "136",
+        "appId": "sturdy",
+        "appName": "Sturdy",
+        "network": "ethereum",
+        "tvl": 9810795.24091985
+      },
+      {
+        "id": "137",
+        "appId": "hop",
+        "appName": "Hop",
+        "network": "optimism",
+        "tvl": 9585930.124132005
+      },
+      {
+        "id": "138",
+        "appId": "thales",
+        "appName": "Thales",
+        "network": "optimism",
+        "tvl": 9289836.80378163
+      },
+      {
+        "id": "139",
+        "appId": "jones-dao",
+        "appName": "Jones Dao",
+        "network": "arbitrum",
+        "tvl": 9202824.845785378
+      },
+      {
+        "id": "140",
+        "appId": "rook",
+        "appName": "Rook",
+        "network": "ethereum",
+        "tvl": 9181485.341938207
+      },
+      {
+        "id": "141",
+        "appId": "barnbridge",
+        "appName": "BarnBridge",
+        "network": "ethereum",
+        "tvl": 9091273.145558564
+      },
+      {
+        "id": "142",
+        "appId": "frax",
+        "appName": "Frax",
+        "network": "arbitrum",
+        "tvl": 8638104.371198183
+      },
+      {
+        "id": "143",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "avalanche",
+        "tvl": 8117205.975373029
+      },
+      {
+        "id": "144",
+        "appId": "solarbeam",
+        "appName": "Solarbeam",
+        "network": "moonriver",
+        "tvl": 8094134.6110140355
+      },
+      {
+        "id": "145",
+        "appId": "pirex",
+        "appName": "Pirex",
+        "network": "ethereum",
+        "tvl": 7688129.455813381
+      },
+      {
+        "id": "146",
+        "appId": "origin",
+        "appName": "Origin",
+        "network": "ethereum",
+        "tvl": 7553189.984654761
+      },
+      {
+        "id": "147",
+        "appId": "agave",
+        "appName": "Agave",
+        "network": "gnosis",
+        "tvl": 6996301.905959628
+      },
+      {
+        "id": "148",
+        "appId": "homora-v2",
+        "appName": "Homora V2",
+        "network": "avalanche",
+        "tvl": 6830780.331453037
+      },
+      {
+        "id": "149",
+        "appId": "pendle",
+        "appName": "Pendle",
+        "network": "ethereum",
+        "tvl": 6797497.143994571
+      },
+      {
+        "id": "150",
+        "appId": "synapse",
+        "appName": "Synapse",
+        "network": "optimism",
+        "tvl": 6691211.357575197
+      },
+      {
+        "id": "151",
+        "appId": "p-stake",
+        "appName": "pSTAKE",
+        "network": "binance-smart-chain",
+        "tvl": 6509822.624320774
+      },
+      {
+        "id": "152",
+        "appId": "pool-together-v4",
+        "appName": "PoolTogetherV4",
+        "network": "polygon",
+        "tvl": 6450176.4006439755
+      },
+      {
+        "id": "153",
+        "appId": "qi-dao",
+        "appName": "Qi Dao",
+        "network": "fantom",
+        "tvl": 6408377.133281693
+      },
+      {
+        "id": "154",
+        "appId": "metavault-trade",
+        "appName": "Metavault.Trade",
+        "network": "polygon",
+        "tvl": 6397251.661646238
+      },
+      {
+        "id": "155",
+        "appId": "hop",
+        "appName": "Hop",
+        "network": "gnosis",
+        "tvl": 6388286.6772752
+      },
+      {
+        "id": "156",
+        "appId": "pool-together-v4",
+        "appName": "PoolTogetherV4",
+        "network": "ethereum",
+        "tvl": 6365112.956538335
+      },
+      {
+        "id": "157",
+        "appId": "dystopia",
+        "appName": "Dystopia",
+        "network": "polygon",
+        "tvl": 6264183.882015419
+      },
+      {
+        "id": "158",
+        "appId": "ellipsis",
+        "appName": "Ellipsis",
+        "network": "binance-smart-chain",
+        "tvl": 6246104.5922399275
+      },
+      {
+        "id": "159",
+        "appId": "rubicon",
+        "appName": "Rubicon",
+        "network": "optimism",
+        "tvl": 6042604.530880771
+      },
+      {
+        "id": "160",
+        "appId": "floor-dao",
+        "appName": "FloorDAO",
+        "network": "ethereum",
+        "tvl": 5776296.659685058
+      },
+      {
+        "id": "161",
+        "appId": "superfluid",
+        "appName": "Superfluid",
+        "network": "polygon",
+        "tvl": 5621315.090306176
+      },
+      {
+        "id": "162",
+        "appId": "openleverage",
+        "appName": "OpenLeverage",
+        "network": "binance-smart-chain",
+        "tvl": 5591465.161471757
+      },
+      {
+        "id": "163",
+        "appId": "kyber-dmm",
+        "appName": "Kyber DMM",
+        "network": "polygon",
+        "tvl": 5481429.370104258
+      },
+      {
+        "id": "164",
+        "appId": "1inch",
+        "appName": "1inch",
+        "network": "ethereum",
+        "tvl": 5270717.111914827
+      },
+      {
+        "id": "165",
+        "appId": "perpetual-protocol",
+        "appName": "Perpetual",
+        "network": "ethereum",
+        "tvl": 5037048.513865493
+      },
+      {
+        "id": "166",
+        "appId": "aavegotchi",
+        "appName": "Aavegotchi",
+        "network": "polygon",
+        "tvl": 5003952.264367207
+      },
+      {
+        "id": "167",
+        "appId": "hop",
+        "appName": "Hop",
+        "network": "polygon",
+        "tvl": 4915181.008620936
+      },
+      {
+        "id": "168",
+        "appId": "dfx",
+        "appName": "DFX",
+        "network": "polygon",
+        "tvl": 4828539.710649057
+      },
+      {
+        "id": "169",
+        "appId": "fei",
+        "appName": "Fei",
+        "network": "ethereum",
+        "tvl": 4822507.999459342
+      },
+      {
+        "id": "170",
+        "appId": "concentrator",
+        "appName": "Concentrator",
+        "network": "ethereum",
+        "tvl": 4683054.629557425
+      },
+      {
+        "id": "171",
+        "appId": "iron-bank",
+        "appName": "Iron Bank",
+        "network": "avalanche",
+        "tvl": 4522190.527782448
+      },
+      {
+        "id": "172",
+        "appId": "dhedge-v2",
+        "appName": "dHEDGE V2",
+        "network": "optimism",
+        "tvl": 4314873.004854262
+      },
+      {
+        "id": "173",
+        "appId": "saddle",
+        "appName": "Saddle",
+        "network": "ethereum",
+        "tvl": 4226111.822604544
+      },
+      {
+        "id": "174",
+        "appId": "popsicle",
+        "appName": "Popsicle",
+        "network": "ethereum",
+        "tvl": 4142337.752842733
+      },
+      {
+        "id": "175",
+        "appId": "premia",
+        "appName": "Premia",
+        "network": "ethereum",
+        "tvl": 4137704.4810089553
+      },
+      {
+        "id": "176",
+        "appId": "solidly",
+        "appName": "Solidly",
+        "network": "fantom",
+        "tvl": 4124954.643326826
+      },
+      {
+        "id": "177",
+        "appId": "rally",
+        "appName": "Rally",
+        "network": "ethereum",
+        "tvl": 4093491.6477179215
+      },
+      {
+        "id": "178",
+        "appId": "dhedge-v2",
+        "appName": "dHEDGE V2",
+        "network": "polygon",
+        "tvl": 4068366.5689925198
+      },
+      {
+        "id": "179",
+        "appId": "honeyswap",
+        "appName": "Honeyswap",
+        "network": "gnosis",
+        "tvl": 3925152.5945159695
+      },
+      {
+        "id": "180",
+        "appId": "smoothy",
+        "appName": "Smoothy",
+        "network": "ethereum",
+        "tvl": 3830251.407349852
+      },
+      {
+        "id": "181",
+        "appId": "beethoven-x",
+        "appName": "Beethoven-X",
+        "network": "optimism",
+        "tvl": 3778232.186603571
+      },
+      {
+        "id": "182",
+        "appId": "airswap",
+        "appName": "AirSwap",
+        "network": "ethereum",
+        "tvl": 3617736.873781628
+      },
+      {
+        "id": "183",
+        "appId": "ubeswap",
+        "appName": "Ubeswap",
+        "network": "celo",
+        "tvl": 3549587.1752467863
+      },
+      {
+        "id": "184",
+        "appId": "aave-amm",
+        "appName": "Aave AMM",
+        "network": "ethereum",
+        "tvl": 3506008.9982258673
+      },
+      {
+        "id": "185",
+        "appId": "mstable",
+        "appName": "mStable",
+        "network": "polygon",
+        "tvl": 3423472.591157756
+      },
+      {
+        "id": "186",
+        "appId": "epns",
+        "appName": "EPNS",
+        "network": "ethereum",
+        "tvl": 3225588.991271617
+      },
+      {
+        "id": "187",
+        "appId": "cream",
+        "appName": "Cream",
+        "network": "binance-smart-chain",
+        "tvl": 3141701.969800708
+      },
+      {
+        "id": "188",
+        "appId": "qi-dao",
+        "appName": "Qi Dao",
+        "network": "optimism",
+        "tvl": 3089717.3473926038
+      },
+      {
+        "id": "189",
+        "appId": "robo-vault",
+        "appName": "Robo Vault",
+        "network": "avalanche",
+        "tvl": 3059085.6774960016
+      },
+      {
+        "id": "190",
+        "appId": "premia",
+        "appName": "Premia",
+        "network": "arbitrum",
+        "tvl": 3015685.0595160425
+      },
+      {
+        "id": "191",
+        "appId": "market-xyz",
+        "appName": "Market",
+        "network": "avalanche",
+        "tvl": 2979885.06152342
+      },
+      {
+        "id": "192",
+        "appId": "frax-lend",
+        "appName": "Frax Lend",
+        "network": "ethereum",
+        "tvl": 2836914.5966701726
+      },
+      {
+        "id": "193",
+        "appId": "unagii",
+        "appName": "Unagii",
+        "network": "ethereum",
+        "tvl": 2501042.2139539653
+      },
+      {
+        "id": "194",
+        "appId": "popsicle",
+        "appName": "Popsicle",
+        "network": "fantom",
+        "tvl": 2395382.989940685
+      },
+      {
+        "id": "195",
+        "appId": "clever",
+        "appName": "CLever",
+        "network": "ethereum",
+        "tvl": 2332238.3786729183
+      },
+      {
+        "id": "196",
+        "appId": "badger",
+        "appName": "Badger",
+        "network": "arbitrum",
+        "tvl": 2149312.4828522033
+      },
+      {
+        "id": "197",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "optimism",
+        "tvl": 2120063.270830976
+      },
+      {
+        "id": "198",
+        "appId": "sushiswap-bentobox",
+        "appName": "SushiSwap BentoBox",
+        "network": "polygon",
+        "tvl": 2067541.4248915485
+      },
+      {
+        "id": "199",
+        "appId": "uniswap-v1",
+        "appName": "Uniswap",
+        "network": "ethereum",
+        "tvl": 2051380.8131585333
+      },
+      {
+        "id": "200",
+        "appId": "homora-v2",
+        "appName": "Homora V2",
+        "network": "ethereum",
+        "tvl": 2032726.342140955
+      },
+      {
+        "id": "201",
+        "appId": "powerpool",
+        "appName": "PowerPool",
+        "network": "ethereum",
+        "tvl": 2022386.2534718825
+      },
+      {
+        "id": "202",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "fantom",
+        "tvl": 1957356.7319502255
+      },
+      {
+        "id": "203",
+        "appId": "waultswap",
+        "appName": "WaultSwap",
+        "network": "binance-smart-chain",
+        "tvl": 1952204.139989853
+      },
+      {
+        "id": "204",
+        "appId": "aelin",
+        "appName": "Aelin",
+        "network": "optimism",
+        "tvl": 1876440.3842323152
+      },
+      {
+        "id": "205",
+        "appId": "aave-v3",
+        "appName": "Aave V3",
+        "network": "harmony",
+        "tvl": 1829516.5095730133
+      },
+      {
+        "id": "206",
+        "appId": "bzx",
+        "appName": "bZx",
+        "network": "binance-smart-chain",
+        "tvl": 1828317.58891583
+      },
+      {
+        "id": "207",
+        "appId": "iron-bank",
+        "appName": "Iron Bank",
+        "network": "fantom",
+        "tvl": 1763554.7744781056
+      },
+      {
+        "id": "208",
+        "appId": "adamant",
+        "appName": "Adamant Finance",
+        "network": "polygon",
+        "tvl": 1757219.0199038163
+      },
+      {
+        "id": "209",
+        "appId": "tempus",
+        "appName": "Tempus Finance",
+        "network": "ethereum",
+        "tvl": 1687104.5195422906
+      },
+      {
+        "id": "210",
+        "appId": "1inch",
+        "appName": "1inch",
+        "network": "binance-smart-chain",
+        "tvl": 1672780.1490407982
+      },
+      {
+        "id": "211",
+        "appId": "armor",
+        "appName": "Armor",
+        "network": "ethereum",
+        "tvl": 1504193.5557629447
+      },
+      {
+        "id": "212",
+        "appId": "tempus",
+        "appName": "Tempus Finance",
+        "network": "fantom",
+        "tvl": 1446230.003447727
+      },
+      {
+        "id": "213",
+        "appId": "harvest",
+        "appName": "Harvest",
+        "network": "polygon",
+        "tvl": 1356892.4821619645
+      },
+      {
+        "id": "214",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "fantom",
+        "tvl": 1351850.5109066071
+      },
+      {
+        "id": "215",
+        "appId": "rari",
+        "appName": "Rari",
+        "network": "ethereum",
+        "tvl": 1238295.30483145
+      },
+      {
+        "id": "216",
+        "appId": "qi-dao",
+        "appName": "Qi Dao",
+        "network": "arbitrum",
+        "tvl": 1226882.4468815096
+      },
+      {
+        "id": "217",
+        "appId": "swerve",
+        "appName": "Swerve",
+        "network": "ethereum",
+        "tvl": 1122606.1298967681
+      },
+      {
+        "id": "218",
+        "appId": "diffusion",
+        "appName": "Diffusion Finance",
+        "network": "evmos",
+        "tvl": 1069857.1825351482
+      },
+      {
+        "id": "219",
+        "appId": "pie-dao",
+        "appName": "PieDAO",
+        "network": "ethereum",
+        "tvl": 1059705.590266398
+      },
+      {
+        "id": "220",
+        "appId": "shell",
+        "appName": "Shell",
+        "network": "ethereum",
+        "tvl": 1057235.390123499
+      },
+      {
+        "id": "221",
+        "appId": "unit",
+        "appName": "Unit",
+        "network": "ethereum",
+        "tvl": 1013145.9426792273
+      },
+      {
+        "id": "222",
+        "appId": "granary-finance",
+        "appName": "The Granary",
+        "network": "optimism",
+        "tvl": 909121.9552652538
+      },
+      {
+        "id": "223",
+        "appId": "swapr",
+        "appName": "Swapr",
+        "network": "arbitrum",
+        "tvl": 851970.5946041875
+      },
+      {
+        "id": "224",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "arbitrum",
+        "tvl": 818696.7136913309
+      },
+      {
+        "id": "225",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "celo",
+        "tvl": 804641.7670491574
+      },
+      {
+        "id": "226",
+        "appId": "qi-dao",
+        "appName": "Qi Dao",
+        "network": "gnosis",
+        "tvl": 803816.06763846
+      },
+      {
+        "id": "227",
+        "appId": "across",
+        "appName": "Across",
+        "network": "ethereum",
+        "tvl": 798575.5265364011
+      },
+      {
+        "id": "228",
+        "appId": "alpha-v1",
+        "appName": "Alpha",
+        "network": "ethereum",
+        "tvl": 797512.2032264502
+      },
+      {
+        "id": "229",
+        "appId": "sushiswap-kashi",
+        "appName": "SushiSwap Kashi",
+        "network": "ethereum",
+        "tvl": 789661.7675005327
+      },
+      {
+        "id": "230",
+        "appId": "sushiswap",
+        "appName": "SushiSwap",
+        "network": "binance-smart-chain",
+        "tvl": 773192.5081361972
+      },
+      {
+        "id": "231",
+        "appId": "dforce",
+        "appName": "dForce",
+        "network": "ethereum",
+        "tvl": 757173.5410215853
+      },
+      {
+        "id": "232",
+        "appId": "zip-swap",
+        "appName": "ZipSwap",
+        "network": "optimism",
+        "tvl": 742392.3284757026
+      },
+      {
+        "id": "233",
+        "appId": "penguin",
+        "appName": "Penguin Finance",
+        "network": "avalanche",
+        "tvl": 736136.6319461355
+      },
+      {
+        "id": "234",
+        "appId": "ooki",
+        "appName": "ooki",
+        "network": "ethereum",
+        "tvl": 679649.0236141655
+      },
+      {
+        "id": "235",
+        "appId": "polynomial",
+        "appName": "Polynomial Protocol",
+        "network": "optimism",
+        "tvl": 678627.5477829129
+      },
+      {
+        "id": "236",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "polygon",
+        "tvl": 666159.7594914237
+      },
+      {
+        "id": "237",
+        "appId": "onx",
+        "appName": "OnX",
+        "network": "ethereum",
+        "tvl": 631918.3486833272
+      },
+      {
+        "id": "238",
+        "appId": "strongblock",
+        "appName": "Strongblock",
+        "network": "ethereum",
+        "tvl": 626496.0145384794
+      },
+      {
+        "id": "239",
+        "appId": "yaxis",
+        "appName": "yAxis",
+        "network": "ethereum",
+        "tvl": 613516.277944249
+      },
+      {
+        "id": "240",
+        "appId": "mooniswap",
+        "appName": "Mooniswap",
+        "network": "ethereum",
+        "tvl": 545685.6801547363
+      },
+      {
+        "id": "241",
+        "appId": "openleverage",
+        "appName": "OpenLeverage",
+        "network": "ethereum",
+        "tvl": 525771.6520405451
+      },
+      {
+        "id": "242",
+        "appId": "sturdy",
+        "appName": "Sturdy",
+        "network": "fantom",
+        "tvl": 491994.90742151317
+      },
+      {
+        "id": "243",
+        "appId": "solace",
+        "appName": "Solace",
+        "network": "ethereum",
+        "tvl": 483796.3672362036
+      },
+      {
+        "id": "244",
+        "appId": "ease",
+        "appName": "Ease.org DeFi Cover",
+        "network": "ethereum",
+        "tvl": 479710.27294864785
+      },
+      {
+        "id": "245",
+        "appId": "pods-yield",
+        "appName": "Pods Yield",
+        "network": "ethereum",
+        "tvl": 477285.64593155717
+      },
+      {
+        "id": "246",
+        "appId": "tenderize",
+        "appName": "Tenderize",
+        "network": "ethereum",
+        "tvl": 452928.8872348384
+      },
+      {
+        "id": "247",
+        "appId": "steak-hut",
+        "appName": "SteakHut",
+        "network": "avalanche",
+        "tvl": 447742.7784007563
+      },
+      {
+        "id": "248",
+        "appId": "robo-vault",
+        "appName": "Robo Vault",
+        "network": "fantom",
+        "tvl": 432775.3301102042
+      },
+      {
+        "id": "249",
+        "appId": "yam",
+        "appName": "Yam",
+        "network": "ethereum",
+        "tvl": 417683.40245475265
+      },
+      {
+        "id": "250",
+        "appId": "tenderize",
+        "appName": "Tenderize",
+        "network": "arbitrum",
+        "tvl": 417074.8788611567
+      },
+      {
+        "id": "251",
+        "appId": "lydia",
+        "appName": "Lydia Finance",
+        "network": "avalanche",
+        "tvl": 380049.8737299481
+      },
+      {
+        "id": "252",
+        "appId": "xsigma",
+        "appName": "xSigma",
+        "network": "ethereum",
+        "tvl": 368422.45475584426
+      },
+      {
+        "id": "253",
+        "appId": "naos",
+        "appName": "NAOS Finance",
+        "network": "ethereum",
+        "tvl": 346957.034299611
+      },
+      {
+        "id": "254",
+        "appId": "dodo",
+        "appName": "Dodo",
+        "network": "polygon",
+        "tvl": 311472.51699640276
+      },
+      {
+        "id": "255",
+        "appId": "evmoswap",
+        "appName": "EvmoSwap",
+        "network": "evmos",
+        "tvl": 304046.86003462895
+      },
+      {
+        "id": "256",
+        "appId": "pool-together-v4",
+        "appName": "PoolTogetherV4",
+        "network": "avalanche",
+        "tvl": 299485.368745
+      },
+      {
+        "id": "257",
+        "appId": "mirror",
+        "appName": "Mirror",
+        "network": "ethereum",
+        "tvl": 276519.8251103595
+      },
+      {
+        "id": "258",
+        "appId": "yearn",
+        "appName": "Yearn",
+        "network": "arbitrum",
+        "tvl": 256875.9681227123
+      },
+      {
+        "id": "259",
+        "appId": "phuture",
+        "appName": "Phuture",
+        "network": "avalanche",
+        "tvl": 253799.64476424153
+      },
+      {
+        "id": "260",
+        "appId": "harvest",
+        "appName": "Harvest",
+        "network": "binance-smart-chain",
+        "tvl": 233540.80128618766
+      },
+      {
+        "id": "261",
+        "appId": "pika-protocol",
+        "appName": "Pika Protocol V2",
+        "network": "optimism",
+        "tvl": 209906.930977
+      },
+      {
+        "id": "262",
+        "appId": "cryptex",
+        "appName": "Cryptex",
+        "network": "ethereum",
+        "tvl": 172285.7521207141
+      },
+      {
+        "id": "263",
+        "appId": "sushiswap-kashi",
+        "appName": "SushiSwap Kashi",
+        "network": "polygon",
+        "tvl": 156113.7555947371
+      },
+      {
+        "id": "264",
+        "appId": "aelin",
+        "appName": "Aelin",
+        "network": "ethereum",
+        "tvl": 153222.47375770248
+      },
+      {
+        "id": "265",
+        "appId": "waultswap",
+        "appName": "WaultSwap",
+        "network": "polygon",
+        "tvl": 149718.7357978051
+      },
+      {
+        "id": "266",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "moonriver",
+        "tvl": 141875.45738420112
+      },
+      {
+        "id": "267",
+        "appId": "bent",
+        "appName": "Bent Finance",
+        "network": "ethereum",
+        "tvl": 141361.40711799375
+      },
+      {
+        "id": "268",
+        "appId": "solace",
+        "appName": "Solace",
+        "network": "aurora",
+        "tvl": 140809.0575485368
+      },
+      {
+        "id": "269",
+        "appId": "ape-tax",
+        "appName": "Ape Tax",
+        "network": "ethereum",
+        "tvl": 111825.59085315655
+      },
+      {
+        "id": "270",
+        "appId": "morpheus-swap",
+        "appName": "MorpheusSwap",
+        "network": "fantom",
+        "tvl": 95993.83984492635
+      },
+      {
+        "id": "271",
+        "appId": "solace",
+        "appName": "Solace",
+        "network": "polygon",
+        "tvl": 95721.12043421801
+      },
+      {
+        "id": "272",
+        "appId": "barnbridge-smart-alpha",
+        "appName": "Barnbridge Smart Alpha",
+        "network": "ethereum",
+        "tvl": 86037.08421942046
+      },
+      {
+        "id": "273",
+        "appId": "banano",
+        "appName": "Banano",
+        "network": "polygon",
+        "tvl": 77826.5927883998
+      },
+      {
+        "id": "274",
+        "appId": "cream",
+        "appName": "Cream",
+        "network": "arbitrum",
+        "tvl": 73082.69959945227
+      },
+      {
+        "id": "275",
+        "appId": "banano",
+        "appName": "Banano",
+        "network": "binance-smart-chain",
+        "tvl": 68127.59510930086
+      },
+      {
+        "id": "276",
+        "appId": "furucombo",
+        "appName": "Furucombo",
+        "network": "polygon",
+        "tvl": 63056.57256
+      },
+      {
+        "id": "277",
+        "appId": "banano",
+        "appName": "Banano",
+        "network": "fantom",
+        "tvl": 59971.09162421852
+      },
+      {
+        "id": "278",
+        "appId": "ooki",
+        "appName": "ooki",
+        "network": "arbitrum",
+        "tvl": 54998.10799595769
+      },
+      {
+        "id": "279",
+        "appId": "governor-dao",
+        "appName": "Governor DAO",
+        "network": "ethereum",
+        "tvl": 42013.437560481674
+      },
+      {
+        "id": "280",
+        "appId": "sushiswap-bentobox",
+        "appName": "SushiSwap BentoBox",
+        "network": "binance-smart-chain",
+        "tvl": 41808.18328280044
+      },
+      {
+        "id": "281",
+        "appId": "honeyswap",
+        "appName": "Honeyswap",
+        "network": "polygon",
+        "tvl": 41534.918834580334
+      },
+      {
+        "id": "282",
+        "appId": "sushiswap-kashi",
+        "appName": "SushiSwap Kashi",
+        "network": "arbitrum",
+        "tvl": 40691.45880431793
+      },
+      {
+        "id": "283",
+        "appId": "kinesis-labs",
+        "appName": "Kinesis Labs",
+        "network": "evmos",
+        "tvl": 38557.63811968922
+      },
+      {
+        "id": "284",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "aurora",
+        "tvl": 36082.55513822428
+      },
+      {
+        "id": "285",
+        "appId": "symphony",
+        "appName": "Symphony Finance",
+        "network": "polygon",
+        "tvl": 34312.4790841487
+      },
+      {
+        "id": "286",
+        "appId": "ooki",
+        "appName": "ooki",
+        "network": "polygon",
+        "tvl": 32363.350097094917
+      },
+      {
+        "id": "287",
+        "appId": "homora-v2",
+        "appName": "Homora V2",
+        "network": "fantom",
+        "tvl": 25897.742645250393
+      },
+      {
+        "id": "288",
+        "appId": "sushiswap-kashi",
+        "appName": "SushiSwap Kashi",
+        "network": "binance-smart-chain",
+        "tvl": 22733.350517595183
+      },
+      {
+        "id": "289",
+        "appId": "teddy-cash",
+        "appName": "Teddy Cash",
+        "network": "avalanche",
+        "tvl": 19738.523085503406
+      },
+      {
+        "id": "290",
+        "appId": "granary-finance",
+        "appName": "The Granary",
+        "network": "ethereum",
+        "tvl": 16933.5411801411
+      },
+      {
+        "id": "291",
+        "appId": "mushroom",
+        "appName": "Mushroom",
+        "network": "ethereum",
+        "tvl": 13598.781209371153
+      },
+      {
+        "id": "292",
+        "appId": "coslend",
+        "appName": "Coslend",
+        "network": "evmos",
+        "tvl": 10667.271686682054
+      },
+      {
+        "id": "293",
+        "appId": "symphony",
+        "appName": "Symphony Finance",
+        "network": "avalanche",
+        "tvl": 8651.628549508725
+      },
+      {
+        "id": "294",
+        "appId": "ooki",
+        "appName": "ooki",
+        "network": "optimism",
+        "tvl": 8603.62451477713
+      },
+      {
+        "id": "295",
+        "appId": "pickle",
+        "appName": "Pickle",
+        "network": "fantom",
+        "tvl": 7267.380995199506
+      },
+      {
+        "id": "296",
+        "appId": "popsicle",
+        "appName": "Popsicle",
+        "network": "binance-smart-chain",
+        "tvl": 5653.475723136581
+      },
+      {
+        "id": "297",
+        "appId": "symphony",
+        "appName": "Symphony Finance",
+        "network": "optimism",
+        "tvl": 4539.739050941576
+      },
+      {
+        "id": "298",
+        "appId": "ape-tax",
+        "appName": "Ape Tax",
+        "network": "fantom",
+        "tvl": 3280.2563303733573
+      },
+      {
+        "id": "299",
+        "appId": "ooki",
+        "appName": "ooki",
+        "network": "binance-smart-chain",
+        "tvl": 3014.6570675472362
+      },
+      {
+        "id": "300",
+        "appId": "saddle",
+        "appName": "Saddle",
+        "network": "evmos",
+        "tvl": 1984.3884082100353
+      },
+      {
+        "id": "301",
+        "appId": "badger",
+        "appName": "Badger",
+        "network": "polygon",
+        "tvl": 1049.4079496816541
+      },
+      {
+        "id": "302",
+        "appId": "market-xyz",
+        "appName": "Market",
+        "network": "polygon",
+        "tvl": -967175.3717032281
+      },
+      {
+        "id": "303",
+        "appId": "market-xyz",
+        "appName": "Market",
+        "network": "fantom",
+        "tvl": -2744646.0036443584
+      }
+    ],
+    "trendingApps": [
+      {
+        "id": "aave-v3",
+        "name": "Aave V3",
+        "img": null,
+        "tvl": 454743283.36741465,
+        "network": "optimism"
+      },
+      {
+        "id": "gmx",
+        "name": "GMX",
+        "img": null,
+        "tvl": 659034356.424359,
+        "network": "arbitrum"
+      },
+      {
+        "id": "compound",
+        "name": "Compound",
+        "img": null,
+        "tvl": 2234761653.829885,
+        "network": "ethereum"
+      },
+      {
+        "id": "liquity",
+        "name": "Liquity",
+        "img": null,
+        "tvl": 39491893.86363072,
+        "network": "ethereum"
+      },
+      {
+        "id": "maple",
+        "name": "Maple",
+        "img": null,
+        "tvl": 349421456.59548247,
+        "network": "ethereum"
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "img": null,
+        "tvl": 735540739.6068202,
+        "network": "binance-smart-chain"
+      },
+      {
+        "id": "convex",
+        "name": "Convex",
+        "img": null,
+        "tvl": 3983388163.3782973,
+        "network": "ethereum"
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": {
+            "date": {
+              "hours": "hours",
+              "days": "days",
+              "weeks": "weeks",
+              "months": "months"
+            },
+            "actions": {
+              "add": "Add",
+              "remove": "Remove",
+              "cancel": "Cancel",
+              "save": "Save",
+              "expand": "Expand",
+              "collapse": "Collapse"
+            },
+            "meta": { "explore": "Explore {{ name }} on Zapper!" },
+            "g": {
+              "buttons": {
+                "apply": "Apply",
+                "close": "Close",
+                "downloadCSV": "Download CSV",
+                "max": "Max",
+                "moreInfo": "More info",
+                "goToDashboard": "Go To Dashboard",
+                "connectedTo": "Connected to {{account}}",
+                "filter": "Filter",
+                "sort": "Sort"
+              },
+              "daoTerms": {
+                "accelerator": "Accelerator",
+                "agency": "Agency",
+                "aggregator": "Aggregator",
+                "ai": "AI",
+                "amm": "AMM",
+                "art": "Art",
+                "art-gallery": "Art Gallery",
+                "asset-manager": "Asset Manager",
+                "auction": "Auction",
+                "auditor": "Auditor",
+                "bitcoin": "Bitcoin",
+                "climate": "Climate",
+                "collection": "Collection",
+                "community": "Community",
+                "community-wallet": "Community Wallet",
+                "consultants": "Consultants",
+                "content": "Content",
+                "coordination": "Coordination",
+                "creators": "Creators",
+                "cross-chain": "Cross Chain",
+                "crowdfunding": "Crowd Funding",
+                "curation": "Curation",
+                "dao-tooling": "DAO Tooling",
+                "defi-tooling": "DeFi Tooling",
+                "derivatives": "Derivatives",
+                "developer": "Developer",
+                "developer-tooling": "Developer Tooling",
+                "dex": "DEX",
+                "digiphysical": "DigiPhysical",
+                "digital-real-estate": "Digital Real Estate",
+                "education": "Education",
+                "esports": "Esports",
+                "farming": "Farming",
+                "fixed-yield": "Fixed Yield",
+                "gaming": "Gaming",
+                "grants": "Grants",
+                "identities": "Identities",
+                "index-fund": "Index Fund",
+                "infrastructure": "Infrastructure",
+                "insurance": "Insurance",
+                "investing": "Investing",
+                "launchpad": "Launchpad",
+                "legal": "Legal",
+                "lending": "Lending",
+                "limited-ownership": "Limited Ownership",
+                "marketing": "Marketing",
+                "marketplace": "Marketplace",
+                "merch": "Merch",
+                "metaverse": "Metaverse",
+                "nftfi": "NFTFi",
+                "options": "Options",
+                "perpetuals": "Perpetuals",
+                "physical-real-estate": "Physical Real Estate",
+                "play-to-earn": "Play to Earn",
+                "polygon-ecosystem": "Polygon Ecosystem",
+                "privacy": "Privacy",
+                "security": "Security",
+                "social": "Social",
+                "social-impact": "Social Impact",
+                "sports": "Sports",
+                "stablecoin": "Stablecoin",
+                "subdao": "Subdao",
+                "surveys": "Surveys",
+                "synthetics": "Synthetics",
+                "vc": "VC",
+                "yield-aggregator": "Yield & Aggregator",
+                "yield": "Yield"
+              },
+              "terms": {
+                "address": "Address",
+                "accountTotal": "Account Total",
+                "itemsCount_one": "{{formattedCount}} item",
+                "itemsCount_other": "{{formattedCount}} items",
+                "resultsCount_one": "{{formattedCount}} result",
+                "resultsCount_other": "{{formattedCount}} results",
+                "addressCount_one": "{{count}} address",
+                "addressCount_other": "{{count}} addresses",
+                "goToAccountPage": "Go to {{account}} account page",
+                "allowance": "Allowance",
+                "activeSince": "Active Since",
+                "details": "Details",
+                "trendingByVolume": "Pool trend by volume (24h)",
+                "learnMore": "Learn More",
+                "estAllocation": "Est. Pool Allocation",
+                "estAllocationSimple": "Est. Allocation",
+                "estFees": "Est. Daily Fee Income",
+                "available": "Available",
+                "asset": "Assets",
+                "apr": "APR",
+                "apy": "APY",
+                "apps": "Apps",
+                "wantToIntegrateAnApp": "Want to integrate an app?",
+                "balance": "Balance",
+                "balances": "Balances",
+                "claimable": "Claimable",
+                "collateral": "Collateral",
+                "vesting": "Vesting",
+                "confirm": "Confirm",
+                "debt": "Debt",
+                "deposit": "Deposits",
+                "expiry": "Expiry",
+                "explore": "Explore",
+                "farming": "Farming",
+                "from": "From",
+                "insurance": "Insurance",
+                "insufficientBalance": "Insufficient Balance",
+                "insufficientSpace": "Insufficient Space",
+                "investments": "Investments",
+                "leveragedPositions": "Leveraged Positions",
+                "liability": "Liability",
+                "liquidity": "Liquidity",
+                "liquidityMining": "Liquidity Mining",
+                "liquidityPools": "Liquidity Pools",
+                "locked": "Locked",
+                "marketSize": "Market Size",
+                "new": "New",
+                "net": "Net",
+                "nft": "NFTs",
+                "notAvailable": "N/A",
+                "owning": "Owning",
+                "pool": "Pool",
+                "poolShare": "Pool Share",
+                "poolTokens": "Pooled Tokens",
+                "pooledAssets": "Pooled Assets",
+                "price": "Price",
+                "revoke": "Revoke",
+                "rewards": "Rewards",
+                "retry": "Retry",
+                "roi": "ROI",
+                "savings": "Savings",
+                "search": "Search",
+                "staking": "Staking",
+                "staked": "Staked",
+                "supplied": "Supplied",
+                "total": "Total",
+                "totalValueLocked": "Total Value Locked",
+                "transactionSettings": "Transaction Settings",
+                "yieldFarming": "Yield Farming",
+                "value": "Value",
+                "vault": "Vault",
+                "vaults": "Vaults",
+                "viewing": "Viewing",
+                "viewAll": "View all",
+                "wallet": "Wallet",
+                "wallets": "Wallets",
+                "watched": "Watched",
+                "unstaking": "Unstaking",
+                "unlimited": "Unlimited",
+                "supportedNetworks": "Supported Networks",
+                "stats": "Stats",
+                "option": "Options",
+                "protocol": "Protocol",
+                "protocols": "Protocols",
+                "genericError": "There was an error, please try again.",
+                "serverError": "Server error",
+                "problematicENS": "Problematic ENS",
+                "problematicAddress": "Problematic Address",
+                "cannotFindAddressForGivenEns": "Could not find an associated address for:",
+                "addressAppearsToBeInvalid": "The following addreses are not valid:",
+                "network": "Network",
+                "networks": "Networks",
+                "categories": "Categories",
+                "collapse": "Collapse",
+                "collapseAll": "Collapse All",
+                "bundle": "Bundle",
+                "copyLink": "Copy Link",
+                "linkCopied": "Link Copied",
+                "survey": "Survey",
+                "allNetworks": "All Networks",
+                "errorFetchingBalancesTitle": "Could not retrieve all bags",
+                "errorFetchingBalances": "There was a problem when attempting to fetch your bags. Some bags might not be able to be shown. Please try again shortly.",
+                "noBalancesFound": "No balances found",
+                "thereAreNoBalancesToDisplay": "There are no balances to display.",
+                "owners": "Owners",
+                "owned": "Owned",
+                "all": "All",
+                "following": "Following",
+                "nothingToSeeHere": "Nothing to see here!",
+                "pageSectionIsBeingBuilt": "We are still building this section. Check it out later!",
+                "supply": "Supply",
+                "assetBreakdown": "Asset Breakdown",
+                "tokenShares": "Token Shares",
+                "quantity": "Quantity",
+                "percentage": "Percentage",
+                "status": "Status",
+                "relatedApps": "Related Apps",
+                "updateRequest": "Request an update",
+                "appHoldings": "App Holdings",
+                "noAppHoldingsYet": "No app holdings yet.",
+                "discoverMore": "Discover More",
+                "relatedNftCollections": "Related NFT Collections",
+                "noSearchResultsFound": "No search results found!",
+                "viewQuantityMore": "View {{quantity}} More...",
+                "viewQuantityComponentMore": "View <0 /> More",
+                "tivExplain": "Total Investable Value (TIV) measures the amount of funds deposited into a given position that a wallet still has a claim to and the positions are active and available.",
+                "noAssetBreakdownAvailable": "No asset breakdown available",
+                "wantToIntegrateTivForApp": "Not seeing an app? Integrate its TIV via <anchor>Zapper Studio</anchor>!",
+                "daoMembership": "DAO Memberships",
+                "shares": "Shares",
+                "favorites": "Favorites"
+              },
+              "platforms": {}
+            },
+            "c": {
+              "ProtocolView": {
+                "explore": "Explore",
+                "holdings": "Holdings",
+                "yourHoldings": "Your Holdings"
+              },
+              "AppsView": {
+                "filterByAppName": "Filter by app name",
+                "exploreDefi": "Explore DeFi",
+                "tivRankings": "TIV Rankings",
+                "discoverLatestApps": "Discover the latest apps in DeFi."
+              },
+              "ProtocolBalanceViewer": {
+                "noHoldingsFound": "No holdings found",
+                "noHoldingsFoundForProtocolOnThisNetwork": "No holdings found for {{protocol}} on the {{network}} network.",
+                "noSearchResultsFound": "No search results found!",
+                "filterByBaseTokens": "Filter by base tokens",
+                "filterByToken": "Filter by token"
+              },
+              "BalanceRow": {
+                "tokenBreakdown": "Token Breakdown",
+                "suppliedTokenBreakdown": "Supplied Token Breakdown",
+                "claimableTokenBreakdown": "Claimable Token Breakdown",
+                "borrowedTokenBreakdown": "Borrowed Token Breakdown",
+                "unknownTokenBreakdown": "Generic Token Breakdown {{token}}",
+                "noInfoAvailableForBreakdown": "No info available for this breakdown",
+                "allAppTokensHiddenDueToFilter": "All app tokens hidden due to filter.",
+                "stats": "Stats",
+                "info": "Info"
+              },
+              "AccountDropdown": {
+                "addressCopied": "Copied!",
+                "buttonCancel": "Cancel",
+                "buttonLogout": "Logout",
+                "connect": "Connect",
+                "connected": "Connected",
+                "exit": "Exit",
+                "ledgerSettings": "Ledger Settings",
+                "linkCopied": "Link Copied!",
+                "accountRefreshed": "Refreshed!",
+                "manageAddresses": "Manage Bundles",
+                "syncMobileApp": "Sync Mobile App",
+                "switchWalletProvider": "Switch Wallet Provider",
+                "watched": "Watched",
+                "bundledWallets": "Bundled Wallets",
+                "modalCreateLabel": {
+                  "title": "Create Label",
+                  "buttonAddLabel": "Add Label",
+                  "buttonRemove": "Remove",
+                  "placeholderLabel": "Enter new label here"
+                },
+                "modalLogoutAll": {
+                  "title": "Log out of all your accounts?",
+                  "text": "Note that your watched wallets and connected addresses are retained in local storage and are re-usable if you wish to re-connect. To purge this information, clear your local cache in your browsers settings or in <href>Zapper's data settings menu</href>."
+                }
+              },
+              "AddressAlert": {
+                "ukraineDonationAddress": "Address used by Ukraine to accept donations."
+              },
+              "Banner": { "imgAlt": "Banner image" },
+              "PageHeaderWithNetworkSelector": {
+                "selectANetworkToExchangeOn": "Select a network to transact on"
+              },
+              "BarCharts": {
+                "AllocationChart": { "title": "Asset Allocation" },
+                "ProtocolChart": { "title": "Platform Allocation" }
+              },
+              "Aave": {
+                "totalBorrowed": "Borrowed Total",
+                "totalSupplied": "Supplied Total",
+                "healthFactor": "Health Factor"
+              },
+              "Compound": {
+                "totalBorrowed": "Borrowed Total",
+                "totalSupplied": "Supplied Total",
+                "headers": { "claimable": "Claimable COMP" }
+              },
+              "Cream": {
+                "totalBorrowed": "Borrowed Total",
+                "totalSupplied": "Supplied Total",
+                "headers": { "claimable": "Claimable CREAM" }
+              },
+              "Dropdown": { "showLinks": "Show additional links" },
+              "EditAddress": {
+                "bundledMax": "Maximum of {{max}} bundled wallets"
+              },
+              "ExploreDropdown": {
+                "exploreMoreDapps": "You should dApp more."
+              },
+              "ExploreTable": {
+                "headers": {
+                  "availablePools": { "title": "Available Pools" },
+                  "netROI": {
+                    "title": "Net ROI (1mo)",
+                    "tooltip": "This is the impermanent gain or loss. If negative, investors were better off holding the underlying tokens than investing them in the pool."
+                  },
+                  "ROI": {
+                    "title": "$ ROI (1mo)",
+                    "tooltip": "This is the return on investment in USD"
+                  }
+                },
+                "addLiquidityCTA": "Add Liquidity",
+                "placeholderFilter": "Filter by token, protocol",
+                "placeholderFilterByTokenOnly": "Filter by token"
+              },
+              "Footer": {
+                "docs": "Docs",
+                "career": "Careers",
+                "contactSupport": "Get Help",
+                "bugBounties": "Bug Bounties",
+                "supportedPlatforms": "Supported Platforms",
+                "supportedTokens": "Supported Tokens",
+                "privacyPolicy": "Privacy Policy",
+                "cookieNotice": "Cookie Notice",
+                "termsOfService": "Terms of Service",
+                "featureRequest": "Feature Request"
+              },
+              "GasSelect": {
+                "optionStandard": "Standard",
+                "optionFast": "Fast",
+                "optionInstant": "Instant",
+                "selectGasSetting": "Select Gas Setting",
+                "gasMode": "Speed"
+              },
+              "Header": {
+                "nav": {
+                  "bridge": "Bridge",
+                  "build": "Build",
+                  "community": "Community",
+                  "dashboard": "Home",
+                  "docs": "Docs",
+                  "exchange": "Swap",
+                  "explore": "Explore",
+                  "farm": "Farm",
+                  "history": "History",
+                  "invest": "Invest",
+                  "learn": "Learn",
+                  "mail": "Mail",
+                  "myProfile": "My Profile",
+                  "pool": "Pool",
+                  "quests": "Quests",
+                  "rewards": "Rewards",
+                  "save": "Save",
+                  "settings": "Settings",
+                  "transactions": "Transactions",
+                  "tutorials": "Tutorials",
+                  "vaults": "Vaults",
+                  "watchlist": "Address Book"
+                }
+              },
+              "Home": {
+                "buttonConnectWallet": "Connect Wallet",
+                "buttonLetsGo": "Let's Go!",
+                "buttonViewDemo": "Don't have an address? View demo.",
+                "linkWhatIsDefi": "What is DeFi?",
+                "or": "or",
+                "subtitle": "Manage your entire web3 portfolio from DeFi to NFTs and whatever comes next. Invest in the latest opportunities from one convenient place.",
+                "title": "<title>Your home to <accent>Web3</accent></title>",
+                "stats": {
+                  "platforms": {
+                    "title": "DeFi platforms supported",
+                    "link": "View the full list"
+                  },
+                  "volume": {
+                    "title": "Invested through our platform",
+                    "date": "Since May 2020"
+                  },
+                  "zappers": {
+                    "title": "Monitored their assets",
+                    "date": "Since January 2020"
+                  }
+                }
+              },
+              "HomeV2": {
+                "subtitle": "Zapper is your home to Web3. Track your wallets. Follow other wallets. Discover NFTs, DAOs, DeFi...",
+                "accounts": "Accounts",
+                "nfts": "NFTs",
+                "defi": "DeFi",
+                "daos": "DAOs",
+                "trendingNfts": "Trending NFT Collections",
+                "popularAccounts": "Popular Accounts",
+                "discoverDaos": "Discover DAOs",
+                "discoverDefi": "Discover DeFi"
+              },
+              "InvestmentsTable": {
+                "poolTokens": "tokens",
+                "placeholderFilter": "Filter by token",
+                "addCTA": "Add",
+                "claimRewardsCTA": "Claim",
+                "rebalanceCTA": "Rebalance",
+                "stakeCTA": "Stake",
+                "unstakeCTA": "Unstake",
+                "withdrawCTA": "Withdraw"
+              },
+              "Widgets": {
+                "title": "Widgets",
+                "networkFee": "Network Fee",
+                "tokenWatchlist": "Token Watchlist",
+                "zapperLearn": "Zapper Learn",
+                "trendingPools": "Trending Pools",
+                "priceMissing": "Price unavailable"
+              },
+              "Search": {
+                "Groups": {
+                  "apps": "Protocols",
+                  "nfts": "Collections",
+                  "accounts": "Accounts",
+                  "tokens": "Tokens",
+                  "daos": "DAOs"
+                }
+              },
+              "Toast": {
+                "Error": {
+                  "tooManyFollowing": "The current limit of addresses you can follow is reached.",
+                  "walletDuplicate": " is already added.",
+                  "walletNotActive": "You can only follow if you have used Ethereum previously.",
+                  "signatureInvalid": "Invalid signature, make sure you're signing with the active wallet and try again. Reach out to us if this persists.",
+                  "walletNotConnected": "Wallet not connected. Please switch to an Ethereum wallet to transact."
+                }
+              },
+              "TokenWatchlistWidget": {
+                "title": "Token Watchlist",
+                "noTokenAdded": "No tokens added yet",
+                "searchForAToken": "Search for a token and favourite it to add it to the watchlist"
+              },
+              "NotConnectedAlert": {
+                "connectWallet": "Connect Wallet",
+                "currentlyViewing": "You are currently viewing ",
+                "walletNotConnected": "Wallet not connected",
+                "bitcoinWallet": "Bitcoin wallet selected",
+                "switch": "Please switch to an Ethereum wallet to transact."
+              },
+              "WalletNotSupportedAlert": {
+                "title": "Bridge using {{walletType}} not yet supported",
+                "subtitle": "Your connected wallet does not support bridging to {{network}}. Please try a different wallet or keep an eye out for updates!"
+              },
+              "NetworkNotSupportedAlert": {
+                "title": "Network not supported",
+                "subtitle": "This feature is not supported on the {{network}} network. Please switch to Ethereum Mainnet to continue."
+              },
+              "PoolNotSupportedAlert": {
+                "title": "Pool not supported on {{network}}",
+                "subtitle": "This feature is not supported yet. Please switch to another pool or network."
+              },
+              "ProductNotSupportedAlert": {
+                "title": "{{productTitle}} not supported",
+                "subtitle": "This feature is not supported on {{network}}, please switch to another {{productSubtitle}} or network."
+              },
+              "BridgeNotAvailableAlert": {
+                "title": "Bridge from {{network}} not yet supported",
+                "subtitle": "Stay tuned! We will soon support bridging from {{network}}."
+              },
+              "WalletConnectBridgeWarningAlert": {
+                "title": "Bridging using WalletConnect",
+                "subtitle": "Please ensure that your wallet supports the {{network}} network before attempting to bridge your funds. Gnosis Safes do not yet support Polygon."
+              },
+              "UnexpectedError": {
+                "title": "500 - An unexpected error occured",
+                "subtitle": "Click on the following button to clear your local storage and session. Contact support if the issue persists.",
+                "buttonHome": "Clear session and return to Home"
+              },
+              "NotFound": {
+                "title": "404 - Nothing to see here",
+                "buttonHome": "Back to Home"
+              },
+              "Settings": {
+                "allowance": "Allowance",
+                "allowanceInfinite": "Infinite",
+                "allowanceLimited": "Exact Amount",
+                "allowances": "Allowances",
+                "allowanceTip": {
+                  "limited": "Only the exact amount is allowed to be transferred. You will need to reapprove for a subsequent transaction.",
+                  "infinite": "Be aware of the risks of giving infinite approval to a smart contract address."
+                },
+                "amountAtRisk": "Amount at Risk: {{amount}}",
+                "currency": "Base Currency",
+                "selectCurrency": "Select Currency",
+                "general": "General",
+                "highSlippage": "We hope you know what you're doing",
+                "infiniteAllowance": "Infinite Allowance",
+                "language": "Language",
+                "lowSlippage": "Transaction may fail",
+                "manage": "Manage",
+                "privacy": "Privacy",
+                "slippage": "Slippage Tolerance",
+                "slippageTip": "This is maximum percentage you are willing to lose due to unfavorable price changes.",
+                "theme": "Theme",
+                "title": "Settings",
+                "trackingOptOut": "Disable Behaviour Tracking",
+                "trackingOptOutTip": "Behaviour tracking allows Zapper to collect anonymous data to improve user experience of our product.",
+                "data": "Data",
+                "clearData": "Clear your Zapper data",
+                "clearDataAction": "Clear data",
+                "clearDataTip": "This will clear your local storage data which contain your connected accounts, watched wallets, watched tokens, bundles...",
+                "importData": "Import your Zapper data",
+                "importDataAction": "Import data",
+                "importDataTip": "This will override your current local storage data which contain your connected accounts, watched wallets, watched tokens, bundles...",
+                "importDataFile": "<choose>Choose a JSON file</choose> or drag it here!",
+                "exportData": "Export your Zapper data",
+                "exportDataAction": "Download JSON",
+                "exportDataTip": "Download your local storage data and reimport it later to keep your connected accounts, watched wallets, watched tokens, bundles..."
+              },
+              "Supported": {
+                "title": "Supported Platforms",
+                "availableSoon": "Available Soon",
+                "platformNotSupported": "Your favorite platform isn't on the list? ",
+                "buttonSubmitHere": "Submit it here.",
+                "headers": {
+                  "platform": "Platform",
+                  "transact": "Transact",
+                  "type": "Type",
+                  "viewBalances": "View Balances"
+                }
+              },
+              "SwitchAccountAlert": {
+                "switchTo": "Switch to a connected wallet to transact.",
+                "currentlyViewing": "Viewing {{ wallet }}"
+              },
+              "Transactions": {
+                "table": {
+                  "from": "From",
+                  "to": "To",
+                  "placeholderFilter": "Filter by protocol, token, event, etc...",
+                  "placeholderNoData": "No data.",
+                  "headers": {
+                    "amounts": "Amount(s)",
+                    "date": "Date",
+                    "fromTo": "From/To",
+                    "name": "name",
+                    "symbol": "Symbol",
+                    "type": "Type"
+                  }
+                },
+                "modal": {
+                  "title": "Transaction Details",
+                  "headers": {
+                    "blockNumber": "Block Number",
+                    "fromTo": "From/To",
+                    "gasLimit": "Gas Limit",
+                    "gasPrice": "Gas Price",
+                    "nonce": "Nonce",
+                    "transactionFee": "Transaction Fee",
+                    "estimatedGasFee": "Estimated Gas Fee"
+                  },
+                  "somethingWentWrong": "Oups! Something went wrong.",
+                  "tx": {
+                    "copied": "Copied!",
+                    "received": "Received",
+                    "sent": "Sent"
+                  }
+                },
+                "downloadModal": {
+                  "title": "Export to CSV",
+                  "copied": "Copied!",
+                  "tokenTax": {
+                    "title": "We've partnered with TokenTax to make your taxes simple.",
+                    "discountText": "Use the code below and get 10% off any plan!",
+                    "button": "Go to TokenTax"
+                  }
+                }
+              },
+              "Uniswap": {
+                "totalEthValuePooled": "Total ETH Value Pooled",
+                "totalValuePooled": "Total Value Pooled",
+                "headers": {
+                  "pools": "Pools",
+                  "v1Pools": "V1 Pools",
+                  "v2Pools": "V2 Pools"
+                }
+              },
+              "Quests": {
+                "dailyQuests": "Daily Quests",
+                "weeklyQuests": "Weekly Quests"
+              },
+              "Notifications": {
+                "registerMail": "Registering {{ens}}",
+                "sendMail": "Sending mail to {{toDisplay}}",
+                "unregisterMail": "Unregistering {{ens}}"
+              },
+              "NetworkFeeWidget": {
+                "gasTrend": "Gas Trend (1w)",
+                "avgFee": "Avg. Fee",
+                "networkFee": "Network Fee",
+                "networkFeeTooltip": "Transactions have varying levels of speed and associated fee. Faster transactions means bigger fees. The prices are in shown in gwei.",
+                "ercTransferCost": "Token Transfer Cost",
+                "ercTransferTooltip": "The approximate price to transfer a token to a different source."
+              }
+            },
+            "s": {
+              "Bridge": {
+                "pageTitle": "Bridge",
+                "pageHeadline": "Bridge Tokens",
+                "pageDescription": "Move tokens from one blockchain network to another.",
+                "bridge": "Bridge",
+                "bridged": "Bridged",
+                "bridging": "Bridging",
+                "unavailable": "Unavailable",
+                "transactions": "Transactions",
+                "emptyStateTitle": "The selected wallet has not used the bridge yet",
+                "emptyStateDescription": "Once it does, the transactions will appear here.",
+                "using": "Using",
+                "ago": "ago",
+                "days": "days",
+                "hours": "hours",
+                "minutes": "minutes",
+                "expected": "Expected",
+                "transferFrom": "Transfer from",
+                "transferTo": "Transfer to",
+                "to": "to",
+                "send": "You send",
+                "receive": "You receive",
+                "route": "Bridge Route",
+                "approve": "Approve",
+                "confirm": "Confirm",
+                "pending": "Pending",
+                "completed": "Completed",
+                "findingBestQuote": "Finding best route",
+                "noRouteAvailable": "No route available",
+                "unfavourable": "Slippage is higher than your tolerance",
+                "gasFeeEstimate": "Gas fee estimate",
+                "bridgeFeeEstimate": "Bridge fee estimate",
+                "exchangeFeeEstimate": "Exchange fee estimate"
+              },
+              "Dashboard": {
+                "totalAssets": "Total Assets",
+                "totalDebt": "Total Debt",
+                "netWorth": "Net Worth",
+                "customize": "Customize",
+                "smartAssetTokenBreakdown": "Token Breakdown",
+                "smartAssetCollateralTokenBreakdown": "From Collateral",
+                "smartAssetDebtTokenBreakdown": "Debt Token Breakdown",
+                "smartAssetBreakdown": "No stats available for this breakdown",
+                "smartAssetClaimableRewardBreakdown": "Claimable Reward(s) Breakdown",
+                "refresh": "Refresh",
+                "networkSettings": {
+                  "networkSettings": "Select Network",
+                  "showHideBalances": "Show/Hide Balances"
+                },
+                "NftModal": {
+                  "title": "NFT Collections",
+                  "toolTip": "NFT price is based on the floor price or the last purchase price"
+                },
+                "account": {
+                  "title": "Account Overview",
+                  "missingAssets": "Don't see your assets?",
+                  "hideBalancesBelow": "Only Show Balances Above",
+                  "includeNftsToTotal": "Include NFTs in totals",
+                  "privacyMode": "Privacy Mode",
+                  "hardRefresh": "Hard Refresh Balances",
+                  "switchView": "Grid View"
+                },
+                "platforms": { "title": "Platforms" }
+              },
+              "TokenTransfer": {
+                "send": "Send",
+                "asset": "Asset",
+                "sendAssets": "Send Assets",
+                "recipient": "Recipient"
+              },
+              "Exchange": {
+                "pageHeading": "Exchange Tokens",
+                "from": "From",
+                "to": "To",
+                "approve": "Approve",
+                "approveLimited": "Approve {{ formattedCount }} {{ symbol }}",
+                "approveInfinite": "Approve Infinite {{ symbol }}",
+                "exchange": "Exchange",
+                "findingBestQuote": "Finding Best Quote",
+                "checkingApproval": "Checking Approval",
+                "exchangeUnavailable": "Exchange Unavailable",
+                "exchangeFees": "Exchange Fees",
+                "wrap": "Wrap",
+                "unwrap": "Unwrap",
+                "sign": "Please confirm transaction",
+                "selectToken": "Select Token",
+                "selectAToken": "Select a token",
+                "filterByToken": "Filter by symbol or enter token address",
+                "exchangeRate": "Exchange Rate",
+                "exchangeRoute": "Exchange Route",
+                "minimumReceived": "Minimum Received",
+                "priceImpact": "Price Impact",
+                "transactionSpeed": "Transaction Speed",
+                "unexchangeable": "Unexchangeable",
+                "unfavourableExchange": "Unfavourable Exchange",
+                "changeNetwork": "Change Network",
+                "exchangeHelpDescription": "Swap into more than 2000 tokens, using the best quotes from over 20 sources.",
+                "insufficientFunds": "Insufficient funds for transaction, make sure you have enough {{ gasSymbol }} for gas",
+                "quoteError": "Could not create transaction from quote",
+                "connectToTransact": "Connect your wallet to transact",
+                "zapperVerified": "Zapper Verified",
+                "verifiedInfo": "Zapper verifies tokens based on community-led token lists",
+                "unverified": "Unverified",
+                "zapperFee": "Zapper Fee",
+                "feeTooltip": "This fee helps support continued development of Zapper’s products."
+              },
+              "TokenWarning": {
+                "title": "Unverified Token",
+                "help": "Unverified tokens have not yet been verified with token lists. Be careful when interacting with these tokens.",
+                "text": "{{name}} on {{networkName}} is an unverified token.",
+                "sub": "Be sure this is the token you want to trade, do your research, and trade at your own risk.",
+                "ack": "I understand",
+                "swapNotSupported": "Swap not supported",
+                "shouldSwitchNetwork": "You're connected to {{networkName}}, which is not a supported network by {{name}}.",
+                "switchNetwork": "Switch to {{networkName}}"
+              },
+              "Pool": {
+                "trendsNotAvailable": "Pools trends not available",
+                "stayTuned": "Stay tuned! We will soon support pool trends from {{network}}."
+              },
+              "Invest": {
+                "pageTitle": "Farm",
+                "currentInvestments": {
+                  "title": "Current Investments",
+                  "CTA": "Invest"
+                },
+                "exploreOpportunities": {
+                  "title": "Explore Opportunities",
+                  "text1": "Add liquidity to earn fees, incentives, voting rights, etc. ",
+                  "text2": "See how it works.",
+                  "CTA": "Invest"
+                },
+                "stakingOpportunities": {
+                  "title": "Staking Opportunities",
+                  "text1": "Stake your liquidity to earn incentives, voting rights, etc."
+                },
+                "InvestModal": {
+                  "approxPoolOutput": "Approx. Pool Output",
+                  "addLiquidity": "Add liquidity",
+                  "chooseToken": "Choose token",
+                  "placeholderEnterAmount": "Enter Amount",
+                  "placeholderSelectPool": "Select Pool",
+                  "selectPools": "Select Pool(s)",
+                  "singleSidedTooltip": "Bancor allows you to add to a liquidity pool with a single token. Select which token you would like to hold in this pool."
+                },
+                "PipeModal": {
+                  "outputPoolLiquidity": "Output Pool Liquidity:",
+                  "approxPoolOutput": "Approx. Pool Output",
+                  "moveBetweenPools": "Move liquidity between pools via pipes.",
+                  "placeholderSelectPool": "Select Pool",
+                  "rebalanceLiquidity": "Rebalance your liquidity into",
+                  "buttons": { "howItWorks": "See how it works." }
+                },
+                "StakingModal": {
+                  "claimYourRewards": "Claim your rewards",
+                  "stakeYourTokens": "Stake",
+                  "unstakeYourTokens": "Unstake",
+                  "explainer": "Because you are providing liquidity and contributing to the health of the protocol, you are eligible to earn"
+                },
+                "WithdrawModal": {
+                  "placeholderSelect": "Select...",
+                  "selectOutput": "Select Output",
+                  "youWillReceive": "You will receive"
+                }
+              },
+              "Token": {
+                "marketCap": "Market cap",
+                "circulatingSupply": "Circulating supply",
+                "24hVolume": "24 hours volume",
+                "ath": "All-time high",
+                "atl": "All-time low",
+                "addTokenToFav": "Add {{symbol}} to favourites",
+                "removeTokenToFav": "Remove {{symbol}} from favourites"
+              },
+              "Ranking": {
+                "pageTitle": "Rankings",
+                "trending": "Trending",
+                "last24h": "Last 24hrs"
+              },
+              "Rewards": {
+                "pageTitle": "Rewards",
+                "subtitle": "Unlock rewards by leveling up. You can increase levels by doing daily, weekly and single quests. Happy questing!"
+              },
+              "Social": {
+                "title": "Social",
+                "followers": "Followers",
+                "followees": "Following",
+                "follow": "Follow",
+                "noRank": "Unranked",
+                "crowdinContext": "The timeframe of the increase of followers",
+                "noConnections": "No connections yet",
+                "explore": "Explore Accounts",
+                "Empty": {
+                  "startFollowing": "Find accounts to follow",
+                  "afterTheyFollow": "Once they do, they will appear here.",
+                  "afterYouFollow": "Once you do, they will appear here.",
+                  "Dashboard": {
+                    "titleFollowing": "You're not following anyone yet",
+                    "titleFollower": "No one is following you yet"
+                  },
+                  "Account": {
+                    "titleFollowing": "{{address}} isn't following anyone",
+                    "titleFollower": "No one is following {{address}} yet"
+                  }
+                }
+              },
+              "Leaderboard": { "pageTitle": "Leaderboard" },
+              "Farm": { "title": "Farming Opportunities" },
+              "Save": {
+                "pageTitle": "Save",
+                "pageHeadline": "Deposit and Earn",
+                "currentDeposits": { "title": "Current Deposits" },
+                "depositOpportunities": {
+                  "title": "Markets",
+                  "text1": "Earn interest by depositing your assets.",
+                  "apyTooltip": "Annual Percentage Yield (APY) is the projected interest on your deposit after one year.",
+                  "deposit": "Deposit"
+                }
+              },
+              "Vault": {
+                "pageTitle": "Vaults",
+                "pageHeadline": "Maximize Your Yield",
+                "currentDeposits": { "title": "Current Deposits" },
+                "depositOpportunities": {
+                  "title": "Vaults",
+                  "text1": "Aggregate yield through depositing your assets.",
+                  "apyTooltip": "Annual Percentage Yield (APY) is the projected interest on your deposit after one year.",
+                  "deposit": "Deposit"
+                }
+              },
+              "Revoke": {
+                "pageTitle": "Allowances",
+                "title": "Manage Allowances",
+                "text1": "View and remove allowances for all Zapper smart contracts.",
+                "networkTooltip": "Managing allowances is currently supported on the following networks.",
+                "searchPlaceholder": "Filter by token symbol"
+              },
+              "Mail": {
+                "conversationHasEncryptedMessages": "Sign in to view encrypted messages.",
+                "conversationHasEncryptedMessagesUnregistered": "Register to view encrypted messages.",
+                "conversations": "Conversations",
+                "encrypted": "Encrypted",
+                "encryptedMessagesCanOnlyBeSentToRegisteredUsers": "Encryped messages can only be sent to registered users",
+                "loading": "Loading...",
+                "loggedInAs": "Logged in as",
+                "messagesAreEncrypted": "Messages will be sent encrypted. Only you and the recipient can read these messages.",
+                "messagesAreNotEncrypted": "Messages will be sent unencrypted. Anyone can read these messages!",
+                "noConversations": "No conversations",
+                "noConversationSelected": "No conversation selected.",
+                "notRegisteredClaimNow": "Not registered. Claim your username now to enable sending encrypted messages.",
+                "register": "Register",
+                "registerPlaceholder": "yourname",
+                "registerDomain": ".zapper.eth",
+                "registerToEnableEncryptedMessages": "Register to enable encrypted messages",
+                "searchPlaceholder": "Filter by subject, content, or sender",
+                "send": "Send",
+                "text1": "View and send messages to other wallet addresses.",
+                "title": "Mail",
+                "to": "To",
+                "unregistered": "Unregistered",
+                "writeAMessage": "Write a message..."
+              },
+              "Nft": {
+                "collection": "Collection",
+                "single": "Single",
+                "filterByCollection": "Filter by Collection",
+                "lowVolume": "Low volume",
+                "lastSale": "Last",
+                "showCollectionsUnder": "Show collections worth less than {{amount}}",
+                "hideCollectionsUnder": "Hide collections worth less than {{amount}}",
+                "changeLimit": "Change limit",
+                "minMonthlyVolume": "Minimum collection value",
+                "floorDiff": "Floor % Diff.",
+                "floorPrice": "Floor Price",
+                "numberOfHolders": "# Holders",
+                "rarity": "Rarity",
+                "owned": "Owned",
+                "ownedBy": "Owned by",
+                "owned_by": "Owned by {{owners}}",
+                "member_of_single": "{{member}} is a member",
+                "member_of_many": "{{members}} are members",
+                "member_of_too_many": "{{members}} and {{countRemaining}} other(s) are members",
+                "owned_by_remaining": "Owned by {{owners}} and {{countRemaining}} others you follow",
+                "owned_by_total": "Owned by {{formattedCount}} account",
+                "owned_by_total_one": "Owned by {{formattedCount}} account",
+                "owned_by_total_other": "Owned by {{formattedCount}} accounts",
+                "externalLinks": "External links",
+                "estimatedValue": "Est. Value",
+                "hodledFor": "Owned for {{days}}d",
+                "hodledForByOwner": "Owned for",
+                "numberOfItems": "Nb. Items",
+                "loadingIssue": "We couldn't load your NFTs. Please try again later",
+                "traitRarety": "This is the {{rank}}th rarest trait for this property.",
+                "traitDistribution": "There are {{distributionPercentage}}% of items with this property.",
+                "soldFor": "Sold For",
+                "volume24h": "24h Volume",
+                "noDescription": "No description",
+                "report": "Report",
+                "crowdinContext": "Flag a nft collection to Zapper",
+                "submitReport": "Report this collection",
+                "reportSubmitted": "Report submitted successfully."
+              },
+              "Quests": {
+                "pageTitle": "Quests",
+                "pending": "Pending",
+                "synced": "Synced",
+                "voltsToBeSpent": "Your on-chain Volts ready to be spent",
+                "voltsToBeSynced": "Your off-chain Volts to be synced",
+                "voltsToBeSyncedDeadlineTitle": "Season 2 is over!",
+                "voltsToBeSyncedDeadline": "Don't forget to sync your Volts by {{deadline}}."
+              },
+              "TokensDirectory": {
+                "pageTitle": "Supported Tokens Directory",
+                "pageSubTitle": "Tokens for the {{network}} network",
+                "pageDescription": "Browse the list of Zapper.fi supported tokens.",
+                "description": "Browse the list of Zapper.fi supported tokens.",
+                "visitDirectoryOfNetwork": "Visit the supported token directory for the {{network}} network",
+                "visitTheTokenPage": "Visit the token page of the {{token}} token.",
+                "tableHeaderTokenName": "Token Name",
+                "tableHeaderTokenSymbol": "Token Symbol"
+              }
+            }
+          },
+          "bundle": {
+            "title": "My Bundles",
+            "create": "Create Bundle",
+            "manage": "Manage Bundle",
+            "label": "Bundle Name",
+            "bundleCount": "Bundle {{count}}",
+            "include-wallets": "Wallets to Include",
+            "included-wallets": "Included Wallets",
+            "address_one": "{{ count }} address",
+            "address_other": "{{ count }} addresses",
+            "widget": {
+              "title": "Bundled Addresses",
+              "noBundle": "No bundles added yet",
+              "howToAddBundle": "Click on the (+) icon to add a bundle"
+            },
+            "remove-modal": {
+              "title": "Remove bundle",
+              "message": "Are you sure you want to remove the bundle {{ label }}?"
+            }
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "bundle"],
+      "userConfig": {
+        "i18n": {
+          "defaultLocale": "en",
+          "locales": [
+            "en",
+            "fr",
+            "es",
+            "ru",
+            "zh",
+            "de",
+            "it",
+            "el",
+            "id",
+            "ja",
+            "nl",
+            "uk",
+            "pl",
+            "pt",
+            "tr",
+            "fa"
+          ]
+        },
+        "fallbackLng": { "default": ["en"] },
+        "localePath": "/var/task/public/locales",
+        "interpolation": { "escapeValue": false, "formatSeparator": "," },
+        "reloadOnPrerender": false,
+        "default": {
+          "i18n": {
+            "defaultLocale": "en",
+            "locales": [
+              "en",
+              "fr",
+              "es",
+              "ru",
+              "zh",
+              "de",
+              "it",
+              "el",
+              "id",
+              "ja",
+              "nl",
+              "uk",
+              "pl",
+              "pt",
+              "tr",
+              "fa"
+            ]
+          },
+          "fallbackLng": { "default": ["en"] },
+          "localePath": "/var/task/public/locales",
+          "interpolation": { "escapeValue": false, "formatSeparator": "," },
+          "reloadOnPrerender": false
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
