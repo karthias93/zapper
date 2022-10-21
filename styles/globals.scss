@@ -1,6 +1,22 @@
+@use "./utils" as u;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: u.$font-main;
+}
+
+html {
+    color: #4b4b4b;
+}
+html.dark {
+    color: #FFFFFF;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -44,7 +60,6 @@
         }
 
         .menus {
-            border-left: 2px solid #E25410;
             padding-left: 15px;
 
             li {
@@ -89,6 +104,8 @@
         padding: 10px 40px 10px 15px;
         margin-right: 30px;
         width: 300px;
+        font-size: smaller;
+        background: #FFFFFF;
     }
 
     .login-btn {
@@ -96,6 +113,7 @@
         border-radius: 8px;
         background: linear-gradient(272.88deg, #FEAA02 -13.53%, #E15310 100%);
         margin-right: 30px;
+        font-size: smaller;
     }
 
     .search-icon {
@@ -117,13 +135,15 @@
             position: fixed !important;
             top: 0;
             right: 0;
-            z-index: -1;
+            z-index: -2;
+            text-align: right;
         }
         .BgRound3 {
             position: fixed !important;
             bottom: 0;
             right: 0;
-            z-index: -1;
+            z-index: -3;
+            text-align: right;
         }
 
     }
@@ -142,12 +162,14 @@
 
         .slek-card {
             width: 360px;
-            background: #ffffffd4;
-            border-radius: 15px;
             padding: 10px 24px 20px 4px;
             margin-right: -55px;
             float: right;
             margin-bottom: 20px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.46) 0%, rgba(217, 217, 217, 0.36) 100%);
+            box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
 
             .ske11 {
                 width: 75%;
@@ -165,4 +187,225 @@
         }
     }
 
+}
+
+.dialog-box {
+    background: linear-gradient(180deg, #FFFFFF 0%, #D9D9D9 100%);
+    box-shadow: 0px 4px 146px rgba(0, 0, 0, 0.4);
+
+    .connect-btn {
+        border: 1px solid #E25410;
+        background: linear-gradient(180deg, #FEAA02 0%, #E25410 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+.menu-border{
+    width: 2px;
+    background: linear-gradient(90deg, #E25410 0%, #E3A233 100%);
+    border-radius: 9px;
+}
+
+.wallet-modal-row {
+    grid-template-columns: 1fr 3fr 2fr;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.profile-container {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%);
+    box-shadow: 0px 10px 79px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+/*
+ * ==== hexagon
+ */
+ .hexagon {
+    position: relative;
+    width: 185px;
+    height: 209px;
+    background: linear-gradient(180deg, #FEAA02 0%, #E25410 100%);
+  }
+  .hexagon-settings {
+    width: 143px;
+    height: 161px;
+  }
+  .preview-profile {
+    width: 79px;
+    height: 89px;
+  }
+  .hexagon:before {
+    position: absolute;
+    content: '';
+  }
+  .hexagon:before {
+    top: 9px;  /* border width */
+    left: 9px;  /* border width */
+    height: calc(100% - 18px);  /* 100% - (2 * border width) */
+    width: calc(100% - 18px);  /* 100% - (2 * border width) */
+    background: #6c6;
+  }
+  .hexagon, .hexagon:before {
+    -webkit-clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  }
+  .upload-icon {
+    background: #000;
+    span {
+        top: 50px;
+    }
+  }
+  .upload-icon:before {
+    top: 3px;  /* border width */
+    left: 3px; 
+    height: calc(100% - 6px);  /* 100% - (2 * border width) */
+    width: calc(100% - 6px); 
+    background-color: #D9D9D9;
+  }
+  /* Just for demo */
+  
+  .hexagon {
+    display: inline-block;
+    margin: 20px;
+  }
+
+.coin-list {
+    flex: 0 1 calc(33.33% - 1.25rem);
+}
+
+.card-wrapper {
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.achivements {
+    background: linear-gradient(119.28deg, #E15310 0%, #E3A333 100%);
+    box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.tab-divider {
+    width: 21px;
+    height: 2px;
+    background: #959595;
+    border-radius: 17px;
+    transform: rotate(90deg);
+}
+
+.tab-list {
+    .active {
+        background: linear-gradient(180deg, #FEAA02 0%, #E15310 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        border-bottom: 4px solid #E15310;
+    }
+}
+
+.nft-card {
+    background: #FFFFFF;
+    border: 0.5px solid #4B4B4B;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.black-shadow {
+    box-shadow: 19px 0px 74px rgba(0, 0, 0, 0.4);
+}
+.sidebar-icons {
+    path {
+        fill: #4B4B4B;
+    }
+}
+.sidebar-btn-icons {
+    path {
+        fill: #FFFFFF;
+    }
+}
+.tokenid-nft {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.settings-card {
+    background: #F7F7F7;
+    border-radius: 30px;
+    padding: 2rem 4rem;
+}
+.upload-avatar {
+    .cancel-btn {
+        border: 2px solid #4B4B4B;
+        border-radius: 15px;
+        padding: .2rem 1rem;
+        min-width: 100px;
+    }
+    .save-btn {
+        background: linear-gradient(180deg, #FEAA02 0%, #E25410 100%);
+        border-radius: 15px;
+        padding: .2rem 1rem;
+        color: #FFFFFF;
+        min-width: 100px;
+    }
+}
+.projects-card {
+    background: #F7F7F7;
+    border-radius: 20px;
+}
+
+/* Dark styles */
+.dark {
+    .layout {
+        .sidebar {
+            box-shadow: u.$bg-black-shadow;
+        }
+        .main-card {
+            background: linear-gradient(180deg, #4B4B4B 0%, #000000 100%);
+            box-shadow: 0px 10px 79px rgba(0, 0, 0, 0.25);
+        }
+        .search-input {
+            box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.1);
+        }
+    }
+    .sidebar-icons {
+        path {
+            fill: #FFFFFF;
+        }
+    }
+    .sidebar-btn-icons {
+        path {
+            fill: #000000;
+        }
+    }
+    .sidebar {
+        .menus1 {
+            .dark-btn {
+                background: linear-gradient(180deg, #FFFFFF 0%, #9A9A9A 100%);
+                border-radius: 18px;
+                color: #000000;
+            }
+        }
+    }
+    .profile-container {
+        background: linear-gradient(180deg, #4B4B4B 0%, #000000 100%);
+        box-shadow: 0px 10px 79px rgba(0, 0, 0, 0.25);
+    }
+    .card-wrapper {
+        background: linear-gradient(180deg, #4B4B4B 0%, #000000 100%);
+    }
+    .icons {
+        path {
+            fill: #FFFFFF;
+        }
+    }
+    .modal-content {
+        background: linear-gradient(111.11deg, #3F3F3F 0%, #171717 100%);
+        box-shadow: 0px 4px 146px rgba(0, 0, 0, 0.4);
+    }
 }
