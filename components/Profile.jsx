@@ -72,7 +72,9 @@ const Profile = ({ page = 'portfolio' }) => {
                             label: d.context.symbol,
                             logo: d.displayProps.images[0],
                             balance: d.context.balance,
-                            price: d.context.price
+                            price: d.context.price,
+                            address: d.context.address,
+                            network: d.context.network,
                         });
                     });
                 });
@@ -90,7 +92,9 @@ const Profile = ({ page = 'portfolio' }) => {
                         label: c.context.symbol,
                         logo: c.displayProps.images[0],
                         balance: c.context.balance,
-                        price: c.context.price
+                        price: c.context.price,
+                        address: c.address,
+                        network: c.network,
                     })
                 });
             }

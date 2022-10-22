@@ -16,7 +16,8 @@ const nextConfig = {
             : "https://zapper-debank.herokuapp.com", // production api
     mailPassword: "jhvtxmiqrltufxtj",
     mailUsername: "unibond12@gmail.com",
-    imgUrlEndpoint: "https://ik.imagekit.io/uihusbecs1/"
+    imgUrlEndpoint: "https://ik.imagekit.io/uihusbecs1/",
+    zapperApi: "https://web.zapper.fi/v2"
   },
 }
 

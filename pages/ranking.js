@@ -44,31 +44,35 @@ function GlobalFilter({
   // Let the table remove the filter if the string is empty
   fuzzyTextFilterFn.autoRemove = val => !val
 
-export default function Projects() {
+export default function Ranking() {
     const [apps, setApps] = useState([]);
     useEffect(()=>{
-        axios.get(`/data/apps.json`)
+        axios.get(`https://api.debank.com/social_ranking/list?page_num=1&page_count=50`)
             .then(res=>{
-                const data = res.data.pageProps.tableData;
+                const data = res.data.data.social_ranking_list;
                 setApps(data)
             })
     }, [])
     const columns = useMemo(() => [
           {
-            Header: '#',
-            accessor: 'id', // accessor is the "key" in the data
+            Header: 'Ranking',
+            accessor: 'rank', // accessor is the "key" in the data
           },
           {
-            Header: 'App',
-            accessor: 'appName',
+            Header: 'User',
+            accessor: 'id',
           },
           {
-            Header: 'Network',
-            accessor: 'network',
+            Header: 'Basic Score',
+            accessor: 'base_score',
           },
           {
-            Header: 'TIV',
-            accessor: 'tvl',
+            Header: 'Weighted Score',
+            accessor: 'total_score',
+          },
+          {
+            Header: 'Social Score(100)',
+            accessor: 'social_score',
           },
         ], []);
     
@@ -135,7 +139,7 @@ export default function Projects() {
                         globalFilter={globalFilter}
                         setGlobalFilter={setGlobalFilter}
                     />
-                        <table className="table-auto w-full rounded" {...getTableProps()}>
+                        <table className="table-auto w-full rounded text-sm" {...getTableProps()}>
                             <thead>
                                 {headerGroups.map((headerGroup, index) => (
                                     <tr {...headerGroup.getHeaderGroupProps()} key={index}>
@@ -153,7 +157,7 @@ export default function Projects() {
                                             {row.cells.map((cell, m)  => {
                                                 return (
                                                     <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>
-                                                        {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.render('Cell')}
+                                                        {['base_score', 'total_score', 'social_score'].includes(cell.column.id) ? parseFloat(cell.value).toFixed(2) : cell.render('Cell')}
                                                     </td>
                                                 )
                                             })}

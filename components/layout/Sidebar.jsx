@@ -42,10 +42,12 @@ const Sidebar = () => {
                             <Feed className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">Feed</span>
                         </li>
-                        <li>
-                            <Profile className="sidebar-icons" width="20px" height="20px" />
-                            <span className="menutext">Social Rankings</span>
-                        </li>
+                        <Link href={`/ranking`}>
+                            <li className="cursor-pointer">
+                                <Profile className="sidebar-icons" width="20px" height="20px" />
+                                <span className="menutext">Social Rankings</span>
+                            </li>
+                        </Link>
                         <Link href={`/projects`}>
                             <li className="cursor-pointer">
                                 <Defi className="sidebar-icons" width="20px" height="20px" />

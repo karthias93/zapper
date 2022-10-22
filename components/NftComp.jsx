@@ -11,7 +11,7 @@ const NftComp = () => {
     return (
         <Fragment>
             <div className="card-wrapper px-8 py-6 bg-white mb-10">
-                {(!data || !data.length) && <div className="font-semibold flex items-center justify-center">No NFTs Found</div>}
+                {(!data || !data.nftUsersTokens.edges.length) && <div className="font-semibold flex items-center justify-center">No NFTs Found</div>}
                 <div className="flex justify-between flex-wrap">
                     {data?.nftUsersTokens?.edges.map(token=>{
                         return (

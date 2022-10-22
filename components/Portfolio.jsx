@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
 import { chains } from "../constants";
+import Link from "next/link";
 
 const Portfolio = ({looksRare, coinBalance, tokens}) => {
     return (
@@ -64,15 +65,17 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                     <div className="table-row-group font-medium text-sm items-center">
                         {tokens.wallet?.map((w,i)=>{
                             return (
-                                <div className="table-row" key={i}>
-                                    <div className="table-cell text-center py-2">
-                                        <Image src={w.logo} alt="" width={22} height={22} />
+                                <Link href={`/token/${w.network}/${w.address}`} key={i}>
+                                    <div className="table-row cursor-pointer">
+                                        <div className="table-cell text-center py-2">
+                                            <Image src={w.logo} alt="" width={22} height={22} />
+                                        </div>
+                                        <div className="table-cell py-2">{w.label}</div>
+                                        <div className="table-cell py-2">{w.price.toFixed(2)}</div>
+                                        <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
+                                        <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
                                     </div>
-                                    <div className="table-cell py-2">{w.label}</div>
-                                    <div className="table-cell py-2">{w.price.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
-                                </div>
+                                </Link>
                             )
                         })}
                     </div>
@@ -99,15 +102,17 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                     <div className="table-row-group font-medium text-sm items-center">
                         {looksRare.wallet?.map((w,i)=>{
                             return (
-                                <div className="table-row" key={i}>
-                                    <div className="table-cell text-center py-2">
-                                        <Image src={w.logo} alt="" width={22} height={22} />
+                                <Link href={`/token/${w.network}/${w.address}`} key={i}>
+                                    <div className="table-row cursor-pointer">
+                                        <div className="table-cell text-center py-2">
+                                            <Image src={w.logo} alt="" width={22} height={22} />
+                                        </div>
+                                        <div className="table-cell py-2">{w.label}</div>
+                                        <div className="table-cell py-2">{w.price.toFixed(2)}</div>
+                                        <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
+                                        <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
                                     </div>
-                                    <div className="table-cell py-2">{w.label}</div>
-                                    <div className="table-cell py-2">{w.price.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{w.balance?.toFixed(2)}</div>
-                                    <div className="table-cell py-2">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(w.value?.toFixed())}</div>
-                                </div>
+                                </Link>
                             )
                         })}
                     </div>

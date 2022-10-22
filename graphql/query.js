@@ -226,6 +226,18 @@ const NftUsersTokens = gql`
     }
 `;
 
+const supportedTokenWithSiblings = gql`
+    query supportedTokenWithSiblings($address: Address!, $network: Network!) {
+        supportedTokenWithSiblings(input: { address: $address, network: $network }) {
+            name
+            address
+            symbol
+            network
+            imgUrl
+        }
+    }
+`;
+
 // {"query":"\n        query NftUsersCollectionsTotals(\n          $owners: [Address!]!\n          $network: Network\n          $minCollectionValueUsd: Float\n          $search: String\n          $collections: [Address!]\n        ) {\n          nftUsersCollections(\n            input: {\n              owners: $owners\n              network: $network\n              search: $search\n              minCollectionValueUsd: $minCollectionValueUsd\n              collections: $collections\n            }\n          ) {\n            totals {\n              count\n              balanceUSD\n            }\n          }\n        }\n      ","variables":{"owners":["0xd387a6e4e84a6c86bd90c158c6028a58cc8ac459"],"minCollectionValueUsd":0,"search":"","collections":[]}}
 export {
     GlobalSearch,
@@ -233,5 +245,6 @@ export {
     UserAvatar,
     UserSocialStats,
     NftNetWorth,
-    NftUsersTokens
+    NftUsersTokens,
+    supportedTokenWithSiblings
 }

@@ -10,6 +10,7 @@ module.exports = {
         'regal-white': '#fff',
         'blue1': 'blue',
         'red': 'red',
+        'light-card': '#F7F7F7'
       },
     },
   },
