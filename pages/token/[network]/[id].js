@@ -73,7 +73,7 @@ export default function Token() {
     return (
         <div className="layout">
             <Sidebar />
-            <div className="main-content w-full ml-64">
+            <div className="main-content w-full ml-0 lg:ml-64">
                 <Background />
                 <div className="container m-auto px-0 lg:px-16">
                     <div className="welcome-page">
