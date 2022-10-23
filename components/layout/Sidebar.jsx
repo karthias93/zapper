@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import { useDispatch, useSelector } from "react-redux";
 import { selectThemeState, setThemeState } from "../../store/themeSlice";
@@ -12,9 +12,11 @@ import Settings from "../../public/images/settings.svg";
 import Dark from "../../public/images/dark.svg";
 import { useAccount } from "wagmi";
 import Link from "next/link";
+import { selectSidebarState } from "../../store/sidebarSlice";
 
 const Sidebar = () => {
     const themeState = useSelector(selectThemeState);
+    const sidebarState = useSelector(selectSidebarState);
     const dispatch = useDispatch();
     const { address } = useAccount();
 
@@ -24,7 +26,7 @@ const Sidebar = () => {
         dispatch(setThemeState(mode))
     }
     return (
-        <div className="sidebar bg-regal-white dark:bg-black">
+        <div className={`sidebar lg:w-64 w-3/4 bg-regal-white dark:bg-black absolute lg:relative overflow-y-auto ${sidebarState ? '' : 'hidden'} lg:flex z-20`}>
             <div>
                 <div className="sidebar-header text-center mb-4">
                     <Image src={`/images/logo.svg`} alt="" width="100%" height="100%"/>

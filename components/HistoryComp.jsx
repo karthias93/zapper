@@ -18,7 +18,7 @@ const HistoryComp = () => {
             {transactionState.map(trans=>{
                 return (
                     <div className="card-wrapper px-8 py-6 bg-white mb-10" key={trans.blockNumber}>
-                        <div className="flex justify-around">
+                        <div className="flex justify-around max-lg:flex-col gap-5">
                             <div className="flex-1">
                                 <div className="flex items-center">
                                     <Image src={`/images/coin-1.svg`} alt="" width={27} height={27} />

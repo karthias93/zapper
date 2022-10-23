@@ -6,8 +6,8 @@ import Link from "next/link";
 const Portfolio = ({looksRare, coinBalance, tokens}) => {
     return (
         <Fragment>
-            <div className="flex mb-10">
-                <div className="w-4/6 bg-white min-h-[100px] mr-6 flex flex-wrap p-8 card-wrapper gap-5">
+            <div className="block lg:flex mb-10">
+                <div className="w-full lg:w-4/6 bg-white min-h-[100px] mr-6 flex flex-wrap p-8 card-wrapper gap-5 max-lg:mb-10 justify-between">
                     {chains.map((chain)=>{
                         return (
                             <div className="flex coin-list" key={chain.name}>
@@ -23,7 +23,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                         )
                     })}
                 </div>
-                <div className="w-2/6 bg-white card-wrapper h-fit flex justify-around gap-8 p-8">
+                <div className="w-full lg:w-2/6 bg-white card-wrapper h-fit flex justify-around gap-8 p-8">
                     <div className="flex-1 bg-[#D3D3D3] rounded flex justify-center items-center dark:bg-black">
                         <div className="mr-2">
                             <Image height={15} width={14} src={`/images/wallet.svg`} alt=""/>
@@ -51,7 +51,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                 </div>
                 <div className="text-black font-semibold text-lg">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(tokens.total?.toFixed())}</div>
             </div>
-            <div className="card-wrapper px-8 py-6 bg-white mb-10">
+            <div className="card-wrapper px-8 py-6 bg-white mb-10 overflow-auto">
                 <div className="table w-full">
                     <div className="table-header-group bg-[#D3D3D3] dark:bg-black">
                         <div className="table-row text-xs font-medium">
@@ -88,7 +88,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                 </div>
                 <div className="text-black font-semibold text-lg">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(looksRare.total?.toFixed())}</div>
             </div>
-            <div className="card-wrapper px-8 py-6 bg-white mb-10">
+            <div className="card-wrapper px-8 py-6 bg-white mb-10 overflow-auto">
                 <div className="table w-full">
                     <div className="table-header-group bg-[#D3D3D3] dark:bg-black">
                         <div className="table-row text-xs font-medium">

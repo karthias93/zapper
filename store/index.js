@@ -5,11 +5,13 @@ import { transactionSlice } from "./transactionSlice";
 import { createWrapper } from "next-redux-wrapper";
 import { userSlice } from "./userSlice";
 import { priceSlice } from "./priceSlice";
+import { sidebarSlice } from "./sidebarSlice";
 
 const makeStore = () =>
   configureStore({
     reducer: {
       [themeSlice.name]: themeSlice.reducer,
+      [sidebarSlice.name]: sidebarSlice.reducer,
       [coinSlice.name]: coinSlice.reducer,
       [transactionSlice.name]: transactionSlice.reducer,
       [userSlice.name]: userSlice.reducer,

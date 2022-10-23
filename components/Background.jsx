@@ -11,7 +11,7 @@ import { selectThemeState } from '../store/themeSlice';
 const Background = () => {
     const themeState = useSelector(selectThemeState);
     return (
-        <div className="main-bg">
+        <div className="main-bg hidden xl:block">
           <div className='BgRound1 w-1/2 dark:bg-[#4b4b4b]'>
             {themeState==='dark' ? <BgDarkRound1 /> : <BgRound1 />}
           </div>

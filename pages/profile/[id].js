@@ -10,7 +10,7 @@ export default function Profile() {
       <Sidebar />
       <div className="main-content w-full">
         <Background />
-        <div className="container m-auto px-16">
+        <div className="container m-auto px-0 lg:px-4 lg:px-16">
           <div className="welcome-page">
             <Header page="Profile" />
             <ProfileComponent />

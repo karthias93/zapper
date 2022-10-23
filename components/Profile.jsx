@@ -112,13 +112,13 @@ const Profile = ({ page = 'portfolio' }) => {
         setCoinBalance(coinChain);
     }, [coinState])
     return (
-        <div className="profile-container">
-            <div className="profile-header flex items-center">
+        <div className="profile-container rounded-2xl p-0 lg:py-4 lg:px-16">
+            <div className="profile-header block items-center lg:flex">
                 <div className="hexagon" onClick={handleClick}>
                     <IKImage path={userState?.profilePic?.filePath && userState.wallet === id ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
                 </div>
                 <div className="profile-info flex-1">
-                    <div className="account-info flex">
+                    <div className="account-info flex max-lg:text-center">
                         <div className="account-name font-medium text-4xl mb-5 flex-1">{userState?.username && userState.wallet === id ? userState.username : 'No ID' }</div>
                         <div className="contact-options flex flex-1 justify-center items-center mb-5 gap-4">
                             <div className="twitter-icon border p-2 flex border-[#434343] rounded-full	">
@@ -129,8 +129,9 @@ const Profile = ({ page = 'portfolio' }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="wallet-info mb-7 flex gap-4 justify-start">
-                        <div className="wallet-address font-normal text-base">{id}</div>
+                    <div className="wallet-info mb-7 gap-4 justify-start flex max-lg:justify-around">
+                        <div className="wallet-address font-normal text-base max-lg:hidden">{id}</div>
+                        <div className="wallet-address font-normal text-base lg:hidden">{id?.substr(0,5)}...{(id?.substr(-5))}</div>
                         <div className="action flex gap-4 justify-center">
                             <div className="copy-icon cursor-pointer">
                                 <CopyToClipboard text={id} onCopy={() => toast('Copied')}>
@@ -142,28 +143,28 @@ const Profile = ({ page = 'portfolio' }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="activity-info flex font-normal text-sm items-center">
-                        <div className="followers flex-1">Followers<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</span></div>
-                        <div className="following flex-1">Following<span className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</span></div>
-                        <div className="achivements text-white flex p-3 justify-around gap-6">
+                    <div className="activity-info font-normal text-sm items-center flex max-lg:text-center">
+                        <div className="followers flex-1 lg:flex">Followers<div className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followersCount ? socialStats.user.socialStats.followersCount : 0}</div></div>
+                        <div className="following flex-1 lg:flex">Following<div className="text-black font-semibold ml-3 dark:text-white">{socialStats?.user?.socialStats?.followedCount ? socialStats.user.socialStats.followedCount : 0}</div></div>
+                        <div className="achivements text-white flex p-3 justify-around gap-6 max-lg:hidden">
                             <Image src={`/images/award.svg`} alt='' width={18} height={18} className="flex-1"/>
                             <div>8659</div>
                         </div>
                     </div>
                 </div>
-                <div className="balance-info flex-1 font-semibold text-5xl text-right">
+                <div className="balance-info flex-1 font-semibold text-2xl lg:text-5xl text-right max-lg:text-center max-lg:mt-3">
                     {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(balance)}
                 </div>
             </div>
-            <div className="tab-container flex">
-                <div className="tab-list flex w-5/6 justify-center text-lg font-medium items-center">
-                    <Link href={`/profile/${id}`}><div className={`tab px-3 mx-5 pb-2 cursor-pointer ${page==='portfolio' ? 'active' : ''}`}>Portfolio</div></Link>
+            <div className="tab-container flex max-lg:block max-lg:mt-3">
+                <div className="tab-list flex w-full lg:w-5/6 justify-center text-normal lg:text-lg font-medium items-center">
+                    <Link href={`/profile/${id}`}><div className={`tab px-3 mx-0 lg:mx-5 pb-2 cursor-pointer ${page==='portfolio' ? 'active' : ''}`}>Portfolio</div></Link>
                     <div className="tab-divider mx-5"></div>
-                    <Link href={`/profile/nft/${id}`}><div className={`tab px-3 mx-5 pb-2 cursor-pointer ${page==='nft' ? 'active' : ''}`}>NFTs</div></Link>
+                    <Link href={`/profile/nft/${id}`}><div className={`tab px-3 mx-0 lg:mx-5 pb-2 cursor-pointer ${page==='nft' ? 'active' : ''}`}>NFTs</div></Link>
                     <div className="tab-divider mx-5"></div>
-                    <Link href={`/profile/history/${id}`}><div className={`tab px-3 mx-5 pb-2 cursor-pointer ${page==='history' ? 'active' : ''}`}>History</div></Link>
+                    <Link href={`/profile/history/${id}`}><div className={`tab px-3 mx-0 lg:mx-5 pb-2 cursor-pointer ${page==='history' ? 'active' : ''}`}>History</div></Link>
                 </div>
-                <div className="filer-dropdown flex-1 w-1/6 text-right pb-2">
+                <div className="filer-dropdown flex-1 w-1/6 text-right pb-2 max-lg:hidden">
                     <select className="form-select
                         block
                         px-3

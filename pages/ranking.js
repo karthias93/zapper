@@ -26,7 +26,7 @@ function GlobalFilter({
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                 <svg className="h-5 w-5 fill-black" viewBox="0 0 20 20"></svg>
             </span>
-            <input className="placeholder:italic placeholder:text-slate-400 block bg-white w-1/4 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm dark:bg-[#212121]" type="text" name="search" value={value || ""}
+            <input className="placeholder:italic placeholder:text-slate-400 block bg-white w-full lg:w-1/4 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm dark:bg-[#212121]" type="text" name="search" value={value || ""}
             onChange={e => {
                 setValue(e.target.value);
                 onChange(e.target.value);
@@ -130,7 +130,7 @@ export default function Ranking() {
             <Sidebar />
             <div className="main-content w-full">
                 <Background />
-                <div className="container m-auto px-16">
+                <div className="container m-auto  px-0 lg:px-4 lg:px-1">
                 <div className="welcome-page">
                     <Header page="Defi List"/>
                     <div className="projects-card">
@@ -139,7 +139,7 @@ export default function Ranking() {
                         globalFilter={globalFilter}
                         setGlobalFilter={setGlobalFilter}
                     />
-                        <table className="table-auto w-full rounded text-sm" {...getTableProps()}>
+                        <table className="table-auto w-full rounded text-sm max-lg:block max-lg:overflow-x-auto" {...getTableProps()}>
                             <thead>
                                 {headerGroups.map((headerGroup, index) => (
                                     <tr {...headerGroup.getHeaderGroupProps()} key={index}>
