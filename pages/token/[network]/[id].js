@@ -75,7 +75,7 @@ export default function Token() {
             <Sidebar />
             <div className="main-content w-full">
                 <Background />
-                <div className="container m-auto px-16">
+                <div className="container m-auto px-0 lg:px-16">
                     <div className="welcome-page">
                         <Header page=""/>
                         <div className="trading-view bg-light-card rounded-lg shadow shadow-white pb-5">
@@ -86,7 +86,7 @@ export default function Token() {
                                     </div>
                                     <div className="flex justify-center items-center">
                                         <Image src={tokenInfo?.imgUrl} alt="" width={30} height={30}/>
-                                        <div className="ml-3 text-2xl font-semibold">{`${tokenInfo?.name} (${tokenInfo.symbol})`}</div>
+                                        {tokenInfo?.name && <div className="ml-3 text-2xl font-semibold">{`${tokenInfo?.name} (${tokenInfo.symbol})`}</div>}
                                     </div>
                                 </div>
                                 <div>
@@ -137,7 +137,7 @@ export default function Token() {
                                     <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='month' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('month')}>1M</div>
                                     <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='year' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('year')}>1Y</div>
                                 </div>
-                                <div className="grid grid-cols-3 p-5 mx-5 mb-0 border border-black rounded-t-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 mb-0 border border-black rounded-t-lg">
                                     <div>
                                         <div className="font-semibold mb-3">
                                             Market cap
@@ -172,7 +172,7 @@ export default function Token() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-3 p-5 mx-5 border border-t-0 border-black rounded-b-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 border border-t-0 border-black rounded-b-lg">
                                     <div>
                                         <div className="font-semibold mb-3">
                                             All-time high

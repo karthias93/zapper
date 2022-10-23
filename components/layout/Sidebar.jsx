@@ -13,10 +13,12 @@ import Dark from "../../public/images/dark.svg";
 import { useAccount } from "wagmi";
 import Link from "next/link";
 import { selectSidebarState } from "../../store/sidebarSlice";
+import SupportModal from "../support";
 
 const Sidebar = () => {
     const themeState = useSelector(selectThemeState);
     const sidebarState = useSelector(selectSidebarState);
+    const [showSupport, setShowSupport] = useState(false);
     const dispatch = useDispatch();
     const { address } = useAccount();
 
@@ -65,7 +67,7 @@ const Sidebar = () => {
             </div>
             <div className="sidebar-footer">
                 <ul className="menus1">
-                    <li>
+                    <li onClick={()=>setShowSupport(true)} className="cursor-pointer">
                         <Support className="sidebar-icons" width="20px" height="20px" />
                         <span className="menutext">Support</span>
                     </li>
@@ -83,6 +85,7 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </div>
+            {showSupport && <SupportModal setShowPopup={setShowSupport} />}
         </div>
     )
 }

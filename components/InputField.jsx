@@ -20,7 +20,7 @@ const InputField = ({label, isEdit, handleChange, inputs, setIsEdit, updateDetai
                     ) : 
                     (
                         <Fragment>
-                            <div className="font-semibold text-2xl mr-2">{inputs[name]}</div>
+                            <div className="font-semibold text-lg lg:text-2xl mr-2">{inputs[name]}</div>
                             <div className="font-semibold text-xs cursor-pointer" onClick={()=>setIsEdit(true)}>(Edit)</div>
                         </Fragment>
                     )

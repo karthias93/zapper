@@ -17,11 +17,13 @@ import { GlobalSearch } from "../../graphql/query";
 import axios from "axios";
 import { Toaster } from 'react-hot-toast';
 import { useDispatch, useSelector } from "react-redux";
-import { setUserState } from "../../store/userSlice";
+import { selectUserState, setUserState } from "../../store/userSlice";
 import { BiMenu } from 'react-icons/bi';
 import { CiDark } from 'react-icons/ci';
 import { selectSidebarState, setSidebarState } from "../../store/sidebarSlice";
 import { selectThemeState, setThemeState } from "../../store/themeSlice";
+import { IKImage } from "imagekitio-react";
+import { useRouter } from "next/router";
 
 const Header = ({page = 'Welcome'}) => {
     const dropdownRef = useRef(null);
@@ -37,10 +39,13 @@ const Header = ({page = 'Welcome'}) => {
     useOutsideAlerter(dropdownRef1, showDropdown1, setShowDropdown1);
     useOutsideAlerter(menuRef, menuDropdown, setMenuDropdown);
     const sidebarState = useSelector(selectSidebarState);
-    const themeState = useSelector(selectThemeState)
+    const themeState = useSelector(selectThemeState);
+    const userState = useSelector(selectUserState);
     const { data: balanceObj } = useBalance({
         addressOrName: address,
     });
+    const router = useRouter();
+    const {id} = router.query;
     useEffect(()=>{
         setBalance(balanceObj?.formatted)
     },[balanceObj?.formatted])
@@ -147,7 +152,10 @@ const Header = ({page = 'Welcome'}) => {
                         </div>
                     )}
                     <div className="hidden lg:block">
-                        <Image height={45} width={45} src={`/images/hexa.svg`} alt=""/>
+                        {!(userState?.profilePic?.filePath && (!id || userState.wallet === id)) && <Image height={45} width={45} src={`/images/hexa.svg`} alt=""/>}
+                        {userState?.profilePic?.filePath && (!id || userState.wallet === id) &&<div className="w-[45px] h-[45px] absolute profile">
+                            <IKImage path={userState.profilePic.filePath} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3"/>
+                        </div>}
                     </div>
                     <CiDark className="lg:hidden" size={30} fill="#FFFFFF" onClick={updateTheme}/>
                     <BiMenu className="lg:hidden" size={30} fill="#FFFFFF" onClick={updateSidebar}/>

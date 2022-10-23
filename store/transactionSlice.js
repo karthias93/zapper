@@ -10,6 +10,7 @@ export const fetchTransactions = createAsyncThunk(
     "transaction/fetchTransactions", async (id, thunkAPI) => {
        try {
             const response = await axios.get(`https://web.zapper.fi/v2/transactions?addresses[]=${id}&network=binance-smart-chain`);
+            // const response = awaitaxios.get(`https://api.debank.com/history/list?page_count=20&start_time=0&token_id=&user_addr=${id}`);
             thunkAPI.dispatch(setTransactionState(response.data.data));
         } catch (error) {
            return thunkAPI.rejectWithValue({ error: error.message });

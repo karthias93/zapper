@@ -63,13 +63,13 @@ export default function Settings() {
       <Sidebar />
       <div className="main-content w-full">
         <Background />
-        <div className="container m-auto px-16">
+        <div className="container m-auto px-0 lg:px-16">
           <div className="welcome-page">
             <Header page="Settings"/>
             <div className="settings-card text-black capitalize">
                 <div>
                     <div className="font-semibold text-2xl mb-5">Account Details</div>
-                    <div className="flex justify-between mb-5">
+                    <div className="flex justify-between mb-5 max-lg:flex-col">
                         <div>
                             <InputField 
                                 label="Username:"

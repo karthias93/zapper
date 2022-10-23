@@ -126,7 +126,7 @@ export default function Projects() {
             <Sidebar />
             <div className="main-content w-full">
                 <Background />
-                <div className="container m-auto px-0 lg:px-4 lg:px-1">
+                <div className="container m-auto px-0 lg:px-16">
                 <div className="welcome-page">
                     <Header page="Defi List"/>
                     <div className="projects-card">
@@ -135,7 +135,7 @@ export default function Projects() {
                         globalFilter={globalFilter}
                         setGlobalFilter={setGlobalFilter}
                     />
-                        <table className="table-auto w-full rounded max-lg:block max-lg:overflow-x-auto" {...getTableProps()}>
+                        <table className="table-auto w-full rounded max-lg:block text-sm max-lg:overflow-x-auto" {...getTableProps()}>
                             <thead>
                                 {headerGroups.map((headerGroup, index) => (
                                     <tr {...headerGroup.getHeaderGroupProps()} key={index}>

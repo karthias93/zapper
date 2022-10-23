@@ -114,12 +114,14 @@ const Profile = ({ page = 'portfolio' }) => {
     return (
         <div className="profile-container rounded-2xl p-0 lg:py-4 lg:px-16">
             <div className="profile-header block items-center lg:flex">
-                <div className="hexagon" onClick={handleClick}>
-                    <IKImage path={userState?.profilePic?.filePath && userState.wallet === id ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
+                <div className="flex justify-center">
+                    <div className="hexagon" onClick={handleClick}>
+                        <IKImage path={userState?.profilePic?.filePath && userState.wallet === id ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
+                    </div>
                 </div>
                 <div className="profile-info flex-1">
                     <div className="account-info flex max-lg:text-center">
-                        <div className="account-name font-medium text-4xl mb-5 flex-1">{userState?.username && userState.wallet === id ? userState.username : 'No ID' }</div>
+                        <div className="account-name font-medium text-2xl lg:text-4xl mb-5 flex-1 max-lg:text-center">{userState?.username && userState.wallet === id ? userState.username : 'No ID' }</div>
                         <div className="contact-options flex flex-1 justify-center items-center mb-5 gap-4">
                             <div className="twitter-icon border p-2 flex border-[#434343] rounded-full	">
                                 <TwitterBlack width={20} height={17} className="icons"/>

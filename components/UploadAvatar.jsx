@@ -38,10 +38,10 @@ const UploadAvatar = ({setShowPopup}) => {
     }
     return (
         <div tabIndex="-1" aria-hidden="true" className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full flex justify-center items-center bg-gray-600 bg-opacity-50">
-            <div className="relative p-4 w-full max-w-[40%] h-full md:h-auto">
-                <div className="relative bg-white rounded-3xl shadow dark:bg-gray-700 py-6 px-8 dialog-box modal-content upload-avatar">
+            <div className="relative p-4 w-full max-w-[90%] lg:max-w-[40%] h-full md:h-auto">
+                <div className="relative bg-white rounded-3xl shadow dark:bg-gray-700 py-2 px-2 lg:py-6 lg:px-8 dialog-box modal-content upload-avatar">
                     <div className="absolute">
-                        <div>Current Avatar</div>
+                        <div className="max-lg:hidden">Current Avatar</div>
                         <div className="hexagon preview-profile">
                             <IKImage path={userState?.profilePic?.filePath ? userState.profilePic.filePath : '/profile-picture-default_.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
                         </div>
