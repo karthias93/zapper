@@ -13,7 +13,7 @@ import Dark from "../../public/images/dark.svg";
 import { useAccount } from "wagmi";
 import Link from "next/link";
 import { selectSidebarState } from "../../store/sidebarSlice";
-import SupportModal from "../support";
+import SupportModal from "../Support";
 
 const Sidebar = () => {
     const themeState = useSelector(selectThemeState);
