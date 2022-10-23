@@ -78,7 +78,7 @@ export default function Token() {
                 <div className="container m-auto px-0 lg:px-16">
                     <div className="welcome-page">
                         <Header page=""/>
-                        <div className="trading-view bg-light-card rounded-lg shadow shadow-white pb-5">
+                        <div className="trading-view bg-light-card rounded-lg shadow shadow-white pb-5 dark:bg-gray-900 dark:shadow-inherit">
                             <div className="flex justify-between p-5">
                                 <div className="">
                                     <div className="capitalize mb-3">
@@ -131,13 +131,13 @@ export default function Token() {
                                     </LineChart>
                                 </ResponsiveContainer>
                                 <div className="flex gap-5 m-5">
-                                    <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='hour' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('hour')}>1H</div>
-                                    <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='day' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('day')}>1D</div>
-                                    <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='week' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('week')}>1W</div>
-                                    <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='month' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('month')}>1M</div>
-                                    <div className={`border border-black text-black font-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='year' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('year')}>1Y</div>
+                                    <div className={`border border-black dark:border-white border-black dark:text-whitefont-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='hour' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('hour')}>1H</div>
+                                    <div className={`border border-black dark:border-white border-black dark:text-whitefont-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='day' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('day')}>1D</div>
+                                    <div className={`border border-black dark:border-white border-black dark:text-whitefont-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='week' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('week')}>1W</div>
+                                    <div className={`border border-black dark:border-white border-black dark:text-whitefont-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='month' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('month')}>1M</div>
+                                    <div className={`border border-black dark:border-white border-black dark:text-whitefont-semibold p-3 mb-5 rounded-xl cursor-pointer ${timeFrame==='year' ? 'bg-blue1 text-white' : ''}`} onClick={()=>setTimeFrame('year')}>1Y</div>
                                 </div>
-                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 mb-0 border border-black rounded-t-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 mb-0 border border-black dark:border-white rounded-t-lg">
                                     <div>
                                         <div className="font-semibold mb-3">
                                             Market cap
@@ -172,7 +172,7 @@ export default function Token() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 border border-t-0 border-black rounded-b-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 p-5 mx-5 border border-t-0 border-black dark:border-white rounded-b-lg">
                                     <div>
                                         <div className="font-semibold mb-3">
                                             All-time high

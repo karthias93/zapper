@@ -63,7 +63,7 @@ export default function Settings() {
       <Sidebar />
       <div className="main-content w-full ml-0 lg:ml-64">
         <Background />
-        <div className="container m-auto px-0 lg:px-16">
+        <div className="container m-auto px-0 lg:px-16 setting-page-height">
           <div className="welcome-page">
             <Header page="Settings"/>
             <div className="settings-card text-black capitalize">

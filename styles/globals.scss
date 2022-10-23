@@ -85,7 +85,7 @@ html.dark {
     }
 
     .page-content {
-        min-height: 82vh;
+        min-height: calc(100vh - 87.5px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -414,4 +414,7 @@ html.dark {
 .profile, .profile:before {
 -webkit-clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 clip-path: polygon(1% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+.setting-page-height {
+    min-height: calc(100vh - 20px);
 }
