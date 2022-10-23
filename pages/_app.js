@@ -20,6 +20,7 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect';
 import { ApolloProvider } from "@apollo/client";
 import apolloClient from "../apollo-client";
 import { IKContext } from 'imagekitio-react';
+import Head from 'next/head';
 
 // Configure chains & providers with the Alchemy provider.
 // Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
@@ -71,6 +72,9 @@ function MyApp({ Component, pageProps }) {
     <IKContext publicKey="public_RFMgpmved2Nz3zxH+LMI9OyPmr4=" urlEndpoint={process.env.imgUrlEndpoint} authenticationEndpoint={`${process.env.apiUrl}/api/imagekit/auth`}>
       <ApolloProvider client={apolloClient}>
         <WagmiConfig client={client}>
+          <Head>
+            <link rel="shortcut icon" href="/images/logo.svg" />
+          </Head>
           <Component {...pageProps} />
         </WagmiConfig>
       </ApolloProvider>

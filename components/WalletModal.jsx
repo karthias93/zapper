@@ -29,7 +29,7 @@ const WalletModal = ({setShowPopup}) => {
                                                 connector.id === pendingConnector?.id &&
                                                 ' (connecting)'}
                                         </div>
-                                        <button className="rounded-xl connect-btn py-1 px-2 lg:py-6 lg:px-8 shrink-0 max-lg:text-sm " disabled={!connector.ready} onClick={() => connect({ connector })}>connect</button>
+                                        <button className="rounded-xl connect-btn py-2 px-6 shrink-0 max-lg:text-sm " disabled={!connector.ready} onClick={() => connect({ connector })}>connect</button>
                                     </div>
                                     <div className="bg-[#c2c2c2] h-[2px] rounded-2xl dark:bf-[#606060]"></div>
                                 </Fragment>
