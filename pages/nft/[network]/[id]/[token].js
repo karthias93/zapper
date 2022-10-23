@@ -124,7 +124,7 @@ export default function Nft() {
     return (
         <div className="layout">
             <Sidebar />
-            <div className="main-content w-full">
+            <div className="main-content w-full ml-64">
                 <Background />
                 <div className="container m-auto px-16">
                     <div className="welcome-page">

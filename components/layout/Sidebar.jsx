@@ -28,7 +28,7 @@ const Sidebar = () => {
         dispatch(setThemeState(mode))
     }
     return (
-        <div className={`sidebar lg:w-64 w-3/4 bg-regal-white dark:bg-black absolute lg:relative overflow-y-auto ${sidebarState ? '' : 'hidden'} lg:flex z-20`}>
+        <div className={`sidebar lg:w-64 w-3/4 bg-regal-white dark:bg-black absolute lg:fixed overflow-y-auto ${sidebarState ? '' : 'hidden'} lg:flex z-20`}>
             <div>
                 <div className="sidebar-header text-center mb-4">
                     <Image src={`/images/logo.svg`} alt="" width="100%" height="100%"/>

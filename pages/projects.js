@@ -124,7 +124,7 @@ export default function Projects() {
     return (
         <div className="layout">
             <Sidebar />
-            <div className="main-content w-full">
+            <div className="main-content w-full ml-64">
                 <Background />
                 <div className="container m-auto px-0 lg:px-16">
                 <div className="welcome-page">
