@@ -156,7 +156,7 @@ export default function Projects() {
                                 {page.map((row, k) => {
                                     prepareRow(row);
                                     return (
-                                        <Link href={`/projects/${row.values.appId}`} key={k}>
+                                        <Link href={`/projects/${row.values.appId.replace('-v', '')}`} key={k}>
                                             <tr {...row.getRowProps()} className="cursor-pointer hover:bg-light-card dark:hover:bg-black">
                                                 {row.cells.map((cell, m)  => {
                                                     console.log(cell)

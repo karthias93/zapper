@@ -80,7 +80,7 @@ export default function Protocol() {
     return (
         <div className="layout">
             <Sidebar />
-            <div className="main-content w-full ml-0 lg:ml-64">
+            <div className="main-content w-full ml-0 lg:ml-64 min-h-screen">
                 <Background />
                 <div className="container m-auto px-0 lg:px-4 lg:px-16">
                     <div className="welcome-page">
