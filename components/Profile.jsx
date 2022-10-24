@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from 'next/image';
 import { useConnect, useAccount } from 'wagmi'
 import WalletModal from "./WalletModal";
@@ -25,13 +25,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCoins, selectCoinState } from "../store/coinSlice";
 import { selectUserState } from "../store/userSlice";
 import { IKImage } from "imagekitio-react";
+import { chains } from "../constants";
+import useOutsideAlerter from "../utils/useOusideAlerter";
 
 const Profile = ({ page = 'portfolio' }) => {
     const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
     const [showPopup, setShowPopup] = useState(false);
     const { address, connector, isConnected } = useAccount();
     const router = useRouter();
-    const {id} = router.query;
+    const {id, chain} = router.query;
     const { data, loading } = useQuery(UserAvatar, { variables: { userInput: { address: id } } });
     const { data: socialStats} = useQuery(UserSocialStats, {variables: { address: id }});
     const { data: nftNet } = useQuery(NftNetWorth, {variables: { addresses:[id] }});
@@ -45,7 +47,9 @@ const Profile = ({ page = 'portfolio' }) => {
     const [looksRare, setLooksRare] = useState([]);
     const [coinBalance, setCoinBalance] = useState({});
     const [balance, setBalance] = useState(0);
-
+    const [chainDropdown, setChainDropdown] = useState(false);
+    const chainRef = useRef();
+    useOutsideAlerter(chainRef, chainDropdown, setChainDropdown);
     useEffect(()=> {
         dispatch(fetchCoins(id));
     }, [dispatch, id])
@@ -61,7 +65,7 @@ const Profile = ({ page = 'portfolio' }) => {
         };
         const coins = {};
         coinState.forEach(wallet=>{
-            if (wallet.appId === 'looks-rare') {
+            if (wallet.appId === 'looks-rare' && (!chain || wallet.network === chain)) {
                 looks.total = wallet.app.meta.total;
                 looks.appName = wallet.app.displayProps.appName;
                 looks.logo = wallet.app.displayProps.images[0];
@@ -78,7 +82,7 @@ const Profile = ({ page = 'portfolio' }) => {
                         });
                     });
                 });
-            } else if (wallet.appId === 'tokens') {
+            } else if (wallet.appId === 'tokens' && (!chain || wallet.network === chain)) {
                 wallet.totals.forEach((trans)=>{
                     if (coins[wallet.network]) {
                         coins[wallet.network] += trans.balanceUSD;
@@ -110,7 +114,12 @@ const Profile = ({ page = 'portfolio' }) => {
         });
         setBalance(parseFloat(token.total+looks.total)?.toFixed())
         setCoinBalance(coinChain);
-    }, [coinState])
+    }, [coinState, chain])
+    const selectChain = (value) =>{
+        router.replace({
+            query: { ...router.query, 'chain': value },
+         });
+    }
     return (
         <div className="profile-container rounded-2xl p-0 lg:py-4 lg:px-16">
             <div className="profile-header block items-center lg:flex">
@@ -166,25 +175,26 @@ const Profile = ({ page = 'portfolio' }) => {
                     <div className="tab-divider mx-5"></div>
                     <Link href={`/profile/history/${id}`}><div className={`tab px-3 mx-0 lg:mx-5 pb-2 cursor-pointer ${page==='history' ? 'active' : ''}`}>History</div></Link>
                 </div>
-                <div className="filer-dropdown flex-1 w-1/6 text-right pb-2 max-lg:hidden">
-                    <select className="form-select
-                        block
-                        px-3
-                        py-1.5
-                        text-[10px]
-                        font-semibold
-                        text-[#4B4B4B]
-                        bg-[#D3D3D3] bg-clip-padding bg-no-repeat
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        float-right
-                        ease-in-out">
-                            <option selected>All chains</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                    </select>
+                <div className="filer-dropdown flex-1 w-full lg:w-1/6 max-lg:text-center max-lg:mt-3 text-right pb-2 ">
+                    <div ref={chainRef} className="mr-5">
+                        <button className="text-regal-white login-btn font-medium py-1.5 px-2 lg:py-2.5 lg:px-3.5 max-lg:bg-[#E15310] max-lg:border-white lg:bg-gradient-to-r from-[#FEAA02] to-[#E15310] bg-[#E15310] max-lg:border-white max-lg:border" onClick={()=> setChainDropdown(true)}>All chains</button>
+                        {chainDropdown && <div className="absolute z-10 mt-1 min-w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black">
+                            <div className="py-1 grid grid-cols-2" role="none">
+                                <div key={'all'} className={`text-gray-700 block px-4 py-2 text-sm cursor-pointer dark:text-white flex items-center ${chain ? '' : 'bg-[#FEAA02]'}`} onClick={()=>selectChain('')}>
+                                    <Image src="/images/all.svg" alt="" width={16} height={16}/>
+                                    <div className="ml-2">All Chain</div>
+                                </div>
+                                {chains.map((c,i)=>{
+                                    return (
+                                        <div key={i} className={`text-gray-700 block px-4 py-2 text-sm cursor-pointer dark:text-white flex items-center ${chain===c.key ? 'bg-[#FEAA02]' : ''}`} onClick={()=>selectChain(c.key)}>
+                                            <Image src={c.img} alt="" width={16} height={16}/>
+                                            <div className="ml-2">{c.name}</div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>}
+                    </div>
                 </div>
             </div>
             <div className="px-10 py-9 bg-[#D3D3D3] dark:bg-[#999]">
@@ -194,10 +204,10 @@ const Profile = ({ page = 'portfolio' }) => {
             </div>
             <div className="footer flex justify-end my-10 items-center text-[#8F8F8F] font-medium gap-4">
                 <div className="">Connect With Us</div>
-                <Twitter />
-                <Linkedin />
-                <Telegram />
-                <Github />
+                <a href="https://twitter.com"><Twitter /></a>
+                <a href="https://linkedin.com"><Linkedin /></a>
+                <a href="https://telegram.com"><Telegram /></a>
+                <a href="https://github.com"><Github /></a>
             </div>
             {showPopup && <UploadAvatar setShowPopup={setShowPopup} />}
         </div>

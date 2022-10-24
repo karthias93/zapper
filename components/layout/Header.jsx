@@ -84,6 +84,7 @@ const Header = ({page = 'Welcome'}) => {
     const logout = () => {
         disconnect();
         setMenuDropdown(false);
+        router.push('/')
     }
 
     const updateSidebar = () => {
@@ -138,11 +139,11 @@ const Header = ({page = 'Welcome'}) => {
                         <button className="text-regal-white login-btn font-medium py-1.5 px-2 lg:py-2.5 lg:px-3.5 max-lg:bg-[#E15310] max-lg:border-white lg:bg-gradient-to-r from-[#FEAA02] to-[#E15310] bg-[#E15310] max-lg:border-white max-lg:border" onClick={()=> address ? setMenuDropdown(true) : setShowPopup(true)}>
                             {balance ? `${address?.substr(0,5)}...${(address?.substr(-10))}($${parseFloat(balanceObj?.formatted).toFixed(2)})` : 'Log in via web3 wallet.'}
                         </button>
-                        {menuDropdown && <div className="absolute z-10 mt-1 min-w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black">
+                        {/* {menuDropdown && <div className="absolute z-10 mt-1 min-w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black">
                             <div className="py-1" role="none">
-                                <div className="text-gray-700 block px-4 py-2 text-sm cursor-pointer" onClick={logout}>Logout</div>
+                                <div className="text-gray-700 block px-4 py-2 text-sm cursor-pointer dark:text-white">Logout</div>
                             </div>
-                        </div>}
+                        </div>} */}
                     </div>) :
                     (
                         <div className="mr-5">
@@ -151,6 +152,11 @@ const Header = ({page = 'Welcome'}) => {
                             </button>
                         </div>
                     )}
+                    <div>
+                        <button className="hidden lg:block mr-5 px-3 py-2.5 font-medium text-sm rounded-lg bg-gradient-to-r from-[#FEAA02] to-[#E15310] text-white" onClick={logout}>
+                        Logout
+                        </button>
+                    </div>
                     <div className="hidden lg:block">
                         {!(userState?.profilePic?.filePath && (!id || userState.wallet === id)) && <Image height={45} width={45} src={`/images/hexa.svg`} alt=""/>}
                         {userState?.profilePic?.filePath && (!id || userState.wallet === id) &&<div className="w-[45px] h-[45px] absolute profile">

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Sidebar from "../components/layout/Sidebar";
 import Header from "../components/layout/Header";
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { useAccount } from 'wagmi';
 import Router from 'next/router';
 import Background from "../components/Background";
@@ -59,6 +59,11 @@ export default function Projects() {
             accessor: 'id', // accessor is the "key" in the data
           },
           {
+            Header: '',
+            accessor: 'appId',
+            show: false
+          },
+          {
             Header: 'App',
             accessor: 'appName',
           },
@@ -94,8 +99,9 @@ export default function Projects() {
     const tableInstance = useTable({ 
                             columns,
                             data: apps,
-                            initialState: { pageIndex: 0 },
+                            initialState: { pageIndex: 0, hiddenColumns: ['appId'] },
                             filterTypes,
+
                         },
                         useGlobalFilter,
                         usePagination
@@ -151,9 +157,11 @@ export default function Projects() {
                                     return (
                                         <tr {...row.getRowProps()} key={k}>
                                             {row.cells.map((cell, m)  => {
+                                                console.log(cell)
                                                 return (
                                                     <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>
-                                                        {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.render('Cell')}
+                                                        {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.column.id === 'appName' ? <div className='flex'><img src={`https://storage.googleapis.com/zapper-fi-assets/apps/${cell.row.values.appId}.png`} alt="" width={24} height={24}/><span className='ml-3'>{cell.value}</span></div> : cell.render('Cell')}
+                                                        
                                                     </td>
                                                 )
                                             })}

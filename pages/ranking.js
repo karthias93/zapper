@@ -132,7 +132,7 @@ export default function Ranking() {
                 <Background />
                 <div className="container m-auto px-0 lg:px-16">
                 <div className="welcome-page">
-                    <Header page="Defi List"/>
+                    <Header page="Social Ranking"/>
                     <div className="projects-card">
                     <GlobalFilter
                         preGlobalFilteredRows={preGlobalFilteredRows}

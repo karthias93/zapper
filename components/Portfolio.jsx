@@ -7,16 +7,16 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
     return (
         <Fragment>
             <div className="block lg:flex mb-10">
-                <div className="w-full lg:w-4/6 bg-white min-h-[100px] mr-6 flex flex-wrap p-8 card-wrapper gap-5 max-lg:mb-10 justify-between">
+                <div className="w-full lg:w-4/6 bg-white min-h-[100px] mr-6 grid grid-cols-1 lg:grid-cols-3 flex-wrap p-8 card-wrapper gap-5 max-lg:mb-10 justify-between">
                     {chains.map((chain)=>{
                         return (
-                            <div className="flex coin-list" key={chain.name}>
-                                <Image src={chain.img} alt="" width={40} height={40}/>
-                                <div className="ml-2">
+                            <div className="grid grid-cols-5 coin-list" key={chain.name}>
+                                <Image src={chain.img} alt="" width={40} height={40} className="col-span-2"/>
+                                <div className="ml-2 col-span-3">
                                     <div className="text-xs font-medium">Assets on {chain.name.charAt(0).toUpperCase()}{chain.name.slice(1)}</div>
-                                    <div className="flex items-center">
+                                    <div className="grid grid-cols-2 items-center">
                                         <div className="font-semibold flex-1">{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(coinBalance[chain.key] ? coinBalance[chain.key].balance?.toFixed() : 0)}</div>
-                                        <div className="flex-1 text-xs text-center leading-normal">{coinBalance[chain.key] ? coinBalance[chain.key].percentage?.toFixed() : 0}%</div>
+                                        <div className="flex-1 text-xs text-right leading-normal">{coinBalance[chain.key] ? coinBalance[chain.key].percentage?.toFixed() : 0}%</div>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                         {tokens.wallet?.map((w,i)=>{
                             return (
                                 <Link href={`/token/${w.network}/${w.address}`} key={i}>
-                                    <div className="table-row cursor-pointer">
+                                    <div className="table-row cursor-pointer dark:hover:bg-black hover:bg-light-card">
                                         <div className="table-cell text-center py-2">
                                             <Image src={w.logo} alt="" width={22} height={22} />
                                         </div>
@@ -103,7 +103,7 @@ const Portfolio = ({looksRare, coinBalance, tokens}) => {
                         {looksRare.wallet?.map((w,i)=>{
                             return (
                                 <Link href={`/token/${w.network}/${w.address}`} key={i}>
-                                    <div className="table-row cursor-pointer">
+                                    <div className="table-row cursor-pointer hover:bg-black">
                                         <div className="table-cell text-center py-2">
                                             <Image src={w.logo} alt="" width={22} height={22} />
                                         </div>
