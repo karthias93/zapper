@@ -153,9 +153,9 @@ const Header = ({page = 'Welcome'}) => {
                         </div>
                     )}
                     <div>
-                        <button className="hidden lg:block mr-5 px-3 py-2.5 font-medium text-sm rounded-lg bg-gradient-to-r from-[#FEAA02] to-[#E15310] text-white" onClick={logout}>
+                    {balance && <button className="hidden lg:block mr-5 px-3 py-2.5 font-medium text-sm rounded-lg bg-gradient-to-r from-[#FEAA02] to-[#E15310] text-white" onClick={logout}>
                         Logout
-                        </button>
+                    </button>}
                     </div>
                     <div className="hidden lg:block">
                         {!(userState?.profilePic?.filePath && (!id || userState.wallet === id)) && <Image height={45} width={45} src={`/images/hexa.svg`} alt=""/>}

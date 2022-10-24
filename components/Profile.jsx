@@ -204,7 +204,7 @@ const Profile = ({ page = 'portfolio' }) => {
             </div>
             <div className="footer flex justify-end my-10 items-center text-[#8F8F8F] font-medium gap-4">
                 <div className="">Connect With Us</div>
-                <a href="https://twitter.com"><Twitter /></a>
+                <a href="https://twitter.com/potent_coin"><Twitter /></a>
                 <a href="https://linkedin.com"><Linkedin /></a>
                 <a href="https://telegram.com"><Telegram /></a>
                 <a href="https://github.com"><Github /></a>

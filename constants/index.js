@@ -40,7 +40,7 @@ export const chains = [
         img: '/images/movr.svg'
     },
     {
-        name: 'bitcoin',
+        name: 'BSC',
         img: '/images/bsc.svg',
         key: 'binance-smart-chain'
     },

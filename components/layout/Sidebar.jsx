@@ -21,6 +21,7 @@ const Sidebar = () => {
     const themeState = useSelector(selectThemeState);
     const sidebarState = useSelector(selectSidebarState);
     const [showSupport, setShowSupport] = useState(false);
+    const [id, setId] = useState('')
     const sidebarRef = useRef();
     const dispatch = useDispatch();
     const { address } = useAccount();
@@ -45,7 +46,11 @@ const Sidebar = () => {
 
     useEffect(()=>{
         handleSidebar(false)
-    },[router?.pathname])
+    },[router?.pathname]);
+
+    useEffect(()=>{
+        setId(address)
+    }, [address])
     return (
         <div ref={sidebarRef} className={`sidebar lg:w-64 w-3/4 bg-regal-white dark:bg-black absolute lg:fixed overflow-y-auto ${sidebarState ? '' : 'hidden'} lg:flex z-20`}>
             <div>
@@ -61,10 +66,10 @@ const Sidebar = () => {
                                 <span className="menutext">Dashboard</span>
                             </li>
                         </Link>
-                        <li>
+                        {/* <li>
                             <Feed className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">Feed</span>
-                        </li>
+                        </li> */}
                         <Link href={`/ranking`}>
                             <li className="cursor-pointer">
                                 <Profile className="sidebar-icons" width="20px" height="20px" />
@@ -96,7 +101,7 @@ const Sidebar = () => {
                             <span className="menutext">Settings</span>
                         </li>
                     </Link>
-                    <li onClick={()=>logout()} className={`cursor-pointer ${address ? '' : 'hidden'}`}>
+                    <li onClick={()=>logout()} className={`cursor-pointer ${id ? '' : 'hidden'}`}>
                         <Support className="sidebar-icons" width="20px" height="20px" />
                         <span className="menutext">Logout</span>
                     </li>
