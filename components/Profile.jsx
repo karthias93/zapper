@@ -124,7 +124,7 @@ const Profile = ({ page = 'portfolio' }) => {
         <div className="profile-container rounded-2xl p-0 lg:py-4 lg:px-16">
             <div className="profile-header block items-center lg:flex">
                 <div className="flex justify-center">
-                    <div className="hexagon" onClick={handleClick}>
+                    <div className="w-[180px] h-[180px] profile m-5" onClick={handleClick}>
                         <IKImage path={userState?.profilePic?.filePath && userState.wallet === id ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
                     </div>
                 </div>

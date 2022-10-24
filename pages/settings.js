@@ -134,7 +134,7 @@ export default function Settings() {
                             <div className="font-normal text-[#FFA800] text-right">Connect</div>
                         </div>
                         <div className="w-1/4 flex gap-5">
-                            <Image src={`/images/github.svg`} alt='' width={15} height={12} className="flex-1"/>
+                            <Image src={`/images/twitter.svg`} alt='' width={15} height={12} className="flex-1"/>
                             <div className="font-semibold text-base flex-1">Twitter</div>
                             <div className="font-normal text-[#FFA800] text-right">Connect</div>
                         </div>

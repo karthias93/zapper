@@ -61,7 +61,7 @@ const Sidebar = () => {
                     <div className="menu-border table-cell"></div>
                     <ul className="menus mb-8 table-cell">
                         <Link href={address ? `/profile/${address}` : `/`} onClick={()=>handleSidebar(false)}>
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer flex">
                                 <Dashboard className="sidebar-icons" width="20px" height="20px" />
                                 <span className="menutext">Dashboard</span>
                             </li>
@@ -71,18 +71,18 @@ const Sidebar = () => {
                             <span className="menutext">Feed</span>
                         </li> */}
                         <Link href={`/ranking`}>
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer flex">
                                 <Profile className="sidebar-icons" width="20px" height="20px" />
                                 <span className="menutext">Social Rankings</span>
                             </li>
                         </Link>
                         <Link href={`/projects`}>
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer flex">
                                 <Defi className="sidebar-icons" width="20px" height="20px" />
                                 <span className="menutext">Defi List</span>
                             </li>
                         </Link>
-                        <li>
+                        <li className="max-lg:hidden flex">
                             <More className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">More</span>
                         </li>
@@ -91,21 +91,21 @@ const Sidebar = () => {
             </div>
             <div className="sidebar-footer">
                 <ul className="menus1">
-                    <li onClick={()=>setShowSupport(true)} className="cursor-pointer">
+                    <li onClick={()=>setShowSupport(true)} className="cursor-pointer flex">
                         <Support className="sidebar-icons" width="20px" height="20px" />
                         <span className="menutext">Support</span>
                     </li>
                     <Link href={address ? `/settings` : `/`}>
-                        <li className="cursor-pointer">
+                        <li className="cursor-pointer flex">
                             <Settings className="sidebar-icons" width="20px" height="20px" />
                             <span className="menutext">Settings</span>
                         </li>
                     </Link>
-                    <li onClick={()=>logout()} className={`cursor-pointer ${id ? '' : 'hidden'}`}>
+                    {id && <li onClick={()=>logout()} className={`cursor-pointer flex`}>
                         <Support className="sidebar-icons" width="20px" height="20px" />
                         <span className="menutext">Logout</span>
-                    </li>
-                    <li className="mt-2 dark-btn">
+                    </li>}
+                    <li className="mt-2 dark-btn flex">
                         <button className="flex" onClick={updateTheme}>
                             <Dark className="sidebar-btn-icons" />
                             <span className="menutext">Dark Mode</span>
