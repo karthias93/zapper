@@ -22,7 +22,7 @@ const HistoryComp = () => {
                             <div className="flex-1">
                                 <div className="flex items-center">
                                     <Image src={`/images/coin-1.svg`} alt="" width={27} height={27} />
-                                    <div className="text-xs font-small ml-2">{timeDifference(Date.now(), trans.time_at)}</div>
+                                    <div className="text-xs font-small ml-2">{timeDifference(Math.floor(Date.now() / 1000), trans.time_at)}</div>
                                 </div>
                                 <div className="flex">
                                     <div className="mr-3 text-lg font-small">{trans?.other_addr.substr(0,5)}...${(trans?.other_addr.substr(-10))}</div>

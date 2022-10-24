@@ -42,7 +42,7 @@ const UploadAvatar = ({setShowPopup}) => {
                 <div className="relative bg-white rounded-3xl shadow dark:bg-gray-700 py-2 px-2 lg:py-6 lg:px-8 dialog-box modal-content upload-avatar">
                     <div className="absolute">
                         <div className="max-lg:hidden">Current Avatar</div>
-                        <div className="hexagon preview-profile">
+                        <div className="w-[80px] h-[80px] profile">
                             <IKImage path={userState?.profilePic?.filePath ? userState.profilePic.filePath : '/profile-picture-default_.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3" />
                         </div>
                     </div>

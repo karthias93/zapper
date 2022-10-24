@@ -120,7 +120,7 @@ export default function Settings() {
                             />
                         </div>
                         <div>
-                            <div className="hexagon hexagon-settings">
+                            <div className="w-[145px] h-[145px] profile m-5">
                                 <IKImage path={userState?.profilePic?.filePath ? userState.profilePic.filePath : '/profile-picture-default.jpg'} alt="" loading="lazy" lqip={{ active: true }} className="relative w-100 mb-3"/>
                             </div>
                             <div className="text-center cursor-pointer" onClick={()=>setShowPopup(true)}>(Edit)</div>
