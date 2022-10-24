@@ -7,6 +7,7 @@ import Router from 'next/router';
 import Background from "../components/Background";
 import axios from 'axios';
 import { useTable, usePagination, useGlobalFilter, useAsyncDebounce } from 'react-table';
+import Link from 'next/link';
 
 function GlobalFilter({
     preGlobalFilteredRows,
@@ -155,17 +156,19 @@ export default function Projects() {
                                 {page.map((row, k) => {
                                     prepareRow(row);
                                     return (
-                                        <tr {...row.getRowProps()} key={k}>
-                                            {row.cells.map((cell, m)  => {
-                                                console.log(cell)
-                                                return (
-                                                    <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>
-                                                        {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.column.id === 'appName' ? <div className='flex'><img src={`https://storage.googleapis.com/zapper-fi-assets/apps/${cell.row.values.appId}.png`} alt="" width={24} height={24}/><span className='ml-3'>{cell.value}</span></div> : cell.render('Cell')}
-                                                        
-                                                    </td>
-                                                )
-                                            })}
-                                        </tr>
+                                        <Link href={`/projects/${row.values.appId}`} key={k}>
+                                            <tr {...row.getRowProps()} className="cursor-pointer hover:bg-light-card dark:hover:bg-black">
+                                                {row.cells.map((cell, m)  => {
+                                                    console.log(cell)
+                                                    return (
+                                                        <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>
+                                                            {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.column.id === 'appName' ? <div className='flex'><img src={`https://storage.googleapis.com/zapper-fi-assets/apps/${cell.row.values.appId}.png`} alt="" width={24} height={24}/><span className='ml-3'>{cell.value}</span></div> : cell.render('Cell')}
+                                                            
+                                                        </td>
+                                                    )
+                                                })}
+                                            </tr>
+                                        </Link>
                                     )
                                 })}
                             </tbody>
