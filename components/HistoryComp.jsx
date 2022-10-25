@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { timeDifference } from "../utils/common";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Copy from "../public/images/copy.svg";
+import toast from "react-hot-toast";
 
 const HistoryComp = () => {
     const dispatch = useDispatch();

@@ -60,9 +60,9 @@ export default function Projects() {
             Header: 'Name',
             accessor: (row, index) => {
                 return (
-                    <div>
+                    <div className='flex'>
                         <Image src={row.logo_url} alt='' width={24} height={24} />
-                        <div>{row.name}</div>
+                        <div className='ml-3'>{row.name}</div>
                     </div>
                 )}
           },
@@ -193,7 +193,6 @@ export default function Projects() {
                                         <Link href={`/projects/${row.original.id}`} key={k}>
                                             <tr {...row.getRowProps()} className="cursor-pointer hover:bg-light-card dark:hover:bg-black">
                                                 {row.cells.map((cell, m)  => {
-                                                    console.log(cell)
                                                     return (
                                                         <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>{cell.render('Cell')}</td>
                                                     )
