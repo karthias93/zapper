@@ -6,8 +6,9 @@ import { useAccount } from 'wagmi';
 import Router from 'next/router';
 import Background from "../components/Background";
 import axios from 'axios';
-import { useTable, usePagination, useGlobalFilter, useAsyncDebounce } from 'react-table';
+import { useTable, usePagination, useGlobalFilter, useAsyncDebounce, useSortBy } from 'react-table';
 import Link from 'next/link';
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai'
 
 function GlobalFilter({
     preGlobalFilteredRows,
@@ -48,33 +49,56 @@ function GlobalFilter({
 export default function Projects() {
     const [apps, setApps] = useState([]);
     useEffect(()=>{
-        axios.get(`/data/apps.json`)
+        axios.get(`https://api.debank.com/project/v2/list`)
             .then(res=>{
-                const data = res.data.pageProps.tableData;
+                const data = res.data.data;
                 setApps(data)
             })
     }, [])
     const columns = useMemo(() => [
           {
-            Header: '#',
-            accessor: 'id', // accessor is the "key" in the data
+            Header: 'Name',
+            accessor: (row, index) => {
+                return (
+                    <div>
+                        <Image src={row.logo_url} alt='' width={24} height={24} />
+                        <div>{row.name}</div>
+                    </div>
+                )}
           },
           {
             Header: '',
-            accessor: 'appId',
+            accessor: 'logo_url',
             show: false
           },
           {
-            Header: 'App',
-            accessor: 'appName',
+            Header: '',
+            accessor: 'id',
+            show: false
           },
           {
-            Header: 'Network',
-            accessor: 'network',
+            Header: 'Tags',
+            accessor: (row, index) => {
+                return (
+                    <div>
+                        {row.tag_ids.map((tag)=>{
+                            return <div key={tag}>{tag}</div>
+                        })}
+                    </div>
+                )}
+          },
+          
+          {
+            Header: 'User Deposits',
+            accessor:  (row, index) => Intl.NumberFormat('en', { style: 'currency', currency: 'USD', notation: 'compact' }).format(row.total_user_usd)
           },
           {
-            Header: 'TIV',
-            accessor: 'tvl',
+            Header: 'Invertors',
+            accessor: 'total_user_count',
+          },
+          {
+            Header: 'Genesis Date',
+            accessor: (row, index) => `${new Date(row.publish_at * 1000).toLocaleDateString('zh-Hans-CN')}`,
           },
         ], []);
     
@@ -100,12 +124,13 @@ export default function Projects() {
     const tableInstance = useTable({ 
                             columns,
                             data: apps,
-                            initialState: { pageIndex: 0, hiddenColumns: ['appId'] },
+                            initialState: { pageIndex: 0, hiddenColumns: ['logo_url','id'], sortBy: [{id:'User Deposits', desc: true}] },
                             filterTypes,
 
                         },
                         useGlobalFilter,
-                        usePagination
+                        useSortBy,
+                        usePagination,
                     );
  
     const {
@@ -147,7 +172,16 @@ export default function Projects() {
                                 {headerGroups.map((headerGroup, index) => (
                                     <tr {...headerGroup.getHeaderGroupProps()} key={index}>
                                         {headerGroup.headers.map((column, i) => (
-                                            <th {...column.getHeaderProps()} key={i} className="p-5 text-left border-b border-inherit dark:border-[#252a37] bg-[#D3D3D3] dark:bg-black">{column.render('Header')}</th>
+                                            <th {...column.getHeaderProps(column.getSortByToggleProps())} key={i} className="p-5 text-left border-b border-inherit dark:border-[#252a37] bg-[#D3D3D3] dark:bg-black">
+                                                {column.render('Header')}
+                                                <span>
+                                                    {column.isSorted
+                                                    ? column.isSortedDesc
+                                                        ? AiFillCaretDown
+                                                        : AiFillCaretUp
+                                                    : ''}
+                                                </span>
+                                            </th>
                                         ))}
                                     </tr>
                                 ))}
@@ -156,15 +190,12 @@ export default function Projects() {
                                 {page.map((row, k) => {
                                     prepareRow(row);
                                     return (
-                                        <Link href={`/projects/${row.values.appId.replace('-v', '')}`} key={k}>
+                                        <Link href={`/projects/${row.original.id}`} key={k}>
                                             <tr {...row.getRowProps()} className="cursor-pointer hover:bg-light-card dark:hover:bg-black">
                                                 {row.cells.map((cell, m)  => {
                                                     console.log(cell)
                                                     return (
-                                                        <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>
-                                                            {cell.column.id === 'tvl' ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(parseFloat(cell.value).toFixed(2)) : cell.column.id === 'appName' ? <div className='flex'><img src={`https://storage.googleapis.com/zapper-fi-assets/apps/${cell.row.values.appId}.png`} alt="" width={24} height={24}/><span className='ml-3'>{cell.value}</span></div> : cell.render('Cell')}
-                                                            
-                                                        </td>
+                                                        <td {...cell.getCellProps()} key={m} className={`p-5 border-b border-inherit dark:border-[#252a37] dark:bg-black`}>{cell.render('Cell')}</td>
                                                     )
                                                 })}
                                             </tr>

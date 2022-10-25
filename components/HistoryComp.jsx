@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTransactions, selectTransactionState } from "../store/transactionSlice";
 import { useRouter } from "next/router";
 import { timeDifference } from "../utils/common";
+import CopyToClipboard from "react-copy-to-clipboard";
+import Copy from "../public/images/copy.svg";
 
 const HistoryComp = () => {
     const dispatch = useDispatch();
@@ -26,7 +28,9 @@ const HistoryComp = () => {
                                 </div>
                                 <div className="flex">
                                     <div className="mr-3 text-lg font-small">{trans?.other_addr.substr(0,5)}...${(trans?.other_addr.substr(-10))}</div>
-                                    <Image src={`/images/copy.svg`} alt="" width={15} height={17} />
+                                    <CopyToClipboard text={trans?.other_addr} onCopy={() => toast('Copied')}>
+                                        <Copy width={19} height={22} className="icons"/>
+                                    </CopyToClipboard>
                                 </div>
                             </div>
                             <div className="flex-1 flex items-center">
