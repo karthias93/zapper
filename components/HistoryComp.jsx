@@ -28,10 +28,10 @@ const HistoryComp = () => {
                                     <div className="text-xs font-small ml-2">{`${new Date(trans.time_at * 1000).toLocaleDateString('zh-Hans-CN')} ${new Date(trans.time_at * 1000).toLocaleTimeString("it-IT")}`}</div>
                                 </div>
                                 <div className="flex">
-                                    <div className="mr-3 text-lg font-small">{trans?.other_addr.substr(0,5)}...${(trans?.other_addr.substr(-10))}</div>
+                                   {trans?.other_addr && <Fragment><div className="mr-3 text-lg font-small">{trans?.other_addr?.substr(0,5)}...{(trans?.other_addr?.substr(-10))}</div>
                                     <CopyToClipboard text={trans?.other_addr} onCopy={() => toast('Copied')}>
                                         <Copy width={19} height={22} className="icons"/>
-                                    </CopyToClipboard>
+                                    </CopyToClipboard></Fragment>}
                                 </div>
                             </div>
                             <div className="flex-1 flex items-center">
