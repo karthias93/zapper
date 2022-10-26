@@ -13,7 +13,7 @@ const nextConfig = {
     apiUrl:
         process.env.NODE_ENV !== "production"
             ? "http://localhost:3000" // development api
-            : "https://zapper-debank.herokuapp.com", // production api
+            : "https://portfolio.potent.finance", // production api
     mailPassword: "jhvtxmiqrltufxtj",
     mailUsername: "unibond12@gmail.com",
     imgUrlEndpoint: "https://ik.imagekit.io/uihusbecs1/",
