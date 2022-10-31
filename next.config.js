@@ -17,8 +17,11 @@ const nextConfig = {
     mailPassword: "jhvtxmiqrltufxtj",
     mailUsername: "unibond12@gmail.com",
     imgUrlEndpoint: "https://ik.imagekit.io/uihusbecs1/",
-    zapperApi: "https://web.zapper.fi/v2"
+    zapperApi: "https://web.zapper.fi/v2",
   },
+  images: {
+    unoptimized: true
+  }
 }
 
 module.exports = nextConfig

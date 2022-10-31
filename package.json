@@ -6,7 +6,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "yarn build && next export"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
@@ -38,7 +39,7 @@
     "react-table": "^7.8.0",
     "recharts": "^2.1.15",
     "sass": "^1.55.0",
-    "wagmi": "^0.7.0"
+    "wagmi": "^0.7.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

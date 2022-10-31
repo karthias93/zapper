@@ -32,6 +32,7 @@ const Header = ({page = 'Welcome'}) => {
     const { address, connector, isConnected } = useAccount();
     const { disconnect } = useDisconnect(); 
     const [ balance, setBalance ] = useState(0);
+    const [ add, setAdd ] = useState('');
     const [ showDropdown, setShowDropdown ] = useState(false);
     const [ showDropdown1, setShowDropdown1 ] = useState(false);
     const [ menuDropdown, setMenuDropdown ] = useState(false);
@@ -49,6 +50,9 @@ const Header = ({page = 'Welcome'}) => {
     useEffect(()=>{
         setBalance(balanceObj?.formatted)
     },[balanceObj?.formatted])
+    useEffect(()=>{
+        setAdd(address)
+    }, [address])
     const dispatch = useDispatch();
 
     useEffect(()=>{
@@ -137,7 +141,7 @@ const Header = ({page = 'Welcome'}) => {
                 {page !== 'Welcome' ? 
                     (<div ref={menuRef} className="mr-5">
                         <button className="text-regal-white login-btn font-medium py-1.5 px-2 lg:py-2.5 lg:px-3.5 max-lg:bg-[#E15310] max-lg:border-white lg:bg-gradient-to-r from-[#FEAA02] to-[#E15310] bg-[#E15310] max-lg:border-white max-lg:border" onClick={()=> address ? setMenuDropdown(true) : setShowPopup(true)}>
-                            {balance ? `${address?.substr(0,5)}...${(address?.substr(-10))}($${parseFloat(balanceObj?.formatted).toFixed(2)})` : 'Log in via web3 wallet.'}
+                            {add ? `${address?.substr(0,5)}...${(address?.substr(-10))}($${parseFloat(balanceObj?.formatted).toFixed(2)})` : 'Log in via web3 wallet.'}
                         </button>
                         {/* {menuDropdown && <div className="absolute z-10 mt-1 min-w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black">
                             <div className="py-1" role="none">
@@ -153,7 +157,7 @@ const Header = ({page = 'Welcome'}) => {
                         </div>
                     )}
                     <div>
-                    {balance && <button className="hidden lg:block mr-5 px-3 py-2.5 font-medium text-sm rounded-lg bg-gradient-to-r from-[#FEAA02] to-[#E15310] text-white" onClick={logout}>
+                    {add && <button className="hidden lg:block mr-5 px-3 py-2.5 font-medium text-sm rounded-lg bg-gradient-to-r from-[#FEAA02] to-[#E15310] text-white" onClick={logout}>
                         Logout
                     </button>}
                     </div>

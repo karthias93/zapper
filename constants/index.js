@@ -55,3 +55,9 @@ export const chains = [
         img: '/images/op.svg'
     }
 ];
+
+export const tokenImg = {
+    eth: '/images/eth.svg',
+    bsc: '/images/bsc.svg',
+    avax: '/images/avax.svg',
+};
