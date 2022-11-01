@@ -73,6 +73,7 @@ function MyApp({ Component, pageProps }) {
       <ApolloProvider client={apolloClient}>
         <WagmiConfig client={client}>
           <Head>
+            <title>Potent - Web3 Portfolio Tracker</title>
             <link rel="shortcut icon" href="/images/logo.svg" />
           </Head>
           <Component {...pageProps} />
