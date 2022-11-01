@@ -19,7 +19,7 @@ const HistoryComp = () => {
     }, [dispatch, id]);
     return (
         <Fragment>
-            {transactionState.history_list.map(trans=>{
+            {transactionState?.history_list?.map(trans=>{
                 return (
                     <div className="card-wrapper px-8 py-6 bg-white mb-10" key={trans.id}>
                         <div className="flex justify-around max-lg:flex-col gap-5">

@@ -5,7 +5,7 @@ import { useConnect } from 'wagmi';
 const WalletModal = ({setShowPopup}) => {
     const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect();
-    const supportedWallet = ['metaMask', 'coinbaseWallet'];
+    const supportedWallet = ['metaMask', 'coinbaseWallet', 'walletConnect'];
     return (
         <div onClick={()=>setShowPopup(false)} tabIndex="-1" aria-hidden="true" className="h-full overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full flex justify-center items-center bg-gray-600 bg-opacity-50">
             <div className="relative p-4 w-full max-w-[90%] lg:max-w-[40%] h-full md:h-auto">
